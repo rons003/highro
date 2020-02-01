@@ -3452,6 +3452,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case AC_DOUBLE:
 		case MA_DOUBLE:
 			skillratio += 10 * (skill_lv - 1);
+			if(sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_ROGUE)
+				skillratio *= (double)(1.5);
 			break;
 		case AC_SHOWER:
 		case MA_SHOWER:

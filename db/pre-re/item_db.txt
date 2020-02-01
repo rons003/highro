@@ -4595,7 +4595,7 @@
 12025,Egg_Boy,Dano Festival Egg,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ getrandgroupitem(IG_EggBoy),1; },{},{}
 12026,Egg_Girl,Dano Festival Egg,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ getrandgroupitem(IG_EggGirl),1; },{},{}
 12027,Giggling_Box,Giggling Box,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 9,0; sc_start SC_Curse,30000,0,3000,0; },{},{}
-12028,Box_Of_Thunder,Box of Thunder,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SPEEDUP0,20000,25; },{},{}
+12028,Box_Of_Thunder,Box of Thunder,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SPEEDUP0,20000,75; },{},{}
 12029,Gloomy_Box,Box of Gloom,11,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "AC_CONCENTRATION",1; },{},{}
 12030,Box_Of_Grudge,Box of Resentment,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_ATKPOTION,60000,20; },{},{}
 12031,Sleepy_Box,Box of Drowsiness,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_MATKPOTION,60000,20; },{},{}
@@ -5532,7 +5532,7 @@
 13514,Spanner_Box,Wrench Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ rentitem 1534,604800; },{},{}
 13515,Grape_Box,Grape Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 514,10; },{},{}
 13516,Royal_Jelly_Box,Royal Jelly Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 526,5; },{},{}
-13517,Yggdrasilberry_Box,Yggdrasil Berry Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 607,3; },{},{}
+13517,Yggdrasilberry_Box,Yggdrasil Berry Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 607,100; },{},{}
 13518,Weapon_Card_Scroll_Box,Weapon Card Pet Egg Scroll Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 13558,1; },{},{}
 13519,Armor_Card_Scroll_Box,Armor Card Pet Egg Scroll Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 13559,1; },{},{}
 13520,Helmet_Card_Scroll_Box,Helmet Card Pet Egg Scroll Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 13560,1; },{},{}

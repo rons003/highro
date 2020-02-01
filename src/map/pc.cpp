@@ -12157,10 +12157,10 @@ uint8 pc_itemcd_add(struct map_session_data *sd, struct item_data *id, t_tick ti
 				if( e_tick > 99 )
 					sprintf(e_msg,msg_txt(sd,379), // Item Failed. [%s] is cooling down. Wait %.1f minutes.
 									itemdb_jname(sd->item_delay[i].nameid), (double)e_tick / 60);
-				else
-					sprintf(e_msg,msg_txt(sd,380), // Item Failed. [%s] is cooling down. Wait %d seconds.
-									itemdb_jname(sd->item_delay[i].nameid), e_tick+1);
-				clif_messagecolor(&sd->bl,color_table[COLOR_YELLOW],e_msg,false,SELF);
+				// else
+				// 	sprintf(e_msg,msg_txt(sd,380), // Item Failed. [%s] is cooling down. Wait %d seconds.
+				// 					itemdb_jname(sd->item_delay[i].nameid), e_tick+1);
+				// clif_messagecolor(&sd->bl,color_table[COLOR_YELLOW],e_msg,false,SELF);
 				return 1; // Delay has not expired yet
 			}
 		} else {// not yet used item (all slots are initially empty)
