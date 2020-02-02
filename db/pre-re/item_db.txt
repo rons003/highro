@@ -10313,3 +10313,38 @@
 //===================================================================
 32350,Farthezan,Farthezan,5,20,,1100,130:180,,1,2,0x00004000,56,2,2,4,170,1,2,{ .@r = getrefine(); bonus2 bSkillAtk,"PA_PRESSURE",40; bonus bVariableCastrate,-.@r; if (.@r>=9) bonus2 bSkillAtk,"LG_RAYOFGENESIS",30; if (.@r>=11) { bonus2 bSkillAtk,"LG_RAYOFGENESIS",20; bonus2 bSkillAtk,"PA_PRESSURE",20; } },{},{}
 32351,Estal,Estal,5,20,,700,195,,1,2,0x00040000,56,2,2,4,170,1,2,{ .@r = getrefine(); bonus2 bSkillCooldown,"GN_SPORE_EXPLOSION",-1000; bonus bBaseAtk,4*.@r; if (.@r>=11) .@val = 50; else if (.@r>=9) .@val = 30; bonus2 bSkillAtk,"GN_SPORE_EXPLOSION",.@val; },{},{}
+
+
+// Added by Ronelle
+3000,angelingwings,Angeling Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3000,{  },{},{}
+3001,arcticwings,Artic Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3001,{  },{},{}
+3002,bbwings,Black Butterfly Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3002,{  },{},{}
+3003,demonwings,Demon Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3003,{  },{},{}
+3004,dragonwings,Dragon Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3004,{  },{},{}
+3005,gargwings,Gargoyle Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3005,{  },{},{}
+3006,icawings,Icarus Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3006,{  },{},{}
+3007,phxwings,Phoenix Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3007,{  },{},{}
+3008,tornwings,Torn Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3008,{  },{},{}
+3009,wbwings,White Butterfly Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3009,{  },{},{}
+
+3010,headprotector_earth,Headprotector Earth,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3010,{  },{},{}
+3011,headprotector_fire,Headprotector Fire,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3011,{  },{},{}
+3012,headprotector_lightning,Headprotector Lightning,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3012,{  },{},{}
+3013,headprotector_sound,Headprotector Sound,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3013,{  },{},{}
+3014,headprotector_water,Headprotector Water,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3014,{  },{},{}
+3015,headprotector_wind,Headprotector Wind,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3015,{  },{},{}
+3016,hokagehat,Hokage Hat,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3016,{  },{},{}
+3017,kakashiprotector,Kakashi Protector,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3017,{  },{},{}
+3018,travelerhat,Traveler's Hat,4,30,,50,,5,,0,0xFFFFFFFF,7,2,256,,0,0,3018,{  },{},{}
+3019,valkyriehelm,Valkyrie Helm,4,30,,50,,5,,0,0xFFFFFFFF,7,2,256,,0,0,3019,{  },{},{}
+3020,spro_blue,Earth Sunglass Protector,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3020,{  },{},{}
+3021,spro_brown,Fire Sunglass Protector,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3021,{  },{},{}
+3022,spro_green,Lightning Sunglas Protector,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3022,{  },{},{}
+3023,darthmaulmask,Sound Sunglass Protector,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3023,{  },{},{}
+3024,darthvaderhelm,Water Sunglass Protector,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3024,{  },{},{}
+3025,jedishood,Wind Sunglass Protector,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3025,{  },{},{}
+3026,sithshood,Dark Maul Mask,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3026,{  },{},{}
+3027,startrooperhelm,Darth Vader Helm,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3027,{  },{},{}
+
+
+
