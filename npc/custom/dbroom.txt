@@ -1,0 +1,32 @@
+prontera,164,163,4	script	Dead Branch Room	578,{
+setarray $@maps$[1], "new_1-3", "new_2-3", "new_3-3", "new_4-3", "new_5-3";
+for(set .@b,1; .@b < getarraysize($@maps$); set .@b,.@b + 1) {
+	if(.@b==1){ set .@menu$, .@menu$  + "Public- "+((getmapusers($@maps$[.@b])>=30)?"^CD0000Closed^000000("+getmapusers($@maps$[.@b])+")":"^007700Open^000000("+getmapusers($@maps$[.@b])+")")+":"; } else { set .@menu$, .@menu$  + "Private["+(.@b-1)+"]- "+((getmapusers(""+$@maps$[.@b]+"")>=5)?"^CD0000Closed^000000("+getmapusers($@maps$[.@b])+")":"^007700Open^000000("+getmapusers($@maps$[.@b])+")")+":"; }
+}
+if(select(.@menu$)) { callfunc "GRfunction",$@maps$[@menu],@menu; }
+}
+
+function	script	GRfunction	{
+if(getmapusers(getarg(0))<=30&&getarg(1)==1){
+	warp getarg(0),0,0; end;
+}
+if(!getmapusers(getarg(0))){
+	mes "Input a new password.";
+	input($password$[getarg(1)]);
+	next; warp getarg(0),0,0;
+	end;
+}
+if(getmapusers(getarg(0))<=5&&getarg(1)!=1) {
+	mes "This room is password protected please input the password now.";
+	input(@name$);
+	if(@name$==$password$[getarg(1)]){
+		mes "correct!"; next; warp getarg(0),0,0; end;
+	} else {
+		mes "Incorrect!";
+		close;
+	}
+} else {
+	mes "I'm sorry this room is full.";
+	close;
+}
+}

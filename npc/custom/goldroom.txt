@@ -1,0 +1,53 @@
+prontera,164,168,4	script	Gold Room	108,{
+mes "[Orang Kaya]";
+mes "Your Password Is ..";
+next;
+set .@A,rand(234);
+set .@B,rand(12);
+mes "If A = "+.@A+"   B = "+.@B;
+switch( rand(4) ){
+    Case 0:
+        set .@Answer,.@A + .@B;
+        mes "How many is A + B ?";
+        break;
+    Case 1:
+        set .@Answer,.@A - .@B;
+        mes "How many is A - B ?";
+        break;
+    Case 2:
+        set .@Answer,.@A * .@B;
+        mes "How many is A * B ?";
+        break;
+    Case 3:
+        set .@Answer,.@A / .@B;
+        mes "How many is A / B ?";
+        break;
+}
+
+input .@Input;
+if( .@Input != .@Answer ){
+    mes "Wrong";
+    atcommand "@kick "+strcharinfo(0);
+}
+	warp "ordeal_3-2.gat",0,0;
+	close;
+set Zeny,zeny+100000000;
+close;
+}
+ 
+
+
+// Monsters
+ordeal_3-2,0,0,0,0	monster	Dokebi	1110,100,0,0,0
+ordeal_3-2,0,0,0,0	monster	Dokebi	1110,100,0,0,0
+ordeal_3-2,0,0,0,0	monster	Dokebi	1110,100,0,0,0
+ordeal_3-2,0,0,0,0	monster	Dokebi	1110,100,0,0,0
+ordeal_3-2,0,0,0,0	monster	Dokebi	1110,100,0,0,0
+ordeal_3-2,0,0,0,0	monster	Gold Guardian	1439,30,0,0,0
+ordeal_3-2,154,154,0,0	monster	Gold Guardian	1439,3,0,0,0
+
+// Warps
+ordeal_3-2.gat,130,193,0	warp	testwrp#1	3,3,ordeal_3-2.gat,154,154
+ordeal_3-2.gat,106,154,0	warp	testwrp#2	3,3,ordeal_3-2.gat,154,154
+ordeal_3-2.gat,201,129,0	warp	testwrp#3	3,3,ordeal_3-2.gat,154,154
+ordeal_3-2.gat,177,193,0	warp	testwrp#4	3,3,ordeal_3-2.gat,154,154

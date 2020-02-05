@@ -10346,5 +10346,7 @@
 3026,sithshood,Dark Maul Mask,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3026,{  },{},{}
 3027,startrooperhelm,Darth Vader Helm,4,30,,50,,3,,0,0xFFFFFFFF,7,2,256,,0,0,3027,{  },{},{}
 
+3100,Credit,Credit,3,5000,,40,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+
 
 
