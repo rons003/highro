@@ -100,6 +100,7 @@ OnStartArena:
 
 // The Emperium has been broken.
 OnAgitBreak:
+	set brokeemp,brokeemp+1;
 	set .@GID,getcharid(2);
 	// Show and log error if an unguilded player breaks the Emperium. (Should NEVER happen)
 	if (.@GID <= 0) {
@@ -137,11 +138,12 @@ OnAgitBreak:
 		}
 	}
 	// Respawn the Emperium, and display new owners.
+	set .@breaker$, strcharinfo(0);
 	sleep 500; // Slow down script execution slightly.
 	if( agitcheck() )
 		donpcevent "Agit#"+strnpcinfo(2)+"::OnStartArena";
 	sleep 7000;
-	announce "The [" + getcastlename(strnpcinfo(2)) + "] castle has been conquered by the [" + getguildName(.@GID) + "] guild.",bc_all|bc_woe;
+	announce "The [" + getcastlename(strnpcinfo(2)) + "] castle has been conquered by ["+.@breaker$+"] of the [" + getguildName(.@GID) + "] guild.",bc_all|bc_woe;
 	end;
 
 // War of Emperium has ended.

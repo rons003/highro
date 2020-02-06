@@ -10,7 +10,7 @@
 -	shop	Emistry_Shop	-1,512:100
 
 
-splendide,181,134,5	script	VPS Shop	757,{
+prontera,164,159,4	script	VPS Shop	757,{
 function ShopSettings;
 function ValidateCost;
 function CurrencyInfo;
