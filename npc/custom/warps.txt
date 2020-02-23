@@ -1,0 +1,3 @@
+
+prontera,166,151,0	warp	SuperMarket	2,2,force_1-1,100,100
+

@@ -1,0 +1,7 @@
+prontera,164,154,4	script	Market	103,{
+    mes "You want to go in market? you can enter in the portal";
+    close;
+    OnInit:
+    waitingroom "Warp to Market",0;
+    end;
+}

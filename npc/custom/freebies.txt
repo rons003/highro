@@ -1,0 +1,23 @@
+prontera,149,188,6	script	Freebies	871,{
+
+if( !#Freebies ){
+set #Freebies,1;
+mes "Welcome...this is your gift...";
+getitem 3669,1;
+getitem 3670,1;
+getitem 3671,1;
+getitem 3672,1;
+getitem 3673,1;
+getitem 4142,2;
+getitem 14524,5;
+getitem 7227,100;
+
+end;
+} else {
+mes "You have claim the Reward already.";
+close;
+}
+OnInit:
+waitingroom "Freebies Here!",0;
+end;
+}

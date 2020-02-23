@@ -10,7 +10,7 @@
 -	shop	Emistry_Shop	-1,512:100
 
 
-prontera,164,159,4	script	VPS Shop	757,{
+prontera,164,159,4	script	APS Shop	757,{
 function ShopSettings;
 function ValidateCost;
 function CurrencyInfo;
@@ -46,7 +46,7 @@ function	ShopSettings	{
 			// Currency [ Item ID / Variable Name ]
 			set @Currency$,"7227";
 			// Item ID Lists
-			setarray @ItemLists[0],2629,2630,2639,2638,30027;
+			setarray @ItemLists[0],2629,2630,2639,2638,2658;
 			// Item Price
 			setarray @ItemCost[0],50,50,50,50,50;
 			break;
@@ -54,7 +54,7 @@ function	ShopSettings	{
 			// Currency [ Item ID / Variable Name ]
 			set @Currency$,"7227";
 			// Item ID Lists
-			setarray @ItemLists[0],30029,30030,30031,30032;
+			setarray @ItemLists[0],3670,3671,3672,3673;
 			// Item Price
 			setarray @ItemCost[0],75,75,75,75;
 			break;
