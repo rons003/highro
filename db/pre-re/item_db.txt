@@ -10378,6 +10378,31 @@
 3686,warhelmofflame,War Helm of Flame,4,30,,50,,5,,0,0xFFFFFFFF,7,2,256,,0,0,3186,{  },{},{}
 3687,blhzaura,Black Lighthalzen Aura,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3187,{  },{},{}
 
+30087,goldgodlhzaura,Gold God Aura,4,30,,50,,5,,0,0xFFFFFFFF,7,2,512,,0,0,3285,{  },{},{}
+30088,blackgodlhzaura,Black God Aura,4,30,,50,,5,,0,0xFFFFFFFF,7,2,512,,0,0,4387,{  },{},{}
+// Fusion Set
+30089,_yyarmor,Fusion Valkyrian Armor,4,0,,2800,,6,,1,0xFFFFFFFE,2,2,16,,1,1,0,{ bonus bAllstats,1; },{},{}
+30090,_yyvshield,Fusion Valkyrian Manteau,4,0,,500,,3,,1,0xFFFFFFFE,7,2,32,,65,1,4,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief||BaseClass==Job_Gunslinger||BaseClass==Job_Taekwon) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)*1); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Acolyte||BaseClass==Job_Ninja) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*1); },{},{}
+30091,_yyvshoes,Fusion Valkyrja's Shield,4,30000,,500,,3,,1,0xFFFFFFFE,2,2,64,,1,1,0,{  },{},{}
+30092,_yyvm,Fusion Valkyrian Shoes,4,0,,500,,4,,1,0xFFFFFFFE,2,2,4,,1,1,0,{  },{},{}
+
+// Spirit Talisman
+40252,행운의부적,Spirit of Alchemist,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ALCHEMIST",1;  },{},{}
+40253,행운의부적,Spirit of Star Gladiator,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_STAR",1;   },{},{}
+40254,행운의부적,Spirit of Assassin,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ASSASSIN",1;  },{},{}
+40255,행운의부적,Spirit of Crusader,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_CRUSADER",1; },{},{}
+40256,행운의부적,Spirit of Bard and Dancer,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_BARDDANCER",1;  },{},{}
+40257,행운의부적,Spirit of Super Novice,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_SUPERNOVICE",1;  },{},{}
+40258,행운의부적,Spirit of Blacksmith,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_BLACKSMITH",1; },{},{}
+40259,행운의부적,Spirit of Soul Linker,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_SOULLINKER",1;  },{},{}
+40260,행운의부적,Spirit of Rogue,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ROGUE",1;  },{},{}
+40261,행운의부적,Spirit of Knight,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_KNIGHT",1; },{},{}
+40262,행운의부적,Spirit of Hunter,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_HUNTER",1; },{},{}
+40263,행운의부적,Spirit of Monk,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_MONK",1;  },{},{}
+40264,행운의부적,Spirit of Sage,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_SAGE",1;  },{},{}
+40265,행운의부적,Spirit of Priest,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_PRIEST",1;  },{},{}
+40266,행운의부적,Spirit of Wizard,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_WIZARD",1;  },{},{}
+
 
 
 

@@ -111,7 +111,7 @@ close;
 }
 -	script	EmpBrk#1	-1,{
 OnTimer3000:
-    if (.end == 1) {    warpchar "prontera",150,172,.charid;
+    if (.end == 1) {    warpchar "prontera",171,197,.charid;
     stopnpctimer;
     set .end, 0;
     }
@@ -149,7 +149,7 @@ areaannounce "pvp_n_4-5",.x1,.y1,.x2,.y2,"GO!!!",0;
 monster "pvp_n_4-5",.xe,.ye,"Emperium",1288,1,"EmpBrk#1::OnThisMobDeath";
 end;
 OnTimer1200000:
-warpchar "prontera",150,172,.charid;
+warpchar "prontera",170,195,.charid;
 stopnpctimer;
 set .end, 1;
 end;
@@ -185,7 +185,7 @@ pvp_n_4-5,99,125,0	script	EmpBrk#1_touch	-1,2,1,{
     killmonster "pvp_n_4-5","EmpBrk#1::OnThisMobDeath";
     mes "[Emperium Breaker Test]";
     mes "You cannot exit from small sqare.";
-    close2;
+    close;
 set $@someonegotin1, 0;
         warp @mpempbrk$,@empbrkx,@empbrky;
     close;
@@ -194,7 +194,7 @@ set $@someonegotin1, 0;
 -	script	EmpBrk#2	-1,{
 
 OnTimer3000:
-    if (.end == 1) {    warpchar "prontera",150,172,.charid;
+    if (.end == 1) {    warpchar "prontera",170,195,.charid;
     stopnpctimer;
     set .end, 0;
     }
@@ -397,7 +397,7 @@ areaannounce "pvp_n_4-5",.x1,.y1,.x2,.y2,"GO!!!",0;
 monster "pvp_n_4-5",.xe,.ye,"Emperium",1288,1,"EmpBrk#4::OnThisMobDeath";
 end;
 OnTimer1200000:
-warpchar "prontera",150,172,.charid;
+warpchar "prontera",171,197,.charid;
 stopnpctimer;
 set .end, 1;
 end;

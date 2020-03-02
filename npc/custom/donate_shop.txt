@@ -1,5 +1,5 @@
 //===== rAthena Script =======================================
-//= Euphy's Quest Shop
+//= Euphy's Donation Shop
 //===== By: ==================================================
 //= Euphy
 //===== Current Version: =====================================
@@ -7,7 +7,7 @@
 //===== Compatible With: =====================================
 //= rAthena Project
 //===== Description: =========================================
-//= A dynamic quest shop based on Lunar's, with easier config.
+//= A dynamic Donation shop based on Lunar's, with easier config.
 //= Includes support for multiple shops & cashpoints.
 //= Item Preview script by ToastOfDoom.
 //===== Additional Comments: =================================
@@ -23,14 +23,14 @@
 //============================================================
 
 // Shop NPCs -- supplying no argument displays entire menu.
-//	callfunc "qshop"{,<shop ID>{,<shop ID>{,...}}};
+//	callfunc "dshop"{,<shop ID>{,<shop ID>{,...}}};
 //============================================================
-prontera,140,174,5	script	Genie#1	660,{ callfunc "qshop"; }
+prontera,136,170,5	script	Donation NPC#1	660,{ callfunc "dshop"; }
 
 
 // Script Core
 //============================================================
--	script	quest_shop	-1,{ 
+-	script	donate_shop	-1,{ 
 function Add; function Chk; function Slot;
 OnInit:
 	freeloop(1);
@@ -57,7 +57,7 @@ OnInit:
 //	setarray .Shops$[1],"<Shop 1>","<Shop 2>"{,...};
 // -----------------------------------------------------------
 
-	setarray .Shops$[1],"Upper Headgear","Middle Headgear","Wings","Fusion Set";
+	setarray .Shops$[1],"Equipment";
 
 // -----------------------------------------------------------
 //  Quest items -- do NOT use a reward item more than once!
@@ -65,51 +65,8 @@ OnInit:
 //	    <Zeny cost>,<point cost>,
 //	    <required item ID>,<required item amount>{,...});
 // -----------------------------------------------------------
-
-	// Upper Headgears
-	Add(1,3677,1,0,0,744,350,1064,200,1009,100);
-	Add(1,3016,1,0,0,1059,100,7097,100,7020,10,1030,20);
-	Add(1,3010,1,0,0,2258,1,12085,1,12120,25,12018,25);
-	Add(1,3011,1,0,0,2258,5,12075,1,12018,50);
-	Add(1,3012,1,0,0,2258,5,12100,1,2282,25);
-	Add(1,3013,1,0,0,2258,5,12095,1,4039,25,4057,25);
-	Add(1,3014,1,0,0,2258,5,12080,1,12119,25,12120,25);
-	Add(1,3015,1,0,0,2258,5,12090,1,12121,50);
-	Add(1,5137,1,10000000,0,1064,150,7047,200,969,100);
-	Add(1,5138,1,10000000,0,1020,300,1034,300,969,100);
-	Add(1,5013,1,5000000,0,754,1,753,1,752,1,751,1,750,1,743,1,742,1,741,1,2613,1,5053,1,7020,1,7036,1,2268,1);
-	//Add(1,30012,1,0,0,7086,5,5300,1,983,5);
-	Add(1,3018,1,0,0,7091,5,5366,1,976,5);
-	Add(1,3017,1,0,0,7078,5,5373,1,981,5);
-	//Add(1,30014,1,0,0,2256,1,923,200,750,5,4147,20,947,100,5072,1,5066,1,1469,4,1130,4);
-	//Add(1,5101,1,0,0,2295,1,7054,100,983,1);
-	//Add(1,5102,1,0,0,7092,2,634,300,982,1);
-
-	// Middle Headgears
-	Add(2,3676,1,10000000,0,7301,400,7150,100,1009,50);
-	Add(2,3678,1,10000000,0,705,400,942,200,1009,50);
-
-	// Wings
-	//Add(3,3003,1,5000000,0,1038,200,1039,200,983,2);
-	//Add(3,30001,1,5000000,0,4174,1,2255,2,983,2);
-	Add(3,3000,1,5000000,0,4054,1,2254,2,982,2);
-	Add(3,3001,1,15000000,0,995,25,749,25,7066,50);
-	Add(3,3007,1,15000000,0,994,80,954,80,7006,80);
-	Add(3,3003,1,15000000,0,1030,150);
-	Add(3,3005,1,15000000,0,7214,100,7063,100,6078,100);
-	Add(3,3660,1,15000000,0,7006,100,7030,100,995,100);
-	Add(3,3008,1,0,0,7101,100,924,150,7053,100,969,200);
-	Add(3,3009,1,0,0,7054,150,7063,20,982,10,969,200);
-	//Add(3,,1,0,0,7168,100,1058,70,983,10,969,200);
-	Add(3,3006,1,200000000,0,1058,500,3009,1,982,10);
-
-	// Fusion Set
-	Add(4,30089,1,1000000,0,3670,2,983,3);
-	Add(4,30090,1,1000000,0,3672,2,983,3);
-	Add(4,30091,1,1000000,0,3673,2,983,3);
-	Add(4,30092,1,1000000,0,3671,2,983,3);
-
-
+	Add(1,3019,1,0,0,1059,100,7097,100,7020,10,1030,20);
+	Add(1,3004,1,0,0,2258,1,12085,1,12120,25,12018,25);
 
 
 
@@ -119,7 +76,7 @@ OnInit:
 	set .menu$,"";
 	for(set .@i,1; .@i<=getarraysize(.Shops$); set .@i,.@i+1) {
 		set .menu$, .menu$+.Shops$[.@i]+":";
-		npcshopdelitem "qshop"+.@i,909;
+		npcshopdelitem "dshop"+.@i,909;
 	}
 	end;
 
@@ -138,8 +95,8 @@ OnMenu:
 		end;
 	}
 	dispbottom "Select one item at a time.";
-	callshop "qshop"+.@i,1;
-	npcshopattach "qshop"+.@i;
+	callshop "dshop"+.@i,1;
+	npcshopattach "dshop"+.@i;
 	end;
 
 OnBuyItem:
@@ -151,7 +108,7 @@ OnBuyItem:
 		message strcharinfo(0),"You can't purchase that many "+getitemname(.@q[0])+".";
 		end;
 	}
-	mes "[Quest Shop]";
+	mes "[Donation Shop]";
 	mes "Reward: ^0055FF"+((.@q[2] > 1)?.@q[2]+"x ":"")+Slot(.@q[0])+"^000000";
 	mes "Requirements:";
 	disable_items;
@@ -168,12 +125,12 @@ OnBuyItem:
 		switch(select(" ~ Purchase ^0055FF"+getitemname(.@q[0])+"^000000:"+((.@preview && !@qe[7])?" ~ Preview...":"")+": ~ ^777777Cancel^000000")) {
 		case 1:
 			if (@qe[0]) { 
-				mes "[Quest Shop]";
+				mes "[Donation Shop]";
 				mes "You're missing one or more quest requirements.";
 				close;
 			}
 			if (!checkweight(.@q[0],.@q[2])) {
-				mes "[Quest Shop]";
+				mes "[Donation Shop]";
 				mes "^FF0000You need "+(((.@q[2]*getiteminfo(.@q[0],6))+Weight-MaxWeight)/10)+" additional weight capacity to complete this trade.^000000";
 				close;
 			}
@@ -221,7 +178,7 @@ function Add {
 			setarray .@j[.@i-2],getarg(.@i),getarg(.@i+1);
 	}
 	copyarray getd(".q_"+getarg(1)+"[0]"),.@j[0],getarraysize(.@j);
-	npcshopadditem "qshop"+getarg(0),getarg(1),((.ShowZeny)?getarg(3):0);
+	npcshopadditem "dshop"+getarg(0),getarg(1),((.ShowZeny)?getarg(3):0);
 	return;
 }
 
@@ -244,19 +201,19 @@ function Slot {
 
 }
 
-function	script	qshop	{
+function	script	dshop	{
 	deletearray @i[0],getarraysize(@i);
 	for(set .@i,0; .@i<getargcount(); set .@i,.@i+1)
 		set @i[.@i],getarg(.@i);
-	doevent "quest_shop::OnMenu";
+	doevent "donate_shop::OnMenu";
 	end;
 }
 
 
 // Dummy shop data -- copy as needed.
 //============================================================
--	shop	qshop1	-1,909:-1
--	shop	qshop2	-1,909:-1
--	shop	qshop3	-1,909:-1
--	shop	qshop4	-1,909:-1
--	shop	qshop5	-1,909:-1
+-	shop	dshop1	-1,909:-1
+-	shop	dshop2	-1,909:-1
+-	shop	dshop3	-1,909:-1
+-	shop	dshop4	-1,909:-1
+-	shop	dshop5	-1,909:-1

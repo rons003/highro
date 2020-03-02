@@ -1,6 +1,6 @@
 	
 
-prontera,146,163,5	script	Breaker Ladder	790,{
+prontera,146,151,5	script	Breaker Ladder	790,{
      
      
      
