@@ -28,3 +28,10 @@
 //   for different monsters, override drop rate with Ratio=100 and edit
 //   base drop rates in mob_db.
 // - This file is reloaded by @reloadmobdb.
+
+// Custom Eutopia Ratio
+969,1000000,1110
+4399,25000,1708
+4408,25000,1768
+4441,35000,1871
+4407,25000,1751

@@ -1418,6 +1418,11 @@ int skill_additional_effect(struct block_list *src, struct block_list *bl, uint1
 				rate = (sd->status.job_level + 9) / 10;
 				skill_castend_damage_id(src, bl, HT_BLITZBEAT, (skill < rate) ? skill : rate, tick, SD_LEVEL);
 			}
+			// Automatic Falcon Assault
+			if(pc_isfalcon(sd) && sd->status.weapon == W_BOW && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_HUNTER 
+			&& rnd() % 1000 <= sstatus->luk * 100 / 3 + 1) {
+				skill_castend_damage_id(src, bl, SN_FALCONASSAULT, skill, tick, 0);				
+			}
 			// Automatic trigger of Warg Strike [Jobbie]
 			if (pc_iswug(sd) && (skill = pc_checkskill(sd, RA_WUGSTRIKE)) > 0 && rnd() % 1000 <= sstatus->luk * 10 / 3 + 1)
 				skill_castend_damage_id(src, bl, RA_WUGSTRIKE, skill, tick, 0);
@@ -8487,6 +8492,7 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 	case SC_STRIPACCESSARY:
 	{
 		bool i;
+		int d = 0;
 
 		//Special message when trying to use strip on FCP [Jobbie]
 		if (sd && skill_id == ST_FULLSTRIP && tsc && tsc->data[SC_CP_WEAPON] && tsc->data[SC_CP_HELM] && tsc->data[SC_CP_ARMOR] && tsc->data[SC_CP_SHIELD])
@@ -8495,6 +8501,42 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 			break;
 		}
 
+		// Custom Soul Link Modification Single Strip Rouge
+		if ( sd && tsc && sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_ROGUE && rand()%100 < 15
+             &&
+            ( skill_id == RG_STRIPWEAPON && tsc->data[SC_CP_WEAPON] ||
+            skill_id == RG_STRIPSHIELD && tsc->data[SC_CP_SHIELD] ||
+            skill_id == RG_STRIPARMOR && tsc->data[SC_CP_ARMOR] ||
+            skill_id == RG_STRIPHELM && tsc->data[SC_CP_HELM] ) ) {
+            int item_id = 7139; // Glistening Coat
+            int ii;
+			int d = 0;
+            ARR_FIND( 0, MAX_INVENTORY, ii, sd->inventory.u.items_inventory[ii].nameid == item_id );
+            if ( ii < MAX_INVENTORY ) {
+                pc_delitem( sd, ii, 1, 0, 0, LOG_TYPE_CONSUME);
+                switch ( skill_id ) {
+                    case RG_STRIPWEAPON:
+                        status_change_end( bl, SC_CP_WEAPON, INVALID_TIMER );
+                        sc_start(NULL, bl, SC_STRIPWEAPON, 100, skill_lv, d );
+                        break;
+                    case RG_STRIPSHIELD:
+                        status_change_end( bl, SC_CP_SHIELD, INVALID_TIMER );
+                        sc_start(NULL, bl, SC_STRIPSHIELD, 100, skill_lv, d );
+                        break;
+                    case RG_STRIPARMOR:
+                        status_change_end( bl, SC_CP_ARMOR, INVALID_TIMER );
+                        sc_start(NULL, bl, SC_STRIPARMOR, 100, skill_lv, d );
+                        break;
+                    case RG_STRIPHELM:
+                        status_change_end( bl, SC_CP_HELM, INVALID_TIMER );
+                        sc_start(NULL, bl, SC_STRIPHELM, 100, skill_lv, d );
+                        break;
+                }
+                clif_skill_nodamage( src, bl, skill_id, skill_lv, i );
+                break;
+            }
+        }
+
 		if ((i = skill_strip_equip(src, bl, skill_id, skill_lv)) || (skill_id != ST_FULLSTRIP && skill_id != GC_WEAPONCRUSH))
 			clif_skill_nodamage(src, bl, skill_id, skill_lv, i);
 
@@ -8502,6 +8544,8 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 		if (sd && !i)
 			clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
 		break;
+
+		
 	}
 
 	case AM_BERSERKPITCHER:
@@ -9791,6 +9835,10 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 			pc_setglobalreg(dstsd, add_str(PCDIECOUNTER_VAR), 0);
 			clif_specialeffect(bl, EF_ANGEL2, AREA);
 			//SC_SPIRIT invokes status_calc_pc for us.
+		}
+		if (skill_id == SL_PRIEST) {    
+			clif_skill_nodamage(src,bl,skill_id,skill_lv,
+				sc_start4(src, bl, SC_REFLECTSHIELD, 100, 7, skill_id, 0, 0, skill_get_time(skill_id,skill_lv)));
 		}
 		clif_skill_nodamage(src, bl, skill_id, skill_lv,
 							sc_start4(src, bl, SC_SPIRIT, 100, skill_lv, skill_id, 0, 0, skill_get_time(skill_id, skill_lv)));

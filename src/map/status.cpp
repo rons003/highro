@@ -3100,6 +3100,9 @@ static int status_get_hpbonus(struct block_list *bl, enum e_status_bonus type) {
 				bonus += 30;
 			if(sc->data[SC_GLASTHEIM_HPSP])
 				bonus += sc->data[SC_GLASTHEIM_HPSP]->val1;
+			if(sc->data[SC_SPIRIT] && (sc->data[SC_SPIRIT]->val2 == SL_WIZARD || sc->data[SC_SPIRIT]->val2 == SL_SAGE))		
+			    bonus += ((TBL_PC*)bl)->status.base_level * 200;
+			
 		}
 	} else if (type == STATUS_BONUS_RATE) {
 		struct status_change *sc = status_get_sc(bl);
@@ -5740,9 +5743,15 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 		vit -= vit * sc->data[SC_STRIPARMOR]->val2/100;
 	if(sc->data[SC_FULL_THROTTLE])
 		vit += vit * sc->data[SC_FULL_THROTTLE]->val3 / 100;
+	if(sc->data[SC_SPIRIT] && (sc->data[SC_SPIRIT]->val2 == SL_WIZARD))
+	    vit += ((TBL_PC*)bl)->status.int_ / 5;
 #ifdef RENEWAL
 	if(sc->data[SC_DEFENCE])
 		vit += sc->data[SC_DEFENCE]->val2;
+
+	
+	// if(sc->data[SC_SPIRIT] && (sc->data[SC_SPIRIT]->val2 == SL_WIZARD || sc->data[SC_SPIRIT]->val2 == SL_SAGE))
+	// 	maxhp += ((TBL_PC*)bl)->status.base_level * 200;
 #endif
 	if(sc->data[SC_CHEERUP])
 		vit += 3;
