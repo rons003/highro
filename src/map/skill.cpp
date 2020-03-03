@@ -8493,7 +8493,8 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 	{
 		bool i;
 		int d = 0;
-
+		int ii;
+		
 		//Special message when trying to use strip on FCP [Jobbie]
 		if (sd && skill_id == ST_FULLSTRIP && tsc && tsc->data[SC_CP_WEAPON] && tsc->data[SC_CP_HELM] && tsc->data[SC_CP_ARMOR] && tsc->data[SC_CP_SHIELD])
 		{
@@ -8502,40 +8503,41 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 		}
 
 		// Custom Soul Link Modification Single Strip Rouge
-		if ( sd && tsc && sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_ROGUE && rand()%100 < 15
-             &&
-            ( skill_id == RG_STRIPWEAPON && tsc->data[SC_CP_WEAPON] ||
-            skill_id == RG_STRIPSHIELD && tsc->data[SC_CP_SHIELD] ||
-            skill_id == RG_STRIPARMOR && tsc->data[SC_CP_ARMOR] ||
-            skill_id == RG_STRIPHELM && tsc->data[SC_CP_HELM] ) ) {
-            int item_id = 7139; // Glistening Coat
-            int ii;
-			int d = 0;
-            ARR_FIND( 0, MAX_INVENTORY, ii, sd->inventory.u.items_inventory[ii].nameid == item_id );
-            if ( ii < MAX_INVENTORY ) {
-                pc_delitem( sd, ii, 1, 0, 0, LOG_TYPE_CONSUME);
-                switch ( skill_id ) {
-                    case RG_STRIPWEAPON:
-                        status_change_end( bl, SC_CP_WEAPON, INVALID_TIMER );
-                        sc_start(NULL, bl, SC_STRIPWEAPON, 100, skill_lv, d );
-                        break;
-                    case RG_STRIPSHIELD:
-                        status_change_end( bl, SC_CP_SHIELD, INVALID_TIMER );
-                        sc_start(NULL, bl, SC_STRIPSHIELD, 100, skill_lv, d );
-                        break;
-                    case RG_STRIPARMOR:
-                        status_change_end( bl, SC_CP_ARMOR, INVALID_TIMER );
-                        sc_start(NULL, bl, SC_STRIPARMOR, 100, skill_lv, d );
-                        break;
-                    case RG_STRIPHELM:
-                        status_change_end( bl, SC_CP_HELM, INVALID_TIMER );
-                        sc_start(NULL, bl, SC_STRIPHELM, 100, skill_lv, d );
-                        break;
-                }
-                clif_skill_nodamage( src, bl, skill_id, skill_lv, i );
-                break;
-            }
-        }
+		if ( sd && tsc && sd->sc.data[SC_SPIRIT] && sd->sc.data[SC_SPIRIT]->val2 == SL_ROGUE &&
+		( skill_id == RG_STRIPWEAPON && tsc->data[SC_CP_WEAPON] ||
+		skill_id == RG_STRIPSHIELD && tsc->data[SC_CP_SHIELD] ||
+		skill_id == RG_STRIPARMOR && tsc->data[SC_CP_ARMOR] ||
+		skill_id == RG_STRIPHELM && tsc->data[SC_CP_HELM] ) ) 
+		{
+			int item_id = 7139; // Glistening Coat
+			
+			ARR_FIND( 0, MAX_INVENTORY, ii, sd->inventory.u.items_inventory[ii].nameid == item_id );
+			if ( ii < MAX_INVENTORY ) {
+				pc_delitem( sd, ii, 1, 0, 0, LOG_TYPE_CONSUME);
+				if(rand()%100 < 15){
+					switch ( skill_id ) { 
+					case RG_STRIPWEAPON:
+						status_change_end( bl, SC_CP_WEAPON, INVALID_TIMER );
+						sc_start(src,bl,SC_STRIPWEAPON,100,skill_lv,skill_get_time(skill_id,skill_lv));
+						break;
+					case RG_STRIPSHIELD:
+						status_change_end( bl, SC_CP_SHIELD, INVALID_TIMER );
+						sc_start(src,bl,SC_STRIPSHIELD,100,skill_lv,skill_get_time(skill_id,skill_lv));
+						break;
+					case RG_STRIPARMOR:
+						status_change_end( bl, SC_CP_ARMOR, INVALID_TIMER );
+						sc_start(src,bl,SC_STRIPARMOR,100,skill_lv,skill_get_time(skill_id,skill_lv));
+						break;
+					case RG_STRIPHELM:
+						status_change_end( bl, SC_CP_HELM, INVALID_TIMER );
+						sc_start(src,bl,SC_STRIPHELM,100,skill_lv,skill_get_time(skill_id,skill_lv));
+						break;
+				}
+				clif_skill_nodamage(src, bl, skill_id, skill_lv, 1);
+				break;
+				}
+			}
+		}
 
 		if ((i = skill_strip_equip(src, bl, skill_id, skill_lv)) || (skill_id != ST_FULLSTRIP && skill_id != GC_WEAPONCRUSH))
 			clif_skill_nodamage(src, bl, skill_id, skill_lv, i);
@@ -8707,7 +8709,7 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 	{
 		unsigned int equip[] = {EQP_WEAPON, EQP_SHIELD, EQP_ARMOR, EQP_HEAD_TOP};
 
-		if (sd && (bl->type != BL_PC || (dstsd && pc_checkequip(dstsd, equip[skill_id - AM_CP_WEAPON]) < 0)))
+		if (sd && (bl->type != BL_PC /*|| (dstsd && pc_checkequip(dstsd, equip[skill_id - AM_CP_WEAPON]) < 0) */))
 		{
 			clif_skill_fail(sd, skill_id, USESKILL_FAIL_LEVEL, 0);
 			map_freeblock_unlock(); // Don't consume item requirements
@@ -9754,8 +9756,12 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 
 		for (i_eqp = 0; i_eqp < 4; i_eqp++)
 		{
-			if (bl->type != BL_PC || (dstsd && pc_checkequip(dstsd, equip[i_eqp]) < 0))
+			if (bl->type != BL_PC /*|| (dstsd && pc_checkequip(dstsd, equip[i_eqp]) < 0) */)
 				continue;
+			status_change_end(bl, (sc_type)(SC_STRIPWEAPON + i), INVALID_TIMER);
+			status_change_end(bl, (sc_type)(SC_STRIPHELM + i), INVALID_TIMER);
+			status_change_end(bl, (sc_type)(SC_STRIPSHIELD + i), INVALID_TIMER);
+			status_change_end(bl, (sc_type)(SC_STRIPARMOR + i), INVALID_TIMER);
 			sc_start(src, bl, (sc_type)(SC_CP_WEAPON + i_eqp), 100, skill_lv, skilltime);
 			s++;
 		}
