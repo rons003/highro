@@ -8514,7 +8514,7 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 			ARR_FIND( 0, MAX_INVENTORY, ii, sd->inventory.u.items_inventory[ii].nameid == item_id );
 			if ( ii < MAX_INVENTORY ) {
 				pc_delitem( sd, ii, 1, 0, 0, LOG_TYPE_CONSUME);
-				if(rand()%100 < 15){
+				if(rand()%100 < 5){
 					switch ( skill_id ) { 
 					case RG_STRIPWEAPON:
 						status_change_end( bl, SC_CP_WEAPON, INVALID_TIMER );
@@ -15637,8 +15637,22 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 			sg->interval = -1;
 			unit->range = 0;
 		}
+		break;	
+	case UNT_SPIDERWEB:
+		if(sg->val2==0 && tsc) {
+			t_tick sec = skill_get_time2(sg->skill_id,sg->skill_lv);
+			if (status_change_start(ss, bl, type, 10000, sg->skill_lv, sg->group_id, 0, 0, sec, SCSTART_NORATEDEF)) {
+				const struct TimerData* td = tsc->data[type]?get_timer(tsc->data[type]->timer):NULL;
+				if (td) 
+					sec = DIFF_TICK(td->tick, tick);
+				unit_movepos(bl, unit->bl.x, unit->bl.y, 0, 0);
+				clif_fixpos(bl);
+				sg->val2=bl->id;
+			}
+			else
+			sec = 20;
+		}
 		break;
-
 	case UNT_ELECTRICSHOCKER:
 		if (bl->id != ss->id)
 		{
