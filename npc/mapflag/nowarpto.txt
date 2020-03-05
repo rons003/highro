@@ -180,3 +180,21 @@ bossnia_04	mapflag	nowarpto
 2012rwc_06	mapflag	nowarpto
 2012rwc_07	mapflag	nowarpto
 2012rwc_08	mapflag	nowarpto
+
+//=====THANATOS
+tha_t02	mapflag	nowarpto
+tha_t03	mapflag	nowarpto
+tha_t04	mapflag	nowarpto
+tha_t05	mapflag	nowarpto
+tha_t06	mapflag	nowarpto
+tha_t07	mapflag	nowarpto
+tha_t08	mapflag	nowarpto
+tha_t09	mapflag	nowarpto
+tha_t10	mapflag	nowarpto
+tha_t11	mapflag	nowarpto
+tha_t12	mapflag	nowarpto
+thana_boss	mapflag	nowarpto
+thana_step	mapflag	nowarpto
+
+//=====GoldRoom
+ordeal_3-2	mapflag	nowarpto
