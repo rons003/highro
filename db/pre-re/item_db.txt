@@ -8,8 +8,8 @@
 501,Red_Potion,Red Potion,0,50,,70,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(45,65),0; },{},{}
 502,Orange_Potion,Orange Potion,0,200,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(105,145),0; },{},{}
 503,Yellow_Potion,Yellow Potion,0,550,,130,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(175,235),0; },{},{}
-504,White_Potion,White Potion,0,1200,,150,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(325,405),0; },{},{}
-505,Blue_Potion,Blue Potion,0,5000,,150,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal 0,rand(40,60); },{},{}
+504,White_Potion,White Potion,0,1200,,150,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 25,0; },{},{}
+505,Blue_Potion,Blue Potion,0,5000,,150,,,,,0xFFFFFFFF,7,2,,,,,,{ percentheal 0,25; },{},{}
 506,Green_Potion,Green Potion,0,40,,70,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_end SC_Poison; sc_end SC_Silence; sc_end SC_Blind; sc_end SC_Confusion; },{},{}
 507,Red_Herb,Red Herb,0,18,,30,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(18,28),0; },{},{}
 508,Yellow_Herb,Yellow Herb,0,40,,50,,,,,0xFFFFFFFF,7,2,,,,,,{ itemheal rand(38,58),0; },{},{}
@@ -1449,8 +1449,8 @@
 2626,Rosary_,Rosary,4,15000,,200,,0,,1,0xFFFFFFFE,7,2,136,,90,0,0,{ bonus bMdef,3; bonus bLuk,1; },{},{}
 2627,Belt,Belt,4,20000,,1200,,0,,1,0xFFFFFFFF,7,2,136,,25,0,0,{},{},{}
 2628,Novice_Armlet,Novice Armlet,4,400,,200,,0,,1,0x00000001,7,2,136,,1,0,0,{},{},{}
-2629,Magingiorde,Megingjard,4,20,,8000,,2,,0,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bStr,40; bonus bMdef,7; },{},{}
-2630,Brysinggamen,Brisingamen,4,20,,1500,,1,,0,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bStr,6; bonus bAgi,6; bonus bVit,6; bonus bInt,6; bonus bLuk,10; bonus bMdef,5; },{},{}
+2629,Magingiorde,Megingjard,4,20,,0,,0,,1,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bStr,10; },{},{}
+2630,Brysinggamen,Brisingamen,4,20,,0,,0,,1,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bDex,10; },{},{}
 2631,First_Age_Ring,Celebration Ring,4,1,,10,,0,,0,0xFFFFFFFF,7,2,136,,1,0,0,{},{},{}
 //2632,Korean_Trinket,Korean Trinket,4,125000,,100,,1,,0,0xFFFFFFFE,7,2,136,,65,0,0,{ bonus bVit,1; bonus bDex,1; bonus bLuk,1; },{},{}
 //2633,Jade_Ring,Jade Ring,4,204000,,100,,0,,0,0xFFFFFFFE,7,2,136,,80,0,0,{ bonus bStr,2; bonus bInt,1; },{},{}
@@ -1458,8 +1458,8 @@
 2635,Bride_Ring,Wedding Ring,4,0,,0,,0,,0,0xFFFFFFFF,7,0,136,,0,0,0,{ skill "WE_MALE",1; skill "WE_FEMALE",1; skill "WE_CALLPARTNER",1; },{},{}
 2636,Gold_Ring_,Gold Christmas Ring,4,30000,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bLuk,1; },{},{}
 2637,Silver_Ring_,Silver Christmas Ring,4,20000,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bLuk,1; },{},{}
-2638,Exorcize_Sachet,Sacred Incense,4,20000,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bStr,1; bonus bLuk,1; },{},{}
-2639,Purification_Sachet,Occult Incense,4,20000,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bInt,1; bonus bAgi,1; },{},{}
+2638,Exorcize_Sachet,Sacred Incense,4,20000,,0,,0,,1,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bVit,10; },{},{}
+2639,Purification_Sachet,Occult Incense,4,20000,,0,,0,,1,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bInt,10; },{},{}
 2640,Kafra_Ring,Kafra Ring,4,40000,,200,,1,,0,0xFFFFFFFE,7,2,136,,0,0,0,{ bonus bStr,1; bonus bInt,1; bonus bAgi,1; bonus bLuk,1; bonus bMdef,1; },{},{}
 2641,Fashionable_Sack,Fashion Hip Sack,4,20,,700,,0,,0,0x00040420,7,2,136,,50,0,0,{ bonus bStr,2; },{},{}
 2642,Serin's_Gold_Ring,Serin's Gold Ring,4,20,,0,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{},{},{}
@@ -1467,7 +1467,7 @@
 2644,The_Sign_,The Sign,4,2,,0,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,5; },{},{}
 2645,Moonlight_Ring,Moonlight Ring,4,40000,,200,,0,,0,0x02021040,7,2,136,,60,0,0,{ bonus bMdef,2; },{},{}
 2646,Bunch_Of_Carnation,Bunch of Carnations,4,2,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bAllStats,3; },{},{}
-2647,Nile_Rose,Nile Rose,4,2,,100,,0,,1,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bMaxHP,10; },{},{}
+2647,Nile_Rose,Nile Rose,4,2,,0,,0,,1,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bMaxHP,10; },{},{}
 2648,Morpheus's_Ring,Morpheus's Ring,4,30000,,100,,0,,0,0xFFFFFFFE,7,2,136,,33,0,0,{ bonus bInt,1; bonus bMaxSPrate,5; },{},{}
 2649,Morpheus's_Armlet,Morpheus's Bracelet,4,30000,,100,,0,,0,0xFFFFFFFE,7,2,136,,33,0,0,{ bonus bInt,1; bonus bMaxSPrate,5; },{},{}
 2650,Morrigane's_Belt,Morrigane's Belt,4,30000,,200,,0,,0,0xFFFFFFFE,7,2,136,,61,0,0,{ bonus bBaseAtk,5; bonus bCritical,3; },{},{}
@@ -1478,7 +1478,7 @@
 2655,Bloody_Iron_Ball,Bloodied Shackle Ball,4,50000,,4000,,0,,0,0xFFFFFFFE,7,2,136,,1,0,0,{},{},{}
 2656,Hyper_Changer,Armor Charm,4,20000,,1000,,1,,0,0x000654E2,7,2,136,,1,0,0,{ bonus bMaxHP,50; },{},{}
 2657,Lab_Passport,Laboratory Permit,4,20,,100,,0,,0,0xFFFFFFFF,7,2,136,,1,0,0,{},{},{}
-2658,Nile_Rose_,Nile Rose,4,2,,100,,0,,1,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bMaxHP,10; },{},{}
+2658,Nile_Rose_,Nile Rose,4,2,,100,,0,,1,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bAgi,10; },{},{}
 2659,Vesper_Core01,Vesper Core 01,4,20,,100,,1,,0,0x00CFFF80,2,2,136,,1,0,0,{ bonus bMdef,3; bonus bInt,2; bonus bMaxSPrate,5; },{},{}
 2660,Vesper_Core02,Vesper Core 02,4,20,,100,,1,,0,0x00CFFF80,2,2,136,,1,0,0,{ bonus bMdef,3; bonus bStr,3; bonus bBaseAtk,10; },{},{}
 2661,Vesper_Core03,Vesper Core 03,4,20,,100,,1,,0,0x00CFFF80,2,2,136,,1,0,0,{ bonus bMdef,3; bonus bAgi,3; bonus bFlee,5; },{},{}
@@ -2041,7 +2041,7 @@
 4400,Aliza_Card,Aliza Card,6,20,,10,,,,,,,,16,,,,,{ bonus3 bAutoSpellWhenHit,"DC_WINKCHARM",1,50+50*(BaseJob==Job_Dancer); },{},{}
 4401,Alicel_Card,Alicel Card,6,20,,10,,,,,,,,16,,,,,{ bonus bFlee,10; bonus bDef,-5; },{},{}
 4402,Aliot_Card,Aliot Card,6,20,,10,,,,,,,,4,,,,,{ if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Thief) { bonus bStr,2; bonus bMaxHPrate,5; } if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Acolyte) { bonus bInt,2; bonus bMaxSPrate,5; } },{},{}
-4403,Kiel_Card,Kiel-D-01 Card,6,20,,10,,,,,,,,769,,,,,{ bonus bDelayRate,-30; },{},{}
+4403,Kiel_Card,Kiel-D-01 Card,6,20,,10,,,,,,,,769,,,,,{ bonus bDelayRate,-10; },{},{}
 4404,Skogul_Card,Skogul Card,6,20,,10,,,,,,,,16,,,,,{ bonus3 bAddEffWhenHit,Eff_Bleeding,3000,ATF_TARGET|ATF_SELF; },{},{}
 4405,Frus_Card,Frus Card,6,20,,10,,,,,,,,16,,,,,{ bonus bMagicDamageReturn,getrefine()*2; if(BaseClass==Job_Mage) bonus bMdef,3; },{},{}
 4406,Skeggiold_Card,Skeggiold Card,6,20,,10,,,,,,,,2,,,,,{ bonus2 bMagicAddRace,RC_Demon,2; },{},{}

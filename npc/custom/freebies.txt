@@ -9,8 +9,10 @@ getitem 3671,1;
 getitem 3672,1;
 getitem 3673,1;
 getitem 4142,2;
-getitem 14524,5;
 getitem 7227,100;
+getitem 504,25;
+getitem 505,25;
+
 
 end;
 } else {
