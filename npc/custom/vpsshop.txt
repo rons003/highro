@@ -18,7 +18,7 @@ function ClearData;
 function ValueConvert;
 function ErrorNotice;
 
-mes "Each Shop from the Menu may purchase using ^FF0000Different Currency^000000.";
+mes "Each Shop from the Menu may purchase using ^FF0000RTC Card^000000.";
 mes "^00FF00____________________________^000000";
 mes "So,Which shop you would like to look at it";
 next;
