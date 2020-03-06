@@ -550,7 +550,7 @@ close;
 
 
 
-lighthalzen,189,297,5	script	Anthonie	904,{    
+prt_in,41,114,5	script	Anthonie	904,{    
 
 
 
@@ -870,7 +870,7 @@ close;
 
 
 
-prt_in,41,114,5	script	Daryl	733,{
+prt_in,32,98,4	script	Daryl	733,{
 
 
 
