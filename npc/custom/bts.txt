@@ -218,7 +218,7 @@ close;
 
 
 
-pay_fild10,182,157,5	script	Russell	900,{
+prt_in,32,114,5	script	Russell	900,{
 
 
 
