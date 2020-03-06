@@ -25,7 +25,7 @@
 // Shop NPCs -- supplying no argument displays entire menu.
 //	callfunc "dshop"{,<shop ID>{,<shop ID>{,...}}};
 //============================================================
-prontera,136,170,5	script	Donation NPC#1	660,{ callfunc "dshop"; }
+prontera,136,170,5	script	Donation NPC#1	829,{ callfunc "dshop"; }
 
 
 // Script Core
