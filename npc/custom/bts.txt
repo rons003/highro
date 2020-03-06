@@ -502,7 +502,7 @@ delitem 2104,1;
 
 delitem 7444,100;
 
-getitem 3672,1;
+getitem 2115,1;
 
 next;
 
@@ -668,7 +668,7 @@ delitem 2406,1;
 
 delitem 7444,100;
 
-getitem 3673,1;
+getitem 2421,1;
 
 set tonton,1;    
 
