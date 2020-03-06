@@ -388,7 +388,7 @@ close;
 
 
 
-gef_fild07,185,249,5	script	Jhames	899,{
+prt_in,35,114,5	script	Jhames	899,{
 
 
 
@@ -714,7 +714,7 @@ close;
 
 
 
-comodo,172,229,5	script	Christian	731,{
+prt_in,38,114,5	script	Christian	731,{
 
 
 
@@ -870,7 +870,7 @@ close;
 
 
 
-valkyrie,49,49,5	script	Daryl	733,{
+prt_in,41,114,5	script	Daryl	733,{
 
 
 
