@@ -608,7 +608,7 @@ mes "Here are the requirements";
 
 next;    
 
-mes "20 Bone Armor Piece";    
+mes "20 Skeletal Armor Piece";    
 
 mes "7 Billow";    
 
@@ -932,7 +932,7 @@ next;
 
 mes "300 Handcuffs";    
 
-mes "50 Emblem of Sun God";
+mes "20 Emblem of Sun God";
 
 mes "10 Matchstick";        
 
@@ -944,9 +944,9 @@ mes "[ Daryl ]";
 
 mes "I'll be waiting for you chosen one!";    
 
-if(countitem(7345) < 300 || countitem(7086) < 50 || countitem(7035) < 10 || countitem(969) < 100) goto kikiki;
+if(countitem(7345) < 300 || countitem(7086) < 20 || countitem(7035) < 10 || countitem(969) < 100) goto kikiki;
 
-if(countitem(7345) >= 300 || countitem(7086) >= 50 || countitem(7035) >= 10 || countitem(969) >= 100) goto killhim;
+if(countitem(7345) >= 300 || countitem(7086) >= 20 || countitem(7035) >= 10 || countitem(969) >= 100) goto killhim;
 
 close;    
 
