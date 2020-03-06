@@ -340,7 +340,7 @@ delitem 2315,1;
 
 next;
 
-getitem 30023,1;
+getitem 2357,1;
 
 set rus_rus,1;
 
@@ -502,7 +502,7 @@ delitem 2104,1;
 
 delitem 7444,100;
 
-getitem 30025,1;
+getitem 3672,1;
 
 next;
 
@@ -668,7 +668,7 @@ delitem 2406,1;
 
 delitem 7444,100;
 
-getitem 30026,1;
+getitem 3673,1;
 
 set tonton,1;    
 
@@ -828,7 +828,7 @@ delitem 7077,7;
 
 delitem 7035,50;
 
-getitem 30024,1;
+getitem 2524,1;
 
 set tan_tan,1;        
 
