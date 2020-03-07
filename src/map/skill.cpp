@@ -1420,7 +1420,7 @@ int skill_additional_effect(struct block_list *src, struct block_list *bl, uint1
 			}
 			// Automatic Falcon Assault
 			if(pc_isfalcon(sd) && sd->status.weapon == W_BOW && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_HUNTER 
-			&& rnd() % 1000 <= sstatus->luk * 100 / 3 + 1) {
+			&& rnd() % 1000 <= sstatus->luk * 1 / 3 + 1) {
 				skill_castend_damage_id(src, bl, SN_FALCONASSAULT, skill, tick, 0);				
 			}
 			// Automatic trigger of Warg Strike [Jobbie]
