@@ -10359,11 +10359,11 @@
 3666,blackvhelm,Black Valkyrie Helm,4,30,,50,,5,,0,0xFFFFFFFF,7,2,256,,0,0,3166,{  },{},{}
 3667,reddwing,Red Dragon Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3167,{  },{},{}
 3668,redvhelm,Red Valkyrie Helm,4,30,,50,,5,,0,0xFFFFFFFF,7,2,256,,0,0,3168,{  },{},{}
-3669,wvhelm,White Valkyrie Helm,4,30,,50,,5,,1,0xFFFFFFFF,7,2,256,,0,0,3169,{  },{},{}
-3670,wvarmor,White Valkyrian Armor,4,0,,2800,,6,,1,0xFFFFFFFE,2,2,16,,1,1,0,{ bonus bAllstats,1; },{},{}
-3671,wvmantue,White Valkyrian Manteau,4,0,,500,,3,,1,0xFFFFFFFE,2,2,4,,1,1,0,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief||BaseClass==Job_Gunslinger||BaseClass==Job_Taekwon) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)*1); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Acolyte||BaseClass==Job_Ninja) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*1); },{},{}
-3672,wvshield,White Valkyrja's Shield,4,30000,,500,,3,,1,0xFFFFFFFE,7,2,32,,65,1,4,{ bonus Mdef,10; bonus2 bResEff,Eff_Stone,5000; },{},{}
-3673,wvshoes,White Valkyrian Shoes,4,0,,500,,4,,1,0xFFFFFFFE,2,2,64,,1,1,0,{  },{},{}
+3669,wvhelm,White Valkyrie Helm,4,30,,50,,5,,1,0xFFFFFFFF,7,2,256,,0,0,3169,{ bonus bDex,1; bonus bStr,1; bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player,10; },{},{}
+3670,wvarmor,White Valkyrian Armor,4,0,,2800,,6,,1,0xFFFFFFFF,2,2,16,,1,1,0,{ bonus bAllstats,1; bonus2 bResEff,Eff_Freeze,5000; },{},{}
+3671,wvmantue,White Valkyrian Manteau,4,0,,500,,3,,1,0xFFFFFFFF,2,2,4,,1,1,0,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief||BaseClass==Job_Gunslinger||BaseClass==Job_Taekwon) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)*1); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Acolyte||BaseClass==Job_Ninja) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*1); },{},{}
+3672,wvshield,White Valkyrja's Shield,4,30000,,500,,3,,1,0xFFFFFFFF,7,2,32,,65,1,4,{ bonus2 bResEff,Eff_Stone,5000; },{},{}
+3673,wvshoes,White Valkyrian Shoes,4,0,,500,,4,,1,0xFFFFFFFF,2,2,64,,1,1,0,{ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bResEff,Eff_Sleep,5000; },{},{}
 
 3676,hollowmask,Hollow Mask,4,30,,50,,5,,1,0xFFFFFFFF,7,2,512,,0,0,3176,{  },{},{}
 3677,cygnushelm,Cygnus Helm,4,30,,50,,5,,1,0xFFFFFFFF,7,2,256,,0,0,3177,{  },{},{}
