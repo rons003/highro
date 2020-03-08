@@ -147,7 +147,7 @@ OnBuyItem:
 			if (.@q[6]) for(set .@i,6; .@i<getarraysize(.@q); set .@i,.@i+2)
 				delitem .@q[.@i],.@q[.@i+1]*.@q[1];
 			getitem .@q[0],.@q[2];
-			if (.Announce) announce strcharinfo(0)+" has buyed "+((.@q[2] > 1)?.@q[2]+"x "+getitemname(.@q[0]):callfunc("F_InsertArticle",getitemname(.@q[0])))+"!",0;
+			if (.Announce) announce strcharinfo(0)+" has purchased "+((.@q[2] > 1)?.@q[2]+"x "+getitemname(.@q[0]):callfunc("F_InsertArticle",getitemname(.@q[0])))+"!",0;
 			specialeffect2 EF_FLOWERLEAF;
 			close;
 		case 2:
