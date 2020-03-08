@@ -2675,7 +2675,7 @@
 5492,Boy's_Cap_I,Student Cap,4,0,,0,,5,,0,0xFFFFFFFE,7,2,256,,0,0,102,{ bonus bMdef,3; bonus2 bAddRace,RC_DemiHuman,5; bonus2 bAddRace,RC_Player,5; },{},{}
 5493,Ulle_Cap_I,Ulle's Cap,4,0,,0,,3,,0,0xFFFFFFFE,7,2,256,,0,0,254,{ bonus bDex,2; bonus bAgi,1; },{},{}
 5494,Spinx_Helm_I,Sphinx Hat,4,0,,0,,5,,0,0x00004082,7,2,257,,0,0,137,{ bonus bStr,5; },{},{}
-5495,Power_Of_Thor,Power Of Thor,4,20,,100,,6,,1,0xFFFFFFFF,7,2,256,,75,1,493,{ bonus bInt,1; bonus bDex,1; bonus bMdef,3; bonus bFlee,5; },{},{}
+5495,Power_Of_Thor,Power Of Thor,4,20,,100,,6,,1,0xFFFFFFFF,7,2,256,,75,1,493,{ bonus bAllStats,1; bonus bFlee,15; bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player,10; },{},{}
 5496,Dice_Hat,Dice Hat,4,20,,300,,3,,0,0xFFFFFFFF,7,2,256,,50,0,494,{ bonus bLuk,4; },{},{}
 5497,King_Tiger_Doll_Hat,King Tiger Doll Hat,4,20,,400,,3,,1,0xFFFFFFFE,7,2,256,,30,1,495,{ bonus bStr,2; },{},{}
 5498,Wondering_Wolf_Helm,Wandering Wolf Helm,4,20,,600,,5,,0,0xFFFFFFFE,7,2,768,,50,1,490,{ bonus bVit,5; bonus bFlee,10; },{},{}
@@ -10089,7 +10089,7 @@
 31566,C_Stole_Of_Dominion,C Stole Of Dominion,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1784,{},{},{}
 31567,C_Sheep_Horn,C Sheep Horns,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1783,{},{},{}
 31569,C_Open_Air_Headset,C Open Air Headset,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1655,{},{},{}
-31570,C_Cyclops_Visor,C Cyclops Visor,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,207,{},{},{}
+31570,C_Cyclops_Visor,C Cyclops Visor,4,0,,0,,0,,1,0xFFFFFFFF,63,2,2048,,1,0,207,{},{},{}
 31571,C_Guardian_Processor,C Guardian Processor,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,1552,{},{},{}
 31572,C_Mobile_Pursuit_System,C Mobile Pursuit System,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1788,{},{},{}
 31573,C_Mecha_Cat_Ears,C Mecha Cat Ears,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,1789,{},{},{}
@@ -10369,9 +10369,9 @@
 3668,redvhelm,Red Valkyrie Helm,4,30,,50,,5,,0,0xFFFFFFFF,7,2,256,,0,0,3168,{  },{},{}
 3669,wvhelm,White Valkyrie Helm,4,30,,50,,5,,1,0xFFFFFFFF,7,2,256,,0,0,3169,{ bonus bDex,1; bonus bStr,1; bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player,10; },{},{}
 3670,wvarmor,White Valkyrian Armor,4,0,,2800,,6,,1,0xFFFFFFFF,2,2,16,,1,1,0,{ bonus bAllstats,1; bonus2 bResEff,Eff_Freeze,5000; },{},{}
-3671,wvmantue,White Valkyrian Manteau,4,0,,500,,3,,1,0xFFFFFFFF,2,2,4,,1,1,0,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief||BaseClass==Job_Gunslinger||BaseClass==Job_Taekwon) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)*1); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Acolyte||BaseClass==Job_Ninja) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*1); },{},{}
+3671,wvmantue,White Valkyrian Manteau,4,0,,500,,3,,1,0xFFFFFFFF,2,2,4,,1,1,0,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief||BaseClass==Job_Gunslinger||BaseClass==Job_Taekwon) bonus bFlee2,3+(getequiprefinerycnt(EQI_GARMENT)*1); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Acolyte||BaseClass==Job_Ninja) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*1); },{},{}
 3672,wvshield,White Valkyrja's Shield,4,30000,,500,,3,,1,0xFFFFFFFF,7,2,32,,65,1,4,{ bonus2 bResEff,Eff_Stone,5000; },{},{}
-3673,wvshoes,White Valkyrian Shoes,4,0,,500,,4,,1,0xFFFFFFFF,2,2,64,,1,1,0,{ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bResEff,Eff_Sleep,5000; },{},{}
+3673,wvshoes,White Valkyrian Shoes,4,0,,500,,4,,1,0xFFFFFFFF,2,2,64,,1,1,0,{ bonus bMaxHPrate,5; bonus bMaxSPrate,5; bonus2 bResEff,Eff_Sleep,5000; },{},{}
 
 3676,hollowmask,Hollow Mask,4,30,,50,,5,,1,0xFFFFFFFF,7,2,512,,0,0,3176,{  },{},{}
 3677,cygnushelm,Cygnus Helm,4,30,,50,,5,,1,0xFFFFFFFF,7,2,256,,0,0,3177,{  },{},{}
