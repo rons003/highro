@@ -57,7 +57,7 @@ OnInit:
 //	setarray .Shops$[1],"<Shop 1>","<Shop 2>"{,...};
 // -----------------------------------------------------------
 
-	setarray .Shops$[1],"Upper Headgear","Middle Headgear","Wings","Fusion Set";
+	setarray .Shops$[1],"Upper Headgear","Middle Headgear","Wings","Fusion Set","Weapons";
 
 // -----------------------------------------------------------
 //  Quest items -- do NOT use a reward item more than once!
@@ -109,6 +109,9 @@ OnInit:
 	Add(4,30090,1,1000000,0,3672,2,983,3);
 	Add(4,30091,1,1000000,0,3673,2,983,3);
 	Add(4,30092,1,1000000,0,3671,2,983,3);
+	
+	// Weapons
+	Add(5,13032,1,1000000,0,3100,1000,982,1);
 
 
 
