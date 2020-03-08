@@ -2315,7 +2315,7 @@
 5132,Angeling_Hat,Angeling Hat,4,20,,700,,2,,0,0xFFFFFFFF,7,2,256,,0,0,204,{ bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player,10; },{},{}
 5133,Sheep_Hat,Sheep Hat,4,20,,150,,1,,0,0x00008110,7,2,256,,0,0,205,{ bonus bShortWeaponDamageReturn,5; },{},{}
 5134,Pumpkin_Hat,Pumpkin-Head,4,20,,200,,2,,0,0xFFFFFFFF,7,2,256,,0,1,206,{ bonus2 bSubRace,RC_Demon,5; },{},{}
-5135,Cyclops_Visor,Cyclop's Eye,4,0,,200,,0,,0,0xFFFFFFFE,7,2,512,,75,0,207,{ bonus bMaxSP,50; },{},{}
+5135,Cyclops_Visor,Cyclop's Eye,4,0,,200,,0,,1,0xFFFFFFFE,7,2,512,,75,0,207,{ bonus bMaxSP,50; },{},{}
 5136,Santa's_Hat_,Antonio's Santa Hat,4,20,,100,,3,,0,0xFFFFFFFF,7,2,256,,0,1,20,{},{},{}
 5137,Alice_Doll,Alice Doll,4,20,,500,,0,,1,0xFFFFFFFE,7,2,256,,30,0,208,{ bonus bStr,1; bonus2 bAddRace,RC_DemiHuman,10; bonus2 bAddRace,RC_Player,10; bonus2 bAddEff2,Eff_Sleep,10; },{},{}
 5138,Magic_Eyes,Magic Eyes,4,20,,300,,1,,0,0x00810204,7,2,256,,30,1,209,{ bonus bMdef,5; bonus bCastrate,-10; bonus bUseSPrate,20; },{},{}
@@ -10089,7 +10089,7 @@
 31566,C_Stole_Of_Dominion,C Stole Of Dominion,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1784,{},{},{}
 31567,C_Sheep_Horn,C Sheep Horns,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1783,{},{},{}
 31569,C_Open_Air_Headset,C Open Air Headset,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1655,{},{},{}
-31570,C_Cyclops_Visor,C Cyclops Visor,4,0,,0,,0,,1,0xFFFFFFFF,63,2,2048,,1,0,207,{},{},{}
+31570,C_Cyclops_Visor,C Cyclops Visor,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,207,{},{},{}
 31571,C_Guardian_Processor,C Guardian Processor,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,1552,{},{},{}
 31572,C_Mobile_Pursuit_System,C Mobile Pursuit System,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1788,{},{},{}
 31573,C_Mecha_Cat_Ears,C Mecha Cat Ears,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,1789,{},{},{}
@@ -10395,10 +10395,10 @@
 30087,goldgodlhzaura,Gold God Aura,4,30,,50,,5,,0,0xFFFFFFFF,7,2,512,,0,0,3285,{  },{},{}
 30088,blackgodlhzaura,Black God Aura,4,30,,50,,5,,0,0xFFFFFFFF,7,2,512,,0,0,4387,{  },{},{}
 // Fusion Set
-30089,_yyarmor,Fusion Valkyrian Armor,4,0,,2800,,6,,1,0xFFFFFFFF,2,2,16,,1,1,0,{ bonus bAllstats,1; },{},{}
-30090,_yyvshield,Fusion Valkyrian Shield,4,0,,500,,3,,1,0xFFFFFFFF,7,2,32,,65,1,4,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief||BaseClass==Job_Gunslinger||BaseClass==Job_Taekwon) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)*1); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Acolyte||BaseClass==Job_Ninja) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*1); },{},{}
-30091,_yyvshoes,Fusion Valkyrja's Shoes,4,30000,,500,,3,,1,0xFFFFFFFF,2,2,64,,1,1,0,{  },{},{}
-30092,_yyvm,Fusion Valkyrian Manteau,4,0,,500,,4,,1,0xFFFFFFFF,2,2,4,,1,1,0,{  },{},{}
+30089,_yyarmor,Fusion Valkyrian Armor,4,0,,2800,,6,,1,0xFFFFFFFF,2,2,16,,1,1,0,{ bonus bAllstats,1; bonus2 bResEff,Eff_Freeze,5000; },{},{}
+30090,_yyvshield,Fusion Valkyrian Shield,4,0,,500,,3,,1,0xFFFFFFFF,7,2,32,,65,1,4,{ bonus2 bResEff,Eff_Stone,7500; },{},{}
+30091,_yyvshoes,Fusion Valkyrja's Shoes,4,30000,,500,,3,,1,0xFFFFFFFF,2,2,64,,1,1,0,{ bonus bMaxHPrate,5; bonus bMaxSPrate,5; bonus2 bResEff,Eff_Sleep,5000; },{},{}
+30092,_yyvm,Fusion Valkyrian Manteau,4,0,,500,,4,,1,0xFFFFFFFF,2,2,4,,1,1,0,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief||BaseClass==Job_Gunslinger||BaseClass==Job_Taekwon) bonus bFlee2,3+(getequiprefinerycnt(EQI_GARMENT)*1); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Acolyte||BaseClass==Job_Ninja) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*1); },{},{}
 
 // Spirit Talisman
 40252,Spirit_ALC,Spirit of Alchemist,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ALCHEMIST",1;  },{},{}
