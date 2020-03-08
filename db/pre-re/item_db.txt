@@ -10347,11 +10347,11 @@
 3027,startrooperhelm,Darth Vader Helm,4,30,,50,,3,,1,0xFFFFFFFF,7,2,256,,0,0,3027,{  },{},{}
 
 // Custom Weapons
-3500,?????,Icarus Sword,5,49000,,1000,115,,1,3,0x000654E2,7,2,2,3,27,1,2,{ bonus3 bAutoSpell,"MO_CALLSPIRITS",5,2;  },{},{}
-3501,?????,Icarus Bow,5,20,,1200,150,,5,0,0x000A0808,7,2,34,4,48,1,11,{ bonus bAtkEle,Ele_Holy; bonus bInt,5; skill "AL_CURE",1; skill "AL_HEAL",1; bonus2 bResEff,Eff_Poison,5000; bonus2 bResEff,Eff_Curse,5000; bonus2 bResEff,Eff_Silence,5000; bonus2 bResEff,Eff_Confusion,5000; bonus2 bResEff,Eff_Blind,5000; },{},{}
-3502,???????,Icarus Staff,5,2500,,400,25,,1,0,0x00818315,7,2,2,2,12,1,10,{ bonus bInt,1; bonus bMatkRate,15; },{},{}
-3503,???,Fist of Fury,5,50000,,1200,130,,1,1,0x0004C5B2,7,2,2,3,27,1,8,{},{},{}
-3504,??????,Skewer,5,20,,1000,70,,1,0,0x028F5EEE,7,2,2,4,36,1,1,{ bonus bBreakArmorRate,500; },{},{}
+3500,ICA_SWORD,Icarus Sword,5,49000,,1000,115,,1,3,0x000654E2,7,2,2,3,27,1,2,{ bonus3 bAutoSpell,"MO_CALLSPIRITS",5,2;  },{},{}
+3501,ICA_BOW,Icarus Bow,5,20,,1200,150,,5,0,0x000A0808,7,2,34,4,48,1,11,{ bonus bAtkEle,Ele_Holy; bonus bInt,5; skill "AL_CURE",1; skill "AL_HEAL",1; bonus2 bResEff,Eff_Poison,5000; bonus2 bResEff,Eff_Curse,5000; bonus2 bResEff,Eff_Silence,5000; bonus2 bResEff,Eff_Confusion,5000; bonus2 bResEff,Eff_Blind,5000; },{},{}
+3502,ICA_STAFF,Icarus Staff,5,2500,,400,25,,1,0,0x00818315,7,2,2,2,12,1,10,{ bonus bInt,1; bonus bMatkRate,15; },{},{}
+3503,First_of_Fury,Fist of Fury,5,50000,,1200,130,,1,1,0x0004C5B2,7,2,2,3,27,1,8,{},{},{}
+3504,Skewer_,Skewer,5,20,,1000,70,,1,0,0x028F5EEE,7,2,2,4,36,1,1,{ bonus bBreakArmorRate,500; },{},{}
 3505,banryu,Banryu,5,2900,,700,53,,1,4,0x000654E3,7,2,2,1,2,1,2,{},{},{}
 
 3100,Credit,Credit,3,5000,,40,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -10401,18 +10401,18 @@
 30092,_yyvm,Fusion Valkyrian Manteau,4,0,,500,,4,,1,0xFFFFFFFF,2,2,4,,1,1,0,{  },{},{}
 
 // Spirit Talisman
-40252,Lotto01,Spirit of Alchemist,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ALCHEMIST",1;  },{},{}
-40253,행운의부적,Spirit of Star Gladiator,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_STAR",1;   },{},{}
-40254,행운의부적,Spirit of Assassin,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ASSASSIN",1;  },{},{}
-40255,행운의부적,Spirit of Crusader,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_CRUSADER",1; },{},{}
-40256,행운의부적,Spirit of Bard and Dancer,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_BARDDANCER",1;  },{},{}
-40257,행운의부적,Spirit of Super Novice,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_SUPERNOVICE",1;  },{},{}
-40258,행운의부적,Spirit of Blacksmith,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_BLACKSMITH",1; },{},{}
-40259,행운의부적,Spirit of Soul Linker,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_SOULLINKER",1;  },{},{}
-40260,행운의부적,Spirit of Rogue,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ROGUE",1;  },{},{}
-40261,행운의부적,Spirit of Knight,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_KNIGHT",1; },{},{}
-40262,행운의부적,Spirit of Hunter,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_HUNTER",1; },{},{}
-40263,행운의부적,Spirit of Monk,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_MONK",1;  },{},{}
-40264,행운의부적,Spirit of Sage,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_SAGE",1;  },{},{}
-40265,행운의부적,Spirit of Priest,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_PRIEST",1;  },{},{}
-40266,행운의부적,Spirit of Wizard,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_WIZARD",1;  },{},{}
+40252,Spirit_ALC,Spirit of Alchemist,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ALCHEMIST",1;  },{},{}
+40253,Spirit_SGR,Spirit of Star Gladiator,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_STAR",1;   },{},{}
+40254,Spirit_ASS,Spirit of Assassin,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ASSASSIN",1;  },{},{}
+40255,Spirit_CRU,Spirit of Crusader,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_CRUSADER",1; },{},{}
+40256,Spirit_BAD,Spirit of Bard and Dancer,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_BARDDANCER",1;  },{},{}
+40257,Spirit_SRN,Spirit of Super Novice,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_SUPERNOVICE",1;  },{},{}
+40258,Spirit_BLA,Spirit of Blacksmith,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_BLACKSMITH",1; },{},{}
+40259,Spirit_SLI,Spirit of Soul Linker,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_SOULLINKER",1;  },{},{}
+40260,Spirit_ROG,Spirit of Rogue,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ROGUE",1;  },{},{}
+40261,Spirit_KNI,Spirit of Knight,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_KNIGHT",1; },{},{}
+40262,Spirit_HUN,Spirit of Hunter,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_HUNTER",1; },{},{}
+40263,Spirit_MON,Spirit of Monk,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_MONK",1;  },{},{}
+40264,Spirit_SAG,Spirit of Sage,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_SAGE",1;  },{},{}
+40265,Spirit_PRI,Spirit of Priest,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_PRIEST",1;  },{},{}
+40266,Spirit_WIZ,Spirit of Wizard,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_WIZARD",1;  },{},{}
