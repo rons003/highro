@@ -10322,7 +10322,7 @@
 3003,demonwings,Demon Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3003,{ bonus bStr,10; bonus2 bSubEle,Ele_Dark,10; },{},{}
 3004,dragonwings,Dragon Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3004,{  },{},{}
 3005,gargwings,Gargoyle Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3005,{ bonus bDex,10; bonus2 bAddEffWhenHit,Eff_Stone,20; },{},{}
-3006,icawings,Icarus Wings,4,20,,100,,4,,0,0xFFFFFFFF,7,2,1,,0,0,3006,{ bonus bAgi,15; bonus3 bSubEle,Ele_Fire,15; bonus3 bSubEle,Ele_Dark,15; bonus3 bSubEle,Ele_Holy,15; bonus3 bSubEle,Ele_Poison,15; bonus3 bSubEele,Ele_Ghost,15; bonus3 bSubEle,Ele_Earth,15; bonus3 bSubEle,Ele_Water,15; bonus3 bSubEle,Ele_Wind,15; },{},{}
+3006,icawings,Icarus Wings,4,20,,100,,4,,0,0xFFFFFFFF,7,2,1,,0,0,3006,{ bonus bAgi,15; bonus2 bSubEle,Ele_Fire,15; bonus2 bSubEle,Ele_Dark,15; bonus2 bSubEle,Ele_Holy,15; bonus2 bSubEle,Ele_Poison,15; bonus2 bSubEle,Ele_Ghost,15; bonus2 bSubEle,Ele_Earth,15; bonus2 bSubEle,Ele_Water,15; bonus2 bSubEle,Ele_Wind,15; },{},{}
 3007,phxwings,Phoenix Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3007,{ bonus bVit,10; bonus2 bAddEffWhenHit,Eff_Blind,20; bonus2 bSubRace,RC_DemiHuman,30; bonus2 bSubRace,RC_Player,30;  },{},{}
 3008,tornwings,Torn Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3008,{ bonus bLuk,10; bonus bFlee2,5; bonus2 bSubEle,Ele_Wind,10; bonus2 bAddEffWhenHit,Eff_Silence,20;   },{},{}
 3009,wbwings,White Butterfly Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3009,{  },{},{}
