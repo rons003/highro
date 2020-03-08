@@ -10401,7 +10401,7 @@
 30092,_yyvm,Fusion Valkyrian Manteau,4,0,,500,,4,,1,0xFFFFFFFF,2,2,4,,1,1,0,{  },{},{}
 
 // Spirit Talisman
-40252,행운의부적,Spirit of Alchemist,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ALCHEMIST",1;  },{},{}
+40252,Lotto01,Spirit of Alchemist,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ALCHEMIST",1;  },{},{}
 40253,행운의부적,Spirit of Star Gladiator,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_STAR",1;   },{},{}
 40254,행운의부적,Spirit of Assassin,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_ASSASSIN",1;  },{},{}
 40255,행운의부적,Spirit of Crusader,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_CRUSADER",1; },{},{}
