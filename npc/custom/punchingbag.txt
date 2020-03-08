@@ -12,13 +12,13 @@
 //===== Additional Comments: =======================================
 //= When duplicating this NPC. Only use NUMBER after the # [secret]
 //==================================================================
-prontera,224,79,0	script	PunchingBag#0	844,{
+prontera,170,200,0	script	PunchingBag#0	844,{
 	end;
 	
 OnMyMobDead:
 OnInit:
 	getunitdata(getnpcid(0), .@d);
-	monster strnpcinfo(4),.@d[UNPC_X],.@d[UNPC_Y],"Punching Bag",2411,1,strnpcinfo(0)+"::OnMyMobDead";
+	monster strnpcinfo(4),.@d[UNPC_X],.@d[UNPC_Y],"Punching Bag",1906,1,strnpcinfo(0)+"::OnMyMobDead";
 	.@dupid = atoi(strnpcinfo(2));
 	.gid[.@dupid] = $@mobid[0];
 	.mhp[.@dupid] = strmobinfo(4,2411);
@@ -40,7 +40,7 @@ OnTimer5000:
 	initnpctimer;
 }
 
-prontera,216,79,0	duplicate(PunchingBag#0)	PunchingBag#1	844
-prontera,224,70,0	duplicate(PunchingBag#0)	PunchingBag#2	844
-prontera,216,58,0	duplicate(PunchingBag#0)	PunchingBag#3	844
-prontera,224,58,0	duplicate(PunchingBag#0)	PunchingBag#4	844
+prontera,170,200,0	duplicate(PunchingBag#0)	PunchingBag#1	844
+prontera,176,200,0	duplicate(PunchingBag#0)	PunchingBag#2	844
+prontera,170,208,0	duplicate(PunchingBag#0)	PunchingBag#3	844
+prontera,176,208,0	duplicate(PunchingBag#0)	PunchingBag#4	844
