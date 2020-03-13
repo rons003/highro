@@ -10,21 +10,21 @@ end;
 
 
 OnMall:	
-warp "force_1-1",100,100;
+atcommand "@warp force_1-1 100 100";
 end;
 
 
 OnBts:	
-warp "prt_in",43,105;
+atcommand "@warp prt_in 43 105";
 end;
 
 
 OnDonate:	
-warp "prontera",136,167;
+atcommand "@warp prontera 136 167";
 end;
 
 
 OnQuestShop:	
-warp "prontera",142,174;
+atcommand "@warp prontera 142 174";
 end;
 }
