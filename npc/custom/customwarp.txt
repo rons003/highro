@@ -1,0 +1,31 @@
+-	script	warp#11	-1,{
+	
+	
+OnInit:
+bindatcmd "maintown ", strnpcinfo(3) +"::OnMaintown";
+bindatcmd "mall", strnpcinfo(3) +"::OnMall";
+bindatcmd "event", strnpcinfo(3) +"::OnEvent";
+bindatcmd "donate", strnpcinfo(3) +"::OnDonate";
+end;
+		
+	
+	
+OnMaintown:	
+warp "prontera",155,178;
+end;
+
+
+OnMall:	
+warp "turbo_room",100,100;
+end;
+
+
+OnEvent:	
+warp "quiz_02",100,100;
+end;
+
+
+OnDonate:	
+warp "turbo_room",200,200;
+end;
+}	

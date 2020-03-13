@@ -624,6 +624,11 @@ ACMD_FUNC(mapmove)
 		return -1;
 	}
 
+	if( !pc_get_group_level(sd) && DIFF_TICK(gettick(),sd->canlog_tick) < 5000 ) {
+		clif_displaymessage(fd,"@warp cannot be issued since you were into battle recently");
+		return -1;
+	}
+
 	clif_displaymessage(fd, msg_txt(sd,0)); // Warped.
 	return 0;
 }
@@ -2135,6 +2140,11 @@ ACMD_FUNC(go)
 		clif_displaymessage(fd, msg_txt(sd,38)); // Invalid location number or name.
 		return -1;
 	}
+
+	if( !pc_get_group_level(sd) && DIFF_TICK(gettick(),sd->canlog_tick) < 5000 ) {
+		clif_displaymessage(fd,"@go cannot be issued since you were into battle recently");
+		return -1;
+	}	
 
 	return 0;
 }
