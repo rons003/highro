@@ -165,3 +165,11 @@
 //5470:5653,{ bonus bDex,1; bonus bLongAtkRate,3; }
 13034:13035,{ bonus bMaxSP,20; bonus bMaxHPRate,5; bonus bHit,10; bonus2 bAddSize,Size_Large,30; autobonus "{ bonus bAspdRate,100; }",1,7000,BF_WEAPON,"{ specialeffect2 EF_POTION_BERSERK; }"; }
 18507:18539,{ bonus bUseSPrate,-3; }
+3019:3664,{ bonus bMaxHPrate,5;}
+3500:3006,{ skill "MO_FINGEROFFENSIVE",5; bonus3 bAutoSpell,"SM_BASH",1,100; }
+3501:3006,{ skill "AL_INCAGI",10; bonus3 bAutoSpell, "TF_DOUBLE",1,100; }
+3502:3006,{ bonus3 bAutoSpellWhenHit,"MG_FIREBOLT",3,20; bonus3 bAutoSpellWhenHit,"MG_COLDBOLT",3,20;bonus bSpeedRate,10; }
+3503:3007,{bonus bUnbreakableWeapon; bonus bAspdRate,10; bonus bCritAtkRate,10;bonus3 bAutoSpell,"MO_EXPLOSIONSPIRITS",3,10;}
+3504:3008,{bonus bCritAtkRate,20; bonus bCritical,10; bonus bFlee2,-5;}
+30089:30091:30092,{ bonus2 bResEff,Eff_Freeze,10000;bonus bMaxHPrate,5; bonus bMaxSPrate,5;bonus2 bSubRace,RC_DemiHuman,-10; bonus2 bSubRace,RC_Player,-10;}
+
