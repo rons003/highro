@@ -585,10 +585,6 @@ ACMD_FUNC(mapmove)
 
 	memset(map_name, '\0', sizeof(map_name));
 
-	if( !pc_get_group_level(sd) && DIFF_TICK(gettick(),sd->canlog_tick) < 5000 ) {
-		clif_displaymessage(fd,"@warp cannot be issued since you were into battle recently");
-		return -1;
-	}
 
 	if (!message || !*message ||
 		(sscanf(message, "%15s %6hd %6hd", map_name, &x, &y) < 3 &&
@@ -622,6 +618,10 @@ ACMD_FUNC(mapmove)
 	}
 	if (sd->bl.m >= 0 && map_getmapflag(sd->bl.m, MF_NOWARP) && !pc_has_permission(sd, PC_PERM_WARP_ANYWHERE)) {
 		clif_displaymessage(fd, msg_txt(sd,248)); // You are not authorized to warp from your current map.
+		return -1;
+	}
+	if( !pc_get_group_level(sd) && DIFF_TICK(gettick(),sd->canlog_tick) < 5000 ) {
+		clif_displaymessage(fd,"@warp cannot be issued since you were into battle recently");
 		return -1;
 	}
 	if (pc_setpos(sd, mapindex, x, y, CLR_TELEPORT) != SETPOS_OK) {
@@ -2011,11 +2011,6 @@ ACMD_FUNC(go)
 	// get the number
 	town = atoi(message);
 
-	if( !pc_get_group_level(sd) && DIFF_TICK(gettick(),sd->canlog_tick) < 5000 ) {
-		clif_displaymessage(fd,"@go cannot be issued since you were into battle recently");
-		return -1;
-	}
-
 	if (!message || !*message || sscanf(message, "%11s", map_name) < 1 || town < 0 || town >= ARRAYLENGTH(data))
 	{// no value matched so send the list of locations
 		const char* text;
@@ -2133,6 +2128,10 @@ ACMD_FUNC(go)
 		}
 		if (sd->bl.m >= 0 && map_getmapflag(sd->bl.m, MF_NOWARP) && !pc_has_permission(sd, PC_PERM_WARP_ANYWHERE)) {
 			clif_displaymessage(fd, msg_txt(sd,248)); // You are not authorized to warp from your current map.
+			return -1;
+		}
+		if( !pc_get_group_level(sd) && DIFF_TICK(gettick(),sd->canlog_tick) < 5000 ) {
+			clif_displaymessage(fd,"@go cannot be issued since you were into battle recently");
 			return -1;
 		}
 		if (pc_setpos(sd, mapindex_name2id(data[town].map), data[town].x, data[town].y, CLR_TELEPORT) == SETPOS_OK) {

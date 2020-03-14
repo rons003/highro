@@ -30,6 +30,7 @@ if( .@Input != .@Answer ){
     atcommand "@kick "+strcharinfo(0);
 }
 	warp "ordeal_3-2.gat",0,0;
+	getitem 602,10;
 	close;
 set Zeny,zeny+100000000;
 close;

@@ -1,0 +1,14 @@
+prontera,158,185,4	script	PVP Warper	100,{
+	for (.@i = 0; .@i < .map_size; .@i++) 
+		.@menu$ = .@menu$ + .map$[.@i] + "("+getmapusers(.map$[.@i])+" user(s))" + ":";
+	.@i = select(.@menu$) - 1;
+	mapannounce .map$[.@i], strcharinfo(0)+ " has entered this PVP room.", bc_map;
+	warp .map$[.@i], 0, 0;
+	end;
+	
+	OnInit:
+		setarray .map$, 
+			"pvp_y_8-2";
+		.map_size = getarraysize(.map$);
+		end;
+}
