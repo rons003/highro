@@ -7936,6 +7936,8 @@ void pc_damage(struct map_session_data *sd,struct block_list *src,unsigned int h
 
 	if(battle_config.prevent_logout_trigger&PLT_DAMAGE)
 		sd->canlog_tick = gettick();
+	if( src->type == BL_PC )
+	   ((TBL_PC*)src)->canlog_tick = gettick();
 }
 
 TIMER_FUNC(pc_close_npc_timer){
