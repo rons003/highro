@@ -1395,6 +1395,7 @@ bool pc_authok(struct map_session_data *sd, uint32 login_id2, time_t expiration_
 #endif
 
 	sd->canuseitem_tick = tick;
+	sd->warpgodelay_tick = tick;
 	sd->canusecashfood_tick = tick;
 	sd->canequip_tick = tick;
 	sd->cantalk_tick = tick;
@@ -7912,7 +7913,7 @@ static TIMER_FUNC(pc_respawn_timer){
  * Invoked when a player has received damage
  *------------------------------------------*/
 void pc_damage(struct map_session_data *sd,struct block_list *src,unsigned int hp, unsigned int sp)
-{
+{	
 	if (sp) clif_updatestatus(sd,SP_SP);
 	if (hp) clif_updatestatus(sd,SP_HP);
 	else return;
@@ -7933,11 +7934,14 @@ void pc_damage(struct map_session_data *sd,struct block_list *src,unsigned int h
 
 	if( sd->status.ele_id > 0 )
 		elemental_set_target(sd,src);
+	if( src->type == BL_PC )
+	   
 
 	if(battle_config.prevent_logout_trigger&PLT_DAMAGE)
 		sd->canlog_tick = gettick();
-	if( src->type == BL_PC )
-	   ((TBL_PC*)src)->canlog_tick = gettick();
+
+	sd->warpgodelay_tick = gettick();
+	
 }
 
 TIMER_FUNC(pc_close_npc_timer){

@@ -7470,7 +7470,7 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 	case NJ_NEN:
 	case NPC_DEFENDER:
 	case NPC_MAGICMIRROR:
-	case ST_PRESERVE:
+	// case ST_PRESERVE:
 	case NPC_KEEPING:
 	case NPC_BARRIER:
 	case NPC_INVINCIBLE:
@@ -8049,6 +8049,7 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 	case CR_SHRINK:
 	case SG_FUSION:
 	case GS_GATLINGFEVER:
+	case ST_PRESERVE:
 		if (tsce)
 		{
 			clif_skill_nodamage(src, bl, skill_id, skill_lv, status_change_end(bl, type, INVALID_TIMER));

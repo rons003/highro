@@ -1792,6 +1792,10 @@
 5822,499,100	// Love Chick Hat
 
 // Eutopia RO
+// Costume Attendance
+19810,475,100
+//
+14524,475,100
 // APS SHOP
 7227,475,100
 2629,475,100

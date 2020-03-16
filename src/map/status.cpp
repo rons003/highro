@@ -6944,8 +6944,8 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 		speed = speed * speed_rate / 100;
 	if( sc->data[SC_STEELBODY] )
 		speed = 200;
-	if( sc->data[SC_DEFENDER] )
-		speed = max(speed, 200);
+	// if( sc->data[SC_DEFENDER] )
+	// 	speed = max(speed, 200);
 	if( sc->data[SC_WALKSPEED] && sc->data[SC_WALKSPEED]->val1 > 0 ) // ChangeSpeed
 		speed = speed * 100 / sc->data[SC_WALKSPEED]->val1;
 

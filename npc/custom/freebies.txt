@@ -12,7 +12,6 @@ getitem 4142,2;
 getitem 7227,100;
 getitem 504,25;
 getitem 505,25;
-getitem 3100,100;
 getitem 602,50;
 
 

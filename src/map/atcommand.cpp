@@ -605,7 +605,10 @@ ACMD_FUNC(mapmove)
 
 		return -1;
 	}
-
+	if( !pc_get_group_level(sd) && DIFF_TICK(gettick(),sd->warpgodelay_tick) < 5000 ) {
+		clif_displaymessage(fd,"@warp cannot be issued since you were into battle recently");
+		return -1;
+	}
 	if ((x || y) && map_getcell(m, x, y, CELL_CHKNOPASS))
 	{	//This is to prevent the pc_setpos call from printing an error.
 		clif_displaymessage(fd, msg_txt(sd,2)); // Invalid coordinates, using random target cell.
@@ -620,14 +623,11 @@ ACMD_FUNC(mapmove)
 		clif_displaymessage(fd, msg_txt(sd,248)); // You are not authorized to warp from your current map.
 		return -1;
 	}
-	if( !pc_get_group_level(sd) && DIFF_TICK(gettick(),sd->canlog_tick) < 5000 ) {
-		clif_displaymessage(fd,"@warp cannot be issued since you were into battle recently");
-		return -1;
-	}
 	if (pc_setpos(sd, mapindex, x, y, CLR_TELEPORT) != SETPOS_OK) {
 		clif_displaymessage(fd, msg_txt(sd,1)); // Map not found.
 		return -1;
 	}
+	
 
 	clif_displaymessage(fd, msg_txt(sd,0)); // Warped.
 	return 0;
@@ -2130,10 +2130,12 @@ ACMD_FUNC(go)
 			clif_displaymessage(fd, msg_txt(sd,248)); // You are not authorized to warp from your current map.
 			return -1;
 		}
-		if( !pc_get_group_level(sd) && DIFF_TICK(gettick(),sd->canlog_tick) < 5000 ) {
+
+		if( !pc_get_group_level(sd) && DIFF_TICK(gettick(),sd->warpgodelay_tick) < 5000 ) {
 			clif_displaymessage(fd,"@go cannot be issued since you were into battle recently");
 			return -1;
 		}
+		
 		if (pc_setpos(sd, mapindex_name2id(data[town].map), data[town].x, data[town].y, CLR_TELEPORT) == SETPOS_OK) {
 			clif_displaymessage(fd, msg_txt(sd,0)); // Warped.
 		} else {

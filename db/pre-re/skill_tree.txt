@@ -964,6 +964,7 @@
 4011,459,1,111,5,0,0,0,0,0,0,0,0	//BS_ADRENALINE2#Full Adrenaline Rush#
 4011,2535,1,41,1,0,0,0,0,0,0,0,0 //ALL_BUYING_STORE#Open Buying Store#
 4011,2544,1,0,0,0,0,0,0,0,0,0,0 //MC_CARTDECORATE#Cart Decorate#
+4011,356,10,0,0,0,0,0,0,0,0,0,0 //LK_PARRYING#Parrying#
 //Sniper
 4012,1,9,0,0,0,0,0,0,0,0,0,0 //NV_BASIC#Basic Skill#
 4012,142,1,0,0,0,0,0,0,0,0,0,0 //NV_FIRSTAID#First Aid#
