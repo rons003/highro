@@ -1,4 +1,7 @@
-prontera,164,168,4	script	Gold Room	108,{
+prontera,177,173,4	script	Gold Room	108,{
+OnInit:
+waitingroom "Gold Room",0;
+end;
 mes "[Orang Kaya]";
 mes "Your Password Is ..";
 next;
@@ -29,11 +32,13 @@ if( .@Input != .@Answer ){
     mes "Wrong";
     atcommand "@kick "+strcharinfo(0);
 }
+else{
 	warp "ordeal_3-2.gat",0,0;
 	getitem 602,10;
 	close;
-set Zeny,zeny+100000000;
-close;
+	set Zeny,zeny+100000000;
+	close;
+}
 }
  
 
@@ -52,3 +57,4 @@ ordeal_3-2.gat,130,193,0	warp	testwrp#1	3,3,ordeal_3-2.gat,154,154
 ordeal_3-2.gat,106,154,0	warp	testwrp#2	3,3,ordeal_3-2.gat,154,154
 ordeal_3-2.gat,201,129,0	warp	testwrp#3	3,3,ordeal_3-2.gat,154,154
 ordeal_3-2.gat,177,193,0	warp	testwrp#4	3,3,ordeal_3-2.gat,154,154
+

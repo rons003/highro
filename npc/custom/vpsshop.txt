@@ -10,7 +10,10 @@
 -	shop	Emistry_Shop	-1,512:100
 
 
-prontera,164,159,4	script	APS Shop	757,{
+prontera,174,154,4	script	Sakura	757,{
+OnInit:
+waitingroom "TCG Shop",0;
+end;
 function ShopSettings;
 function ValidateCost;
 function CurrencyInfo;
@@ -62,7 +65,7 @@ function	ShopSettings	{
 			// Currency [ Item ID / Variable Name ]
 			set @Currency$,"7227";
 			// Item ID Lists
-			setarray @ItemLists[0],5390,5495,5506,5507,5313,5316,5317,5318,5319,5320,5324,5327,5333,5334,5335,5336,5337,5338,5339,5340,5346,5356,5357,5359,5360,5366,5372,5373,5379,5380,5381,5382,5383;
+			setarray @ItemLists[0],5390,5495,5506,5507,5313,5316,5317,5318,5319,5320,5324,5224,5333,5334,5335,5336,5337,5338,5339,5340,5346,5356,5357,5359,5360,5366,5372,5373,5379,5380,5381,5382,5383;
 			// Item Price
 			setarray @ItemCost[0],75,75,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40;
 			break;

@@ -300,3 +300,4 @@ arug_dun01	mapflag	nosave	SavePoint
 
 evt_bomb	mapflag	nosave	SavePoint
 //evt_zombie	mapflag	nosave	SavePoint
+ordeal_3-2	mapflag	nosave	SavePoint

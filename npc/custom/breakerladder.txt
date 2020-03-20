@@ -1,7 +1,9 @@
 	
 
 prontera,146,151,5	script	Breaker Ladder	790,{
-     
+     OnInit:
+waitingroom "Breaker Ladder",0;
+end;
      
      
     query_sql "SELECT `char`.char_id,`char`.`name`,global_reg_value.`value` FROM global_reg_value LEFT JOIN `char` ON global_reg_value.char_id=`char`.char_id WHERE global_reg_value.str='brokeemp' ORDER BY CAST(`global_reg_value`.`value` AS UNSIGNED) DESC LIMIT 10", .@char_id, .@name$, .@count;

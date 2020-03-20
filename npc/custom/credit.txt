@@ -69,6 +69,13 @@ setarray .coin_id,3100;
 setarray .value,10000000;
 
 .coin_size = getarraysize( .coin_name$ );
+
+
+
+
+waitingroom "Credit Exchanger",0;
+
+
 end;
 
 

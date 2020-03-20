@@ -1,0 +1,155 @@
+-	script	announce_RFYL	-1,{
+
+//Event Start Time
+
+OnClock0000:
+OnClock0800:
+OnClock1600:	
+
+announce "The Run For Your Life Event will begin in 3 Minutes.",0;
+killmonsterall "quiz_01";
+enablenpc "RFYL Warper";
+sleep 5000;
+announce "The Run For Your Life NPC has appeared in prontera 131 164.",0;
+sleep 55000;
+announce "Run For Your life will begin in 2 minutes.You better get ready!",0;
+sleep 60000;
+announce "Run For Your Life will begin in 1 minute!",0;
+sleep 30000;
+mapannounce "quiz_01","In 30 seconds the monster will appear!",0;
+sleep 25000;
+announce "Run For Your life Event will begin in 5",0;
+sleep 1000;
+announce "4",0;
+sleep 1000;
+announce "3",0;
+sleep 1000;
+announce "2",0;
+sleep 1000;
+announce "1",0;
+sleep 1000;
+announce "Run For Your Life Event Has begun!!",0;
+monster "quiz_01",42,369,"1015",1015,1;
+disablenpc "RFYL Warper";
+sleep 10000;
+monster "quiz_01",42,369,"Zombie",1015,1;
+sleep 10000;
+monster "quiz_01",42,369,"Zombie",1015,10;
+sleep 10000;
+monster "quiz_01",42,369,"Zombie",1015,15;
+sleep 10000;
+monster "quiz_01",42,369,"Zombie",1015,25;
+initnpctimer;
+end;
+
+OnTimer0500:
+if ( getmapusers("quiz_01") == 0 )
+{
+killmonsterall "quiz_01";
+announce "Run For Your Life Event is over.",0;
+disablenpc "Prize";
+stopnpctimer;
+end;
+}
+else if ( getmapusers("quiz_01") == 1 ) {
+killmonsterall "quiz_01";
+mapannounce "quiz_01","You have won, please approach to Prize NPC.",0;
+enablenpc "Prize";
+set $@RFYLCounter,0;
+stopnpctimer;
+end;
+}
+
+else if ( getmapusers("quiz_01") > 1 )
+{
+if ($@RFYLCounter >= 3){
+    switch(rand(0,2)){
+        case 0: mapannounce "quiz_01",getmapusers("quiz_01") +" players are still alive.",0,0x00FF00; break;
+        case 1: mapannounce "quiz_01",getmapusers("quiz_01") +" players are STILL alive? Are you sure you're not cheating?",0,0x00FF00; break;
+        case 2: mapannounce "quiz_01",getmapusers("quiz_01") +" players are STILL ALIVE? Seriously, I'm gonna have to report you.",0,0x00FF00; break;
+        }
+} else {
+    mapannounce "quiz_01",getmapusers("quiz_01") +" players are still alive.",0,0x00FF00;
+}
+sleep 10000;
+set $@RFYLCounter,$@RFYLCounter+1;
+initnpctimer;
+end;
+}
+initnpctimer;
+end;
+
+OnPCDieEvent:
+getmapxy .@maprfyl$,.@xrfyl,.@yrfyl,0;
+if ( .@maprfyl$ == "quiz_01") {
+sleep2 1;
+warp "prontera",156,223;
+atcommand "@alive "+ strcharinfo(0);
+dispbottom "You have lost...";
+}
+sleep2 1000;
+if ( getmapusers("quiz_01") == 1 ) {
+killmonsterall "quiz_01";
+mapannounce "quiz_01","You have won, please approach to Prize NPC.",0;
+enablenpc "Prize";
+set $@RFYLCounter,0;
+stopnpctimer;
+end;
+}
+end;
+}
+
+quiz_01,42,369,3	script	Prize	72,{
+announce "Hey "+strcharinfo(0)+" has won in Run For Your Life Event Congrats!",0;
+getitem 3100,20;
+warp "prontera",156,223;
+sleep2 250;
+disablenpc "Prize";
+end;
+}
+
+prontera,131,164,3	script	RFYL Warper	84,{
+if (BaseLevel > 1){
+mes "[^0000FFRFYL Warper^000000]";
+mes "You must be a level 1 Novice.";
+close;
+}
+if (class > 0){
+mes "[^0000FFRFYL Warper^000000]";
+mes "You are not a Novice and must be level 1.";
+close;
+}
+mes "[^0000FFRFYL Warper^000000]";
+mes "Hi "+strcharinfo(0)+"";
+mes "^696969Do you wish to participate in the Run For Your Life Event?^000000";
+next;
+switch(select("Yes","No")) {
+case 1:
+atcommand "@storeall";
+sc_end SC_ALL;
+sc_start SC_DECREASEAGI,300000,10;
+percentheal 100,100;
+warp "quiz_01",42,369;
+end;
+break;
+case 2:
+mes "[^0000FFRFYL Warper^000000]";
+mes "Brains brainnnss.. brains? Mind.";
+mes "^696969It's really fun! Come join us when you change your mind.^000000";
+close;
+}
+OnInit:
+disablenpc "RFYL Warper";
+disablenpc "Prize";
+end;
+}
+
+quiz_01	mapflag	nowarp
+quiz_01	mapflag	nowarpto
+quiz_01	mapflag	noteleport
+quiz_01	mapflag	nosave
+quiz_01	mapflag	nomemo
+quiz_01	mapflag	nobranch
+quiz_01	mapflag	pvp_noparty
+quiz_01	mapflag	nocommand	4
+quiz_01	mapflag	restricted	5

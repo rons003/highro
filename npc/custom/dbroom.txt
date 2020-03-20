@@ -1,4 +1,7 @@
-prontera,164,163,4	script	Dead Branch Room	578,{
+prontera,173,177,4	script	Dead Branch Room	578,{
+OnInit:
+waitingroom "DB Room",0;
+end;
 setarray $@maps$[1], "new_1-3", "new_2-3", "new_3-3", "new_4-3", "new_5-3";
 for(set .@b,1; .@b < getarraysize($@maps$); set .@b,.@b + 1) {
 	if(.@b==1){ set .@menu$, .@menu$  + "Public- "+((getmapusers($@maps$[.@b])>=30)?"^CD0000Closed^000000("+getmapusers($@maps$[.@b])+")":"^007700Open^000000("+getmapusers($@maps$[.@b])+")")+":"; } else { set .@menu$, .@menu$  + "Private["+(.@b-1)+"]- "+((getmapusers(""+$@maps$[.@b]+"")>=5)?"^CD0000Closed^000000("+getmapusers($@maps$[.@b])+")":"^007700Open^000000("+getmapusers($@maps$[.@b])+")")+":"; }

@@ -93,7 +93,7 @@ OnGMStart:
 	killmonster "poring_w01.gat","All";
 	announce "(Poring Manager) : A Gamemaster started a Poring Catcher Event now.",0;
 	sleep 3000;
-	announce "(Poring Manager) : If you want to join, come at the middle of Prontera, enter the warp portal.",0;
+	announce "(Poring Manager) : If you want to join, warp at the middle of Prontera, enter the warp portal.",0;
 	enablenpc "PoringCatcher";
 	sleep 2000;
 	announce "(Poring Manager) : Prize: will be TCG and Gold Coins",0;
@@ -121,16 +121,14 @@ OnGMStop:
 	disablenpc "PoringCatcher";
 	end;
 
+OnClock0400:
+OnClock1200:
+OnClock2000:
 
-
-OnClock1245:
-OnClock1145:
-OnClock1345:
-OnClock2345:
 	killmonster "poring_w01.gat","All";
 	announce "(Poring Manager) : Poring Catcher Event will start at the moment.",0;
 	sleep 3000;
-	announce "(Poring Manager) : If you want to join, come at the Lower part of Main Town, enter the warp portal.",0;
+	announce "(Poring Manager) : If you want to join, warp at prontera 109, 241, enter the warp portal.",0;
 	enablenpc "PoringCatcher";
 	sleep 2000;
 	announce "(Poring Manager) : Prize: will be Credits",0;
@@ -154,7 +152,7 @@ OnInit:
 	disablenpc "PoringCatcher";
 }
 //---------All Job Registration----------------------------------------
-prontera,146,172,0	warp	PoringCatcher	2,2,poring_w01,105,128
+prontera,109,241,0	warp	PoringCatcher	2,2,poring_w01,105,128
 
 //---------------------------------------------------------------------
 
@@ -228,7 +226,7 @@ end;
 OnMobKilled:
    killmonster "poring_w01.gat","All";
    atcommand "@doommap";
-   getitem 3100,10;
+   getitem 3100,20;
    announce "Poring Banker: We have a winner! well done " + strcharinfo(0) + ".",0;
    warp "SavePoint",0,0;
    end;

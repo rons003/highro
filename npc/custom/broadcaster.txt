@@ -31,7 +31,7 @@ prontera,164,173,4	script	Broadcaster#1::BC	894,{
 		mes "Please input your message.";
 		next;
 		input broadcast$;
-		announce "Message from "+strcharinfo(0)+": "+broadcast$+"",0,0xFFA500; // Edit FFA500 to green color code
+		announce "[ Shout ] "+strcharinfo(0)+": "+broadcast$+"",0,0xFFA500; // Edit FFA500 to green color code
 		close2;
 		set Broadcast, gettimetick(2)+180;
 		dispbottom "Broadcaster: Please wait for 3min until next broadcast to avoid flooding.";

@@ -2282,7 +2282,7 @@
 5099,Cat_Hat,Neko Mimi,4,20,,300,,1,,0,0xFFFFFFFF,7,2,256,,0,1,182,{ bonus bLuk,2; bonus bMdef,10; bonus2 bSubRace,RC_Brute,5; },{},{}
 5100,Sales_Signboard,Sales Banner,4,20,,800,,0,,0,0xFFFFFFFF,7,2,256,,75,1,183,{ bonus bStr,1; bonus bAgi,1; bonus bLuk,1; },{},{}
 5101,Takius_Blindfold,Takius's Blindfold,4,20,,100,,0,,0,0xFFFFFFFF,7,2,512,,0,0,184,{},{},{}
-5102,Round_Eyes,Blank Eyes,4,20,,100,,0,,0,0xFFFFFFFF,7,2,512,,0,0,185,{},{},{}
+5102,Round_Eyes,Blank Eyes,4,20,,100,,0,,1,0xFFFFFFFF,7,2,512,,0,0,185,{bonus bCritAtkRate,3;},{},{}
 5103,Sunflower_Hairpin,Sunflower Hairpin,4,20,,600,,1,,0,0xFFFFFFFE,7,2,256,,30,0,186,{ bonus bAgi,2; bonus bCritical,5; },{},{}
 5104,Dark_Blindfold,Dark Blinder,4,20,,100,,0,,0,0xFFFFFFFE,7,2,512,,0,0,187,{ bonus2 bResEff,Eff_Blind,10000; bonus2 bResEff,Eff_Stun,200; },{},{}
 5105,Hat_Of_Cake_,2nd Anniversary Hat,4,20,,1000,,1,,0,0xFFFFFFFF,7,2,256,,24,1,109,{ bonus bDex,1; bonus bMaxSP,80; bonus3 bAddMonsterDropItem,7864,7,50; },{},{}
@@ -3616,7 +3616,7 @@
 7176,XMAS_Coupon,Royal Certificate,3,0,,10,,,,,,,,,,,,,{},{},{}
 7177,Part_Of_Star's_Sob,Crumb of Sobbing Starlight,3,0,,0,,,,,,,,,,,,,{},{},{}
 7178,Star's_Sob,Sobbing Starlight,3,0,,0,,,,,,,,,,,,,{},{},{}
-7179,Donation_Card,Proof of Donation,3,0,,10,,,,,,,,,,,,,{},{},{}
+7179,Donation_Card,Proof of Donation,3,0,,0,,,,,,,,,,,,,{},{},{}
 7180,Introduction_Of_Mr.Han,Hahn Sukbong's Recommendation,3,0,,10,,,,,,,,,,,,,{},{},{}
 7181,Receipt_01,Receipt,3,0,,10,,,,,,,,,,,,,{},{},{}
 7182,Cacao,Cacao,3,200,,20,,,,,,,,,,,,,{},{},{}
@@ -5096,7 +5096,7 @@
 12530,Mastela_Fruit_Box,Mastela Fruit Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12531,White_Potion_Box,White Potion Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12532,Royal_Jelly_Box2,Royal Jelly Box2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12533,Blue_Herb_Box2,Blue Herb Box2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12533,Blue_Herb_Box2,Blue Herb Box2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{getitem 608,100;},{},{}
 12534,Yggdrasil_Seed_Box,Yggdrasil Seed Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12535,Iggdrasilberry_Box,Iggdrasilberry Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12536,NY_Rice_Cake_Soup,NY Rice Cake Soup,2,20,,100,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -7683,7 +7683,7 @@
 20173,C_Lude_Hood,Costume Lude Hood,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1282,{},{},{}
 20174,C_Halloween_Hat_Orange,Costume Orange Halloween Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1283,{},{},{}
 20175,C_Diabolic_Headphone,Costume Diabolic Headphone,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1284,{},{},{}
-20176,Happy_Pierrot_Mask,Costume Happy Pierrot Mask,4,0,,0,,,,0,0xFFFFFFFF,63,2,6144,,1,0,1288,{},{},{}
+20176,Happy_Pierrot_Mask,Costume Happy Pierrot Mask,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,1288,{},{},{}
 20177,C_Drooping_Dorasuke,Costume Drooping Dorasuke,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1290,{},{},{}
 20178,C_Puppy_Love,Costume Puppy Love,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,94,{},{},{}
 20179,C_Monkey_Coat_Hat,Costume Monkey Coat Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,858,{},{},{}
@@ -10322,7 +10322,7 @@
 3003,demonwings,Demon Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3003,{ bonus bStr,10; bonus2 bSubEle,Ele_Dark,10; },{},{}
 3004,dragonwings,Dragon Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3004,{ bonus bStr,5; bonus bAgi,5; bonus bVit,5; bonus bDex,5; bonus bInt,5; bonus bLuk,5; bonus2 bAddRace,RC_DemiHuman,10; bonus2 bAddRace,RC_Player,10; bonus2 bAddEff,Eff_Curse,500; bonus bAtkEle,Ele_Wind; },{},{}
 3005,gargwings,Gargoyle Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3005,{ bonus bDex,10;  bonus2 bAddEff,Eff_Stone,100; },{},{}
-3006,icawings,Icarus Wings,4,20,,100,,4,,0,0xFFFFFFFF,7,2,1,,0,0,3006,{ bonus bAgi,15; bonus2 bSubEle,Ele_Fire,15; bonus2 bSubEle,Ele_Dark,15; bonus2 bSubEle,Ele_Holy,15; bonus2 bSubEle,Ele_Poison,15; bonus2 bSubEle,Ele_Ghost,15; bonus2 bSubEle,Ele_Earth,15; bonus2 bSubEle,Ele_Water,15; bonus2 bSubEle,Ele_Wind,15; bonus bAtkEle,Ele_Wind; },{},{}
+3006,icawings,Icarus Wings,4,20,,100,,4,,0,0xFFFFFFFF,7,2,1,,0,0,3006,{ bonus bAgi,15; bonus2 bSubEle,Ele_Fire,15; bonus2 bSubEle,Ele_Dark,15; bonus2 bSubEle,Ele_Holy,15; bonus2 bSubEle,Ele_Poison,15; bonus2 bSubEle,Ele_Ghost,15; bonus2 bSubEle,Ele_Earth,15; bonus2 bSubEle,Ele_Water,15; bonus2 bSubEle,Ele_Wind,15;},{},{}
 3007,phxwings,Phoenix Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3007,{ bonus bVit,10;  bonus2 bAddEff,Eff_Blind,100; bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3;  },{},{}
 3008,tornwings,Torn Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3008,{ bonus bLuk,10; bonus bFlee2,5; bonus2 bSubEle,Ele_Wind,10; bonus2 bAddEff,Eff_Silence,100;   },{},{}
 3009,wbwings,White Butterfly Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3009,{ bonus bAgi,10; bonus bFlee,30; },{},{}
@@ -10347,11 +10347,11 @@
 3027,startrooperhelm,Darth Vader Helm,4,30,,50,,3,,1,0xFFFFFFFF,7,2,256,,0,0,3027,{  },{},{}
 
 // Custom Weapons
-3500,ICA_SWORD,Icarus Sword,5,49000,,500,160,,1,4,0x000654E2,7,2,2,3,27,1,2,{ bonus3 bAutoSpell,"MO_CALLSPIRITS",5,2;  },{},{}
-3501,ICA_BOW,Icarus Bow,5,20,,1200,150,,5,3,0x000A0808,7,2,34,4,48,1,11,{ skill "AL_HEAL",5; },{},{}
+3500,ICA_SWORD,Icarus Sword,5,49000,,500,120,,1,4,0x000654E2,7,2,2,3,27,1,2,{ bonus3 bAutoSpell,"MO_CALLSPIRITS",5,2;  },{},{}
+3501,ICA_BOW,Icarus Bow,5,20,,1200,120,,5,3,0x000A0808,7,2,34,4,48,1,11,{ skill "AL_HEAL",5; },{},{}
 3502,ICA_STAFF,Icarus Staff,5,2500,,400,25,,1,4,0x00818315,7,2,2,2,12,1,10,{ bonus bDex,2; bonus bInt,2; bonus bMatkRate,15; bonus2 bSkillAtk,"AL_HOLYLIGHT",200; if(BaseJob == Job_Wizard) bonus bMatkRate,(getequiprefinerycnt(EQI_HAND_R)*2);},{},{}
-3503,First_of_Fury,Fist of Fury,5,50000,,1200,130,,1,4,0x0004C5B2,7,2,2,3,27,1,8,{},{},{}
-3504,Skewer_,Skewer,5,20,,1000,70,,1,3,0x028F5EEE,7,2,2,4,36,1,1,{ bonus bVit,5; },{},{}
+3503,First_of_Fury,Fist of Fury,5,50000,,1200,120,,1,4,0x0004C5B2,7,2,2,3,27,1,8,{},{},{}
+3504,Skewer_,Skewer,5,20,,1000,120,,1,3,0x028F5EEE,7,2,2,4,36,1,1,{ bonus bVit,5; },{},{}
 3505,banryu,Banryu,5,2900,,700,53,,1,4,0x000654E3,7,2,2,1,2,1,2,{},{},{}
 
 3100,Credit,Credit,3,5000,,40,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -10368,10 +10368,10 @@
 3667,reddwing,Red Dragon Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3167,{  },{},{}
 3668,redvhelm,Red Valkyrie Helm,4,30,,50,,5,,0,0xFFFFFFFF,7,2,256,,0,0,3168,{  },{},{}
 3669,wvhelm,White Valkyrie Helm,4,30,,50,,5,,1,0xFFFFFFFF,7,2,256,,0,0,3169,{ bonus bDex,1; bonus bStr,1; bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player,10; },{},{}
-3670,wvarmor,White Valkyrian Armor,4,0,,2800,,6,,1,0xFFFFFFFF,2,2,16,,1,1,0,{ bonus bAllstats,1; bonus2 bResEff,Eff_Freeze,5000; },{},{}
-3671,wvmantue,White Valkyrian Manteau,4,0,,500,,3,,1,0xFFFFFFFF,2,2,4,,1,1,0,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief||BaseClass==Job_Gunslinger||BaseClass==Job_Taekwon) bonus bFlee2,3+(getequiprefinerycnt(EQI_GARMENT)*1); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Acolyte||BaseClass==Job_Ninja) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*1); },{},{}
+3670,wvarmor,White Valkyrian Armor,4,0,,2800,,6,,1,0xFFFFFFFF,7,2,16,,1,1,0,{ bonus bAllstats,1; bonus2 bResEff,Eff_Freeze,5000; },{},{}
+3671,wvmantue,White Valkyrian Manteau,4,0,,500,,3,,1,0xFFFFFFFF,7,2,4,,1,1,0,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief||BaseClass==Job_Gunslinger||BaseClass==Job_Taekwon) bonus bFlee2,3+(getequiprefinerycnt(EQI_GARMENT)*1); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Acolyte||BaseClass==Job_Ninja) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*1); },{},{}
 3672,wvshield,White Valkyrja's Shield,4,30000,,500,,3,,1,0xFFFFFFFF,7,2,32,,65,1,4,{ bonus2 bResEff,Eff_Stone,5000; },{},{}
-3673,wvshoes,White Valkyrian Shoes,4,0,,500,,4,,1,0xFFFFFFFF,2,2,64,,1,1,0,{ bonus bMaxHPrate,5; bonus bMaxSPrate,5; bonus2 bResEff,Eff_Sleep,5000; },{},{}
+3673,wvshoes,White Valkyrian Shoes,4,0,,500,,4,,1,0xFFFFFFFF,7,2,64,,1,1,0,{ bonus bMaxHPrate,5; bonus bMaxSPrate,5; bonus2 bResEff,Eff_Sleep,5000; },{},{}
 
 3676,hollowmask,Hollow Mask,4,30,,30,,5,,1,0xFFFFFFFF,7,2,512,,0,0,3176,{ bonus bAtkRate,3; bonus bMatkRate,3; },{},{}
 3677,cygnushelm,Cygnus Helm,4,30,,50,,5,,1,0xFFFFFFFF,7,2,256,,0,0,3177,{ bonus2 bSubRace,RC_DemiHuman,10; bonus2 bSubRace,RC_Player,10; if(getiteminfo(getequipid(EQI_HAND_R),11)==W_BOW) {bonus bLongAtkRate,3;} },{},{}
@@ -10395,7 +10395,7 @@
 30087,goldgodlhzaura,Gold God Aura,4,30,,50,,5,,0,0xFFFFFFFF,7,2,512,,0,0,3285,{  },{},{}
 30088,blackgodlhzaura,Black God Aura,4,30,,50,,5,,0,0xFFFFFFFF,7,2,512,,0,0,4387,{  },{},{}
 // Fusion Set
-30089,_yyarmor,Fusion Valkyrian Armor,4,0,,2800,,6,,1,0xFFFFFFFF,7,2,16,,1,1,0,{ bonus bAllstats,1; },{},{}
+30089,_yyarmor,Fusion Valkyrian Armor,4,0,,2800,,6,,1,0xFFFFFFFF,7,2,16,,1,1,0,{ bonus bAllstats,1; bonus2 bResEff,Eff_Freeze,5000; },{},{}
 30090,_yyvshield,Fusion Valkyrian Shield,4,0,,500,,3,,1,0xFFFFFFFF,7,2,32,,65,1,4,{ bonus2 bResEff,Eff_Stone,5000; },{},{}
 30091,_yyvshoes,Fusion Valkyrja's Shoes,4,30000,,500,,3,,1,0xFFFFFFFF,7,2,64,,1,1,0,{ bonus bMaxHPrate,5; bonus bMaxSPrate,5; bonus2 bResEff,Eff_Sleep,5000; },{},{}
 30092,_yyvm,Fusion Valkyrian Manteau,4,0,,500,,4,,1,0xFFFFFFFF,7,2,4,,1,1,0,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief||BaseClass==Job_Gunslinger||BaseClass==Job_Taekwon) bonus bFlee2,5+(getequiprefinerycnt(EQI_GARMENT)*1); else if(BaseClass==Job_Swordman||BaseClass==Job_Merchant||BaseClass==Job_Acolyte||BaseClass==Job_Ninja) bonus bShortWeaponDamageReturn,5+(getequiprefinerycnt(EQI_GARMENT)*1); },{},{}
@@ -10416,3 +10416,4 @@
 40264,Spirit_SAG,Spirit of Sage,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_SAGE",1;  },{},{}
 40265,Spirit_PRI,Spirit of Priest,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_PRIEST",1;  },{},{}
 40266,Spirit_WIZ,Spirit of Wizard,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_WIZARD",1;  },{},{}
+40300,Box_of_Thunder_Box,Box of Thunder Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12028,100; },{},{}
