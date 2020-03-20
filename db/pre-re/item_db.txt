@@ -5097,7 +5097,7 @@
 12531,White_Potion_Box,White Potion Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12532,Royal_Jelly_Box2,Royal Jelly Box2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12533,Blue_Herb_Box2,Blue Herb Box2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{getitem 608,100;},{},{}
-12534,Yggdrasil_Seed_Box,Yggdrasil Seed Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12534,Yggdrasil_Seed_Box,Yggdrasil Seed Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 608,100; },{},{}
 12535,Iggdrasilberry_Box,Iggdrasilberry Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12536,NY_Rice_Cake_Soup,NY Rice Cake Soup,2,20,,100,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12537,Solo_Gift_Basket,Solo Gift Basket,2,1000,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -10349,7 +10349,7 @@
 // Custom Weapons
 3500,ICA_SWORD,Icarus Sword,5,49000,,500,120,,1,4,0x000654E2,7,2,2,3,27,1,2,{ bonus3 bAutoSpell,"MO_CALLSPIRITS",5,2;  },{},{}
 3501,ICA_BOW,Icarus Bow,5,20,,1200,120,,5,3,0x000A0808,7,2,34,4,48,1,11,{ skill "AL_HEAL",5; },{},{}
-3502,ICA_STAFF,Icarus Staff,5,2500,,400,25,,1,4,0x00818315,7,2,2,2,12,1,10,{ bonus bDex,2; bonus bInt,2; bonus bMatkRate,15; bonus2 bSkillAtk,"AL_HOLYLIGHT",200; if(BaseJob == Job_Wizard) bonus bMatkRate,(getequiprefinerycnt(EQI_HAND_R)*2);},{},{}
+3502,ICA_STAFF,Icarus Staff,5,2500,,400,25,,1,4,0x00818315,7,2,2,2,12,1,10,{ bonus bDex,2; bonus bInt,2; bonus bMatkRate,15; if(BaseJob == Job_Wizard) bonus bMatkRate,(getequiprefinerycnt(EQI_HAND_R)*2);},{},{}
 3503,First_of_Fury,Fist of Fury,5,50000,,1200,120,,1,4,0x0004C5B2,7,2,2,3,27,1,8,{},{},{}
 3504,Skewer_,Skewer,5,20,,1000,120,,1,3,0x028F5EEE,7,2,2,4,36,1,1,{ bonus bVit,5; },{},{}
 3505,banryu,Banryu,5,2900,,700,53,,1,4,0x000654E3,7,2,2,1,2,1,2,{},{},{}
@@ -10387,6 +10387,7 @@
 3687,blhzaura,Black Lighthalzen Aura,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3187,{  },{},{}
 
 //
+8420,rcyc,Lord Cyclop's Eye,4,0,,200,,0,,1,0xFFFFFFFE,7,2,512,,1,0,3920,{ bonus bVit,3; bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3; bonus bFlee,20; },{},{}
 8461,danzobandage,Danzo Bandage,4,30,,50,,5,,1,0xFFFFFFFF,7,2,512,,0,0,3961,{ bonus bAllStats,3; },{},{}
 8469,flameaura,Flame Aura,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3969,{  bonus bAtkEle,Ele_Fire; bonus bAllStats,5; bonus bMatkRate,30; bonus2 bAddRace,RC_DemiHuman,10; bonus2 bAddRace,RC_Player,10; if(BaseJob==Job_Wizard) bonus3 bAutoSpellWhenHit,"NPC_EARTHQUAKE",2,10; },{},{}
 8473,goldrunesofpower,Rune's of Power,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3973,{ bonus bVit,10; bonus bAgi,10; bonus bDex,10; bonus bMaxHPrate,15;bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3; },{},{}

@@ -358,7 +358,7 @@ mes "By the way my brothers and cousins are scattered";
 
 mes "around Rune-Midgard and Daryl is in valkyrie";
 
-announce "Wowowow "+strcharinfo(0)+" has just created the mystical Valkyrie Armor.",8;
+announce strcharinfo(0)+" has just created the Valkyrie Armor.",8;
 
 close;    
 
@@ -518,7 +518,7 @@ mes "Again my brothers and cousins are scattered";
 
 mes "Around Rune-Midgard and Daryl is in valkyrie";
 
-announce "Wowowow "+strcharinfo(0)+" has just created the mystical Valkyrie Shield.",8;
+announce strcharinfo(0)+" has just created the mystical Valkyrie Shield.",8;
 
 set jmz_bit,1;        
 
@@ -684,7 +684,7 @@ mes "and when you gain the valkyrie set speak to Daryl";
 
 mes "my brothers and cousins are scattered around Rune-Midgard and Daryl is at the valkyrie hall";
 
-announce "Wowowow "+strcharinfo(0)+" has just created the mystical Valkyrie Shoes.",8;    
+announce strcharinfo(0)+" has just created the Valkyrie Shoes.",8;    
 
 close;    
 
@@ -842,7 +842,7 @@ mes "and when you gain the valkyrie set speak to Daryl.";
 
 mes "my brothers and cousins are scattered around Rune-Midgard and Daryl is in the valkyrie hall";
 
-announce "Wowowow "+strcharinfo(0)+" has just created the mystical Valkyrie Manteau.",8;        
+announce strcharinfo(0)+" has just created the Valkyrie Manteau.",8;        
 
 close;    
 
@@ -932,7 +932,7 @@ next;
 
 mes "300 Handcuffs";    
 
-mes "20 Emblem of Sun God";
+mes "20 Drifting Air";
 
 mes "10 Matchstick";        
 
@@ -944,9 +944,9 @@ mes "[ Daryl ]";
 
 mes "I'll be waiting for you chosen one!";    
 
-if(countitem(7345) < 300 || countitem(7086) < 20 || countitem(7035) < 10 || countitem(969) < 100) goto kikiki;
+if(countitem(7345) < 300 || countitem(7092) < 20 || countitem(7035) < 10 || countitem(969) < 100) goto kikiki;
 
-if(countitem(7345) >= 300 || countitem(7086) >= 20 || countitem(7035) >= 10 || countitem(969) >= 100) goto killhim;
+if(countitem(7345) >= 300 || countitem(7092) >= 20 || countitem(7035) >= 10 || countitem(969) >= 100) goto killhim;
 
 close;    
 
@@ -992,7 +992,7 @@ mes "You are very good!!";
 
 delitem 7345,300;    
 
-delitem 7086,50;    
+delitem 7086,20;    
 
 delitem 969,100;
 

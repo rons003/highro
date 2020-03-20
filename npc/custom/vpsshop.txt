@@ -10,10 +10,7 @@
 -	shop	Emistry_Shop	-1,512:100
 
 
-prontera,174,154,4	script	Sakura	757,{
-OnInit:
-waitingroom "TCG Shop",0;
-end;
+prontera,174,154,4	script	RTC Shop	757,{
 function ShopSettings;
 function ValidateCost;
 function CurrencyInfo;

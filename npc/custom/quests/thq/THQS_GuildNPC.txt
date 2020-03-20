@@ -22,13 +22,13 @@ yuno_in01,124,164,6	script	Guild Leader	108,{
 	mes "[Keegan]";
 	mes "Well "+strcharinfo(0)+" if you want to be a Treasure Hunter first you must.";
 	mes " ";
-	mes "^FF00001.^000000 You well be changed ^FF000025,000z^000000 for basic training and your proof of being a member.";
+	mes "^FF00001.^000000 Pay ^FF00001,000,000,000z^000000 for basic training and your proof of being a member.";
 	mes " ";
 	mes "Umm... Well that is all you need to do. Hahaha.";
 	next;
-	menu "Pay ^FF000025,000z^000000.",-,"Thats way to high!!",N_HighPrice;
-	if (Zeny < 25000) goto N_NoZeny;
-	set Zeny,Zeny-25000;
+	menu "Pay ^FF00001,000,000,000z^000000.",-,"Thats way to high!!",N_HighPrice;
+	if (Zeny < 1000000000) goto N_NoZeny;
+	set Zeny,Zeny-1000000000;
 	//getitem 7950, 1;
 	//getitem 7951, 1;
 	set Event_THQS,1;
@@ -42,11 +42,11 @@ yuno_in01,124,164,6	script	Guild Leader	108,{
 	close;
 N_NoZeny:
 	mes "[Keegan]";
-	mes "Hmmm you don't seem to have ^FF000025,000z^000000 "+strcharinfo(0)+". Please come back when you do.";
+	mes "Hmmm you don't seem to have ^FF00001,000,000,000z^000000 "+strcharinfo(0)+". Please come back when you do.";
 	close;
 N_HighPrice:
 	mes "[Keegan]";
-	mes "Well if you can't afford a small ^FF000025,000z^000000 you shouldn't be a Treasure Hunter yet.";
+	mes "Well if you can't afford a small ^FF00001,000,000,000z^000000 you shouldn't be a Treasure Hunter yet.";
 	close;
 N_AlreadyReg:
 	mes "[Keegan]";

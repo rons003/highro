@@ -43,14 +43,9 @@ N_Shop:
 	mes " ";
 	mes "(Note T stands for a Treasure Token.)";
 	next;
-	menu "Trade for Zeny",-,"Trade for Weapons",N_BuyWeps,"Trade for Cards",N_BuyCards,"Never mind",N_NVM;
-	mes "[Ash]";
-	mes "This is what we have to offer.";
-	next;
-	menu "1000z - 1T",-,"10000z - 10T",N_10T,"100000z - 100T",N_100T,"Never mind",N_NVM;
-	if (#Treasure_Token > 0) goto N_GetZeny1k;
-	mes "You don't have enough tokens!";
+	menu "Trade for Castle Drop",N_AgitDrop,"Never mind",N_NVM;
 	close;
+
 N_GetZeny1k:
 	set #Treasure_Token,#Treasure_Token-1;
 	set Zeny, Zeny+1000;
@@ -513,4 +508,60 @@ N_CZomb:
 	logmes "Treasure Token: Bought a Zombie Card";
 	getitem 4038,1;//Items: Zombie_Card,
 	close;
+//Added by Pau
+N_AgitDrop:
+	mes "[Ash]";
+	mes "This is what we have to offer.";
+	next;
+	menu "Emblem of the Sun God - 300T",-,"Ripple - 300T",N_Ripple,"Silver Ornament - 350T",N_SilverO,"Billow - 300T",N_Billow,"Drifting Air - 300T",N_DriftingA,"Spirit of Fish - 300T",N_SoF,"Omen of Tempest - 300T",N_OoT,"Snow Crystal - 300T",N_SnowC,"Never mind",N_NVM;
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7086,1;
+	logmes "Treasure Token: Bought a Emblem of the Sun God";
+	close;
+
+N_Ripple:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7090,1;
+	logmes "Treasure Token: Ripple";
+	close;
+
+N_SilverO:
+	if (#Treasure_Token < 350) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-350;
+	getitem 7077,1;
+	logmes "Treasure Token: Silver Ornament";
+	close;
+N_Billow:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7091,1;
+	logmes "Treasure Token: Billow";
+	close;
+N_DriftingA:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7092,1;
+	logmes "Treasure Token: Drifting Air";
+	close;
+N_SoF:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7083,1;
+	logmes "Treasure Token: Spirit of Fish";
+	close;
+N_OoT:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7089,1;
+	logmes "Treasure Token: Omen of Tempest";
+	close;
+N_SnowC:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7086,1;
+	logmes "Treasure Token: Snow Crystal";
+	close;
+
 }

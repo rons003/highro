@@ -29,8 +29,8 @@ yuno,117,135,0	warp	yun01	1,1,yuno_in01,116,37
 yuno_in01,116,40,0	warp	yun02	1,1,yuno,120,138
 yuno,48,105,0	warp	yun03	1,1,yuno_in01,37,176
 yuno_in01,40,176,0	warp	yun04	1,1,yuno,51,105
-yuno_in01,32,182,0	warp	yun05	1,1,yuno_in01,86,164
-yuno_in01,82,164,0	warp	yun06	1,1,yuno_in01,28,182
+//yuno_in01,32,182,0	warp	yun05	1,1,yuno_in01,86,164
+yuno_in01,82,164,0	warp	yun06	1,1,prontera,155,173
 yuno,48,151,0	warp	yun07	1,1,yuno_in01,30,100
 yuno_in01,34,100,0	warp	yun08	1,1,yuno,51,151
 yuno,93,180,0	warp	yun09	1,1,yuno_in04,33,127
@@ -207,3 +207,14 @@ yuno_pre,81,68,0	warp	yungvn09	1,1,yuno_pre,95,68
 yuno_pre,18,92,0	warp	yungvn10	1,1,yuno_pre,18,73
 yuno,157,322,0	warp	yungvn11	1,1,yuno_pre,69,13
 yuno_pre,69,10,0	warp	yungvn12	1,1,yuno,157,317
+
+
+yuno_in01	mapflag	nowarp
+yuno_in01	mapflag	nowarpto
+yuno_in01	mapflag	noteleport
+yuno_in01	mapflag	nosave
+yuno_in01	mapflag	nomemo
+yuno_in01	mapflag	nobranch
+yuno_in01	mapflag	noloot
+yuno_in01	mapflag	noskill
+yuno_in01	mapflag	nopenalty

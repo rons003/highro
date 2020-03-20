@@ -1,8 +1,5 @@
 prontera,147,141,5	script	Komika	533,{
 
-OnInit:
-waitingroom "Box Trader",0;
-
 set $@npcname_mpq$, "^4000C0[Komika]^000000";
 mes $@npcname_mpq$;
 mes "Would you want to trade some of your items to boxes?";
@@ -73,7 +70,7 @@ input @bot;
 if(countitem(12028) < (100*@bot)) goto LNotEnough;
 	delitem 12028,(100*@bot);
 mes "You really have that many Boxes of Thunder? Okay, let's trade!";
-	getitem BOXOFTHUNDERIDGOESHERE,(1*@bot);
+	getitem 40300,(1*@bot);
 mes ". . .";
 mes "Thank you sweety. Dont abuse it too much!";
 close;
@@ -89,4 +86,8 @@ mes "Wtf, come back when you got the goods!";
 close;
 L_Exit:
 close;
+
+OnInit:
+waitingroom "Box Trader",0;
+
 }

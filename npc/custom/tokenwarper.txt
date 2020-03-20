@@ -1,0 +1,23 @@
+prontera,174,160,3	script	S-Rank Hunter	46,{
+
+mes "[^0000FFSung Jin-Woo^000000]";
+mes "Hi "+strcharinfo(0)+"";
+mes "^696969Do you want to warp at Treasure Hunting Guild?^000000";
+next;
+switch(select("Yes","No")) {
+case 1:
+warp "yuno_in01",87,164;
+end;
+break;
+case 2:
+mes "[^0000FFSung Jin-Woo^000000]";
+mes "^696969It's really fun! Come join us when you change your mind.^000000";
+close;
+}
+
+OnInit:
+waitingroom "Token Quest",0;
+end;
+
+
+}
