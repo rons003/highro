@@ -121,9 +121,7 @@ OnGMStop:
 	disablenpc "PoringCatcher";
 	end;
 
-OnClock0400:
-OnClock1200:
-OnClock2000:
+//OnMinute00:
 
 	killmonster "poring_w01.gat","All";
 	announce "(Poring Manager) : Poring Catcher Event will start at the moment.",0;
@@ -140,7 +138,7 @@ OnClock2000:
 	if(getmapusers("poring_w01") == 0) 
 	{
 		disablenpc "Poring Banker";
-		announce "Event Poring Catcher didn't start because no players found in map.",0;
+		//announce "Event Poring Catcher didn't start because no players found in map.",0;
 		end;
 	}
 
@@ -152,7 +150,7 @@ OnInit:
 	disablenpc "PoringCatcher";
 }
 //---------All Job Registration----------------------------------------
-prontera,109,241,0	warp	PoringCatcher	2,2,poring_w01,105,128
+//prontera,109,241,0	warp	PoringCatcher	2,2,poring_w01,105,128
 
 //---------------------------------------------------------------------
 
@@ -199,7 +197,7 @@ L_Start:
 
 OnSummon:
    if(getmapusers("poring_w01") == 0) goto L_2None;
-   monster "poring_w01.gat",0,0,"Poring",1002,1,"poringwin::OnMobKilled";
+   monster "poring_w01.gat",104,104,15,15,"Poring",1002,1,"poringwin::OnMobKilled"; //random range 15cells from 104,104
    monster "poring_w01.gat",0,0,"Pouring",1002,10,"poringlose::OnMobKilled";
    monster "poring_w01.gat",0,0,"Proing",1002,10,"poringlose::OnMobKilled";
    monster "poring_w01.gat",0,0,"Poirng",1002,10,"poringlose::OnMobKilled";

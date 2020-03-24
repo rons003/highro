@@ -13050,8 +13050,8 @@ TIMER_FUNC(skill_castend_id)
 				ud->skill_id != WZ_WATERBALL)
 				sc->data[SC_SPIRIT]->val3 = 0; //Clear bounced spell check.
 
-			if (sc->data[SC_DANCING] && skill_get_inf2(ud->skill_id) & INF2_SONG_DANCE && sd)
-				skill_blockpc_start(sd, BD_ADAPTATION, 3000);
+			//if (sc->data[SC_DANCING] && skill_get_inf2(ud->skill_id) & INF2_SONG_DANCE && sd)
+				//skill_blockpc_start(sd, BD_ADAPTATION, 3000);
 		}
 
 		if (sd && ud->skill_id != SA_ABRACADABRA && ud->skill_id != WM_RANDOMIZESPELL) // they just set the data so leave it as it is.[Inkfish]
@@ -17779,7 +17779,8 @@ bool skill_check_condition_castbegin(struct map_session_data *sd, uint16 skill_i
 	if (require.weapon && !pc_check_weapontype(sd, require.weapon) || 
 		(skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_KNIGHT && sd->status.weapon == W_1HSWORD)
 			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_BLACKSMITH && sd->status.weapon == W_1HAXE)
-			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_KNIGHT && sd->status.weapon == W_1HSPEAR) )
+			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_KNIGHT && sd->status.weapon == W_1HSPEAR)
+			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_STAR) )
 	{
 		switch (skill_id)
 		{
@@ -17980,7 +17981,8 @@ bool skill_check_condition_castend(struct map_session_data *sd, uint16 skill_id,
 	{
 		if((skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_KNIGHT && sd->status.weapon == W_1HSWORD)
 			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_BLACKSMITH && sd->status.weapon == W_1HAXE)
-			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_KNIGHT && sd->status.weapon == W_1HSPEAR))
+			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_KNIGHT && sd->status.weapon == W_1HSPEAR)
+			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_STAR))
 		{
 			return true;
 		}

@@ -1,0 +1,15 @@
+-	script	pvpskull	-1,{
+
+OnPCKillEvent:
+
+.@map$ = strcharinfo(3);
+
+if (.@map$ == "pvp_y_8-2" ) {
+
+.@char_id = getcharid( 0,rid2name( killedrid ) );
+
+getitem2 7420,1,1,0,0,254,0, ( .@char_id & 65535 ), ( .@char_id >> 16 );
+
+}
+end;
+}

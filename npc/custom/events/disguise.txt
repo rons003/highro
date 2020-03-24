@@ -49,7 +49,7 @@ prontera,203,241,6	script	Disguise Event	795,{
 			set .EventON,1; set .Timer,1; setnpctimer 0; initnpctimer;
 			set .ResetCounter,.ResetCounter+1;
 			announce "The Disguise Event will begin in 3 minutes.",bc_all | bc_blue;
-			announce "The Event is being held in Prontera.",bc_all | bc_blue;
+			announce "The Event is being held in Prontera 203, 241.",bc_all | bc_blue;
 			close;
 		case 2:
 			mes .@n$;
@@ -128,7 +128,7 @@ OnInit:
 	set .Wait,0;
 	set .Winner,0;
 	set .ResetCounter,0;
-	set .Rounds,10;
+	set .Rounds,20;
 	set .Prize,3100;
 	set .PrizeAmt,1;
 	set .Rule,1;
@@ -147,18 +147,8 @@ OnInit:
 	    "2100,2101,2012,2103,2104,2105,2106,2107,2108,2109,2110,2111,2112,2113," + 
 	    "2114,2115,2116,2117,2118,2119,2120,2121,2123,2124,2125,1496,";
 	end;
-OnClock0100:
-OnClock0300:
-OnClock0500:
-OnClock0700:
-OnClock0900:
-OnClock1100:
-OnClock1300:
-OnClock1500:
-OnClock1700:
-OnClock1900:
-OnClock2100:
-OnClock2300:
+OnMinute15:
+OnMinute35:
 	set .ResetCounter,.ResetCounter+1;
 	set .EventON,1;
 	set .Timer,1;

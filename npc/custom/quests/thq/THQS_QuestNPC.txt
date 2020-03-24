@@ -37,13 +37,13 @@ N_PayZeny:
 	set two_qset, 0;
 	set three_qset, 0;
 	set four_qset, 0;
-	//set five_qset, 0;
-	//set six_qset, 0;
+	set five_qset, 0;
+	set six_qset, 0;
 	//set seven_qset, 0;
 	//set eight_qset, 0;
 	//set nine_qset, 0;
 	//set ten_qset, 0;
-	//set On_Quest, 0;
+	set On_Quest, 0;
 	set Zeny,Zeny-2500;
 	//add time delay penalty. You can get another quest after 1 hour. [Lupus]
 	set #THQ_DELAY,(gettime(DT_YEAR)*12*31*24+gettime(DT_MONTH)*31*24+gettime(DT_DAYOFMONTH)*24+gettime(DT_HOUR) + 1);
@@ -79,8 +79,8 @@ N_NewQuest:
 	if(@treasure_job==2) goto N_JobList2;
 	if(@treasure_job==3) goto N_JobList3;
 	if(@treasure_job==4) goto N_JobList4;
-	//if(@treasure_job==5) goto N_JobList5;
-	//if(@treasure_job==6) goto N_JobList6;
+	if(@treasure_job==5) goto N_JobList5;
+	if(@treasure_job==6) goto N_JobList6;
 	//if(@treasure_job==7) goto N_JobList7;
 	//if(@treasure_job==8) goto N_JobList8;
 	//if(@treasure_job==9) goto N_JobList9;

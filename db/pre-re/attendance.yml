@@ -3,8 +3,8 @@ Header:
   Version: 1
 
 Body:
-  - Start: 20200316
-    End: 20200325
+  - Start: 20200322
+    End: 20200331
     Rewards:
       - Day: 1
         ItemId: 7227
@@ -34,4 +34,4 @@ Body:
         ItemId: 7227
         Amount: 150
       - Day: 10
-        ItemId: 19810
+        ItemId: 5377

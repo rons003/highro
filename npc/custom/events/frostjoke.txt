@@ -1,0 +1,47 @@
+prontera,204,177,5	script	Komika Event	89,{
+if (BaseLevel > 1) goto L_ClassLevel; //Change '1' to your desired level
+if (class == 0) goto L_Event; //Checks if the player is a Novice, if so, proceeds into the event.
+if (class > 0) goto L_ClassLevel; //Checks if the Player is NOT a Novice. If they aren't, they are not allowed to participate.
+
+ L_Event:
+mes "[ ^0000FFFinn^000000 ]";
+mes "You wish to participate in Frost Joke event?";
+next;
+switch(select("- Yes","- No")) {
+case 1:
+    sc_end SC_ALL;
+    percentheal 100,100;
+    atcommand "@die";
+    atcommand "@alive";
+    warp "quiz_02",134,347;
+    atcommand "@storeall";
+    end;
+    break;
+case 2:
+    next;
+    mes "[ ^0000FFFinn^000000 ]";
+    mes "Come back when your ready.";
+    close;
+    break;
+
+ L_ClassLevel:
+mes "[ ^0000FFFinn^000000 ]";
+mes "Sorry, but it seems you are not a Novice and Level 1.";
+close;
+}
+
+OnInit:
+waitingroom "Komika Event",0;
+end;
+
+}
+// Mapflags for the Map
+quiz_02	mapflag	nowarp
+quiz_02	mapflag	nowarpto
+quiz_02	mapflag	noteleport
+quiz_02	mapflag	nosave
+quiz_02	mapflag	nomemo
+quiz_02	mapflag	nobranch
+quiz_02	mapflag	noloot
+quiz_02	mapflag	nopenalty
+quiz_02	mapflag	nocommand	80

@@ -210,7 +210,7 @@ payon,175,226,4	script	Kafra Employee::kaf_payon2	116,{
 	mes "always on your side.";
 	mes "How may I assist you?";
 	callfunc "F_Kafra",5,0,1,60,930;
-	savepoint "payon",257,242,1,1;
+	savepoint "payon",174,215,1,1;
 	callfunc "F_KafEnd",0,1,"in the city of Payon";
 }
 
@@ -357,7 +357,7 @@ yuno,277,221,4	script	Kafra Employee::kaf_yuno3	861,{
 
 // Alberta
 //============================================================
-alberta,28,229,0	script	Kafra Employee::kaf_alberta	116,{
+alberta,178,141,6	script	Kafra Employee::kaf_alberta	116,{
 	cutin "kafra_02",2;
 	callfunc "F_KafSet";
 	mes "[Kafra Employee]";
@@ -367,7 +367,7 @@ alberta,28,229,0	script	Kafra Employee::kaf_alberta	116,{
 	mes "always ready to serve you.";
 	mes "How can I help you today?";
 	callfunc "F_Kafra",5,0,0,50,850;
-	savepoint "alberta",31,231,1,1;
+	savepoint "alberta",191,138,1,1;
 	callfunc "F_KafEnd",0,1,"in the city of Alberta";
 }
 
@@ -434,6 +434,29 @@ cmd_fild07,136,134,4	script	Kafra Employee::kaf_cmd_fild07	721,{
 		savepoint "izlude",94,103,1,1;
 	callfunc "F_KafEnd",0,1,"in the city of Izlude";
 }
+
+
+// Izlude
+//============================================================
+izlude,130,150,3	script	Kafra Employee::kaf_izlud	114,{
+	cutin "kafra_04",2;
+	callfunc "F_Kafra",0,3,0,80,700;
+	savepoint "izlude",127,138,1,1;
+	callfunc "F_KafEnd",0,1,"in the city of Izlude";
+}
+
+//Xmas
+//============================================================
+xmas,155,124,3	script	Kafra Employee::kaf_xmas	116,{
+	cutin "kafra_04",2;
+	callfunc "F_Kafra",0,3,0,80,700;
+	savepoint "xmas",148,124,1,1;
+	callfunc "F_KafEnd",0,1,"in the city of Lutie";
+}
+
+
+
+
 
 // Moscovia
 //============================================================

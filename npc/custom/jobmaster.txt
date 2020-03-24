@@ -456,7 +456,7 @@ OnInit:
 	// Settings
 	.ThirdClass = false;			// Enable third classes?
 	.RebirthClass = true;			// Enable rebirth classes?
-	.SecondExpanded = true;		// Enable new expanded second classes: Ex. Super Novice, Kagerou/Oboro, Rebellion?
+	.SecondExpanded = false;		// Enable new expanded second classes: Ex. Super Novice, Kagerou/Oboro, Rebellion?
 	.BabyNovice = true;	// Enable Baby novice classes? Disable it if you like player must have parent to get job baby.
 	.BabyClass = true;				// Enable Baby classes?
 	.BabyThird = false;				// Enable Baby third classes?

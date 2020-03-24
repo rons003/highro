@@ -1,0 +1,18 @@
+-	script	News	-1,{
+OnInit:
+set .Time,300;		// Announce every x Minute.
+
+setarray .News$[0],	// Random Message to be Announced
+		"Feel free to use @request if you have any concerns regarding the game.",
+		"Like and Support Komika Esports Facebook page at www.facebook.com/komikaph.",
+		"For more details about Komika Esports, please visit our website at www.komikaesports.com.",
+		"Welcome to Eutopia Ragnarok Online! Please report all bugs that you find immediately by using @request.",
+		"Like and Share Event on our Facebook page at www.facebook.com/eutopiaro.";
+		
+while( 1 ){
+	announce .News$[ rand( getarraysize( .News$ ) ) ],0;
+	sleep ( .Time * 1000 );
+	}
+end;
+}
+

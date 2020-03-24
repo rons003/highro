@@ -42,11 +42,11 @@ else{
 
 
 // Monsters
-ordeal_3-2,0,0,0,0	monster	Dokebi	1110,100,0,0,0
-ordeal_3-2,0,0,0,0	monster	Dokebi	1110,100,0,0,0
-ordeal_3-2,0,0,0,0	monster	Dokebi	1110,100,0,0,0
-ordeal_3-2,0,0,0,0	monster	Dokebi	1110,100,0,0,0
-ordeal_3-2,0,0,0,0	monster	Dokebi	1110,100,0,0,0
+ordeal_3-2,0,0,0,0	monster	Dokebi	1110,150,0,0,0
+ordeal_3-2,0,0,0,0	monster	Dokebi	1110,150,0,0,0
+ordeal_3-2,0,0,0,0	monster	Dokebi	1110,150,0,0,0
+ordeal_3-2,0,0,0,0	monster	Dokebi	1110,150,0,0,0
+ordeal_3-2,0,0,0,0	monster	Dokebi	1110,150,0,0,0
 ordeal_3-2,0,0,0,0	monster	Gold Guardian	1439,30,0,0,0
 ordeal_3-2,154,154,0,0	monster	Gold Guardian	1439,3,0,0,0
 
@@ -55,4 +55,4 @@ ordeal_3-2.gat,130,193,0	warp	testwrp#1	3,3,ordeal_3-2.gat,154,154
 ordeal_3-2.gat,106,154,0	warp	testwrp#2	3,3,ordeal_3-2.gat,154,154
 ordeal_3-2.gat,201,129,0	warp	testwrp#3	3,3,ordeal_3-2.gat,154,154
 ordeal_3-2.gat,177,193,0	warp	testwrp#4	3,3,ordeal_3-2.gat,154,154
-
+ordeal_3-2	mapflag	noskill
