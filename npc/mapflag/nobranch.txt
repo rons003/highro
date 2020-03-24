@@ -19,6 +19,7 @@
 //= 2.0 Renewal split. [Euphy]
 //============================================================
 
+
 // Cities ======================
 ayo_in01	mapflag	nobranch
 ayo_in02	mapflag	nobranch
@@ -336,3 +337,5 @@ spl_in02	mapflag	nobranch
 2012rwc_08	mapflag	nobranch
 
 //evt_zombie	mapflag	nobranch
+
+new_1-1	mapflag	nobranch
