@@ -1337,7 +1337,7 @@
 2421,Valkyrie_Shoes,Valkyrian Shoes,4,0,,500,,4,,1,0xFFFFFFFE,7,2,64,,1,1,0,{ bonus bUnbreakableShoes; bonus2 bResEff,Eff_Sleep,10000; bonus bMaxHPrate,10; bonus bMaxSPrate,10; },{},{}
 2422,High_Fashion_Sandals,High Fashion Sandals,4,24000,,200,,2,,1,0x00818314,7,2,64,,40,1,0,{ bonus bMdef,10; },{},{}
 2423,Variant_Shoes,Variant Shoes,4,20,,500,,3,,0,0xFFFFFFFE,2,2,64,,85,1,0,{ bonus bMaxHPRate,20-getrefine(); bonus bMaxSPRate,20-getrefine(); bonus bDef,getrefine()/2; },{},{}
-2424,Tidal_Shoes,Tidal Shoes,4,20,,300,,3,,1,0xFFFFFFFE,2,2,64,,55,1,0,{ bonus2 bSubEle,Ele_Water,5; },{},{}
+2424,Tidal_Shoes,Tidal Shoes,4,20,,300,,3,,1,0xFFFFFFFF,7,2,64,,55,1,0,{ bonus2 bSubEle,Ele_Water,5; },{},{}
 2425,Black_Leather_Boots,Black Leather Boots,4,20,,500,,4,,0,0xFFFFFFFE,2,2,64,,55,1,0,{ bonus bAgi,1; if(getrefine()>=9) bonus bAgi,2; },{},{}
 2426,Shadow_Walk,Shadow Walk,4,20,,2000,,0,,0,0xFFFFFFFE,2,2,64,,75,1,0,{ bonus bMdef,10; if(getskilllv("AS_CLOAKING")<2){ bonus5 bAutoSpellWhenHit,"AS_CLOAKING",2,100,BF_MAGIC,0; } else bonus5 bAutoSpellWhenHit,"AS_CLOAKING",getskilllv("AS_CLOAKING"),100,BF_MAGIC,0; },{},{}
 2427,Golden_Shoes,Golden Shoes,4,20,,300,,4,,0,0xFFFFFFFF,7,2,64,,0,0,0,{ bonus bMdef,4; },{},{}
@@ -1393,7 +1393,7 @@
 2525,Cape_Of_Ancient_Lord_,Ancient Cape,4,82000,,600,,2,,1,0xFFFFFFFE,7,2,4,,40,1,0,{ bonus bAgi,1; },{},{}
 2526,Dragon_Scale_Coat,Coat of Dragon Scale,4,20,,10,,4,,0,0xFFFFFFFF,7,2,4,,50,1,0,{},{},{}
 2527,Dragon_Breath,Dragon Breath,4,20,,600,,4,,1,0xFFFFFFFE,2,2,4,,48,1,0,{ bonus2 bSubRace,RC_Dragon,15; },{},{}
-2528,Wool_Scarf,Wool Scarf,4,20,,500,,3,,1,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bMdef,4; },{},{}
+2528,Wool_Scarf,Wool Scarf,4,20,,500,,3,,1,0xFFFFFFFF,7,2,4,,55,1,0,{ bonus bMdef,4; },{},{}
 2529,Rider_Insignia,Rider Insignia,4,20,,500,,4,,0,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bAgi,2; },{},{}
 2530,Rider_Insignia_,Rider Insignia,4,20,,500,,4,,1,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bAgi,2; },{},{}
 2531,Ulfhedinn,Ulfhedinn,4,20,,700,,3,,1,0x000654E2,2,2,4,,70,1,0,{ bonus3 bAutoSpellWhenHit,"NPC_STONESKIN",6,20; },{},{}

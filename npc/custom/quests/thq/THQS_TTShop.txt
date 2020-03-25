@@ -560,7 +560,7 @@ N_OoT:
 N_SnowC:
 	if (#Treasure_Token < 300) goto N_NeedToken;
 	set #Treasure_Token,#Treasure_Token-300;
-	getitem 7086,1;
+	getitem 7088,1;
 	logmes "Treasure Token: Snow Crystal";
 	close;
 

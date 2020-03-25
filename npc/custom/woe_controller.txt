@@ -42,7 +42,7 @@ OnInit:
 // -----------------------------------------------------------
 
 	set .CastleWarp,0;		// 1: Always enable all castle warps. | 0: Warp only to active castles.
-	set .AutoKick,1;		// Automatically kick players from inactive castles during WOE? (1:yes / 0:no)
+	set .AutoKick,0;		// Automatically kick players from inactive castles during WOE? (1:yes / 0:no)
 	set .NoOwner,0; 		// Automatically kick players from unconquered castles outside of WOE? (1:yes / 0:no)
 	set .ExitWarp,0;		// Warp all players from castles when WOE ends? (1:yes / 0:no)
 	set .GMAccess,99;		// GM level required to access Session Manager.
@@ -64,13 +64,13 @@ OnInit:
 // -----------------------------------------------------------
 
 	// Combine values as needed (e.g. 1|8 = 1+8 = 9).
-	set .Options, 1|4|8;
+	set .Options, 1|2|4|8;
 
 	// Rewards per castle.
 	//   setarray .reward_id[0],     <itemID>{,<itemID>,...}
 	//   setarray .reward_amount[0], <amount>{,<amount>,...}
-	setarray .reward_id[0],7929;
-	setarray .reward_amount[0],2;
+	setarray .reward_id[0],7929,13517,40300;
+	setarray .reward_amount[0],2,30,30;
 
 	// Zeny reward:
 	.reward_zeny = 0;

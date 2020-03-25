@@ -1,14 +1,17 @@
-prontera,158,185,4	script	PVP Warper	100,{
-	for (.@i = 0; .@i < .map_size; .@i++) 
-		.@menu$ = .@menu$ + .map$[.@i] + "("+getmapusers(.map$[.@i])+" user(s))" + ":";
-	.@i = select(.@menu$) - 1;
-	mapannounce .map$[.@i], strcharinfo(0)+ " has entered this PVP room.", bc_map;
-	warp .map$[.@i], 0, 0;
-	end;
-	
-	OnInit:
-		setarray .map$, 
-			"pvp_y_8-2";
-		.map_size = getarraysize(.map$);
-		end;
+
+prontera,158,185,4	script	PVP Room	100,{
+        warp "pvp_y_8-2",0,0;
+        announce ""+strcharinfo(0)+" entered the PVP Room",bc_all;
+        end;
+
+OnInit:
+	freeloop(1);
+	while( 1 ){
+		.@count = getmapusers("pvp_y_8-2");
+		waitingroom "PVP Room ["+.@count+"]",0;
+		sleep 2000;
+		delwaitingroom;
+	}
+	freeloop(0);
+end;
 }

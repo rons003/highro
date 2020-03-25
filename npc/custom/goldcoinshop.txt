@@ -10,7 +10,7 @@
 -	shop	Gold_Coin_Shop	-1,512:100
 
 
-prontera,174,154,4	script	Gold Coin Shop	757,{
+prontera,174,157,4	script	Gold Coin Shop	512,{
 function ShopSettings;
 function ValidateCost;
 function CurrencyInfo;
@@ -18,7 +18,7 @@ function ClearData;
 function ValueConvert;
 function ErrorNotice;
 
-mes "Each Shop from the Menu may purchase using ^FF0000RTC Card^000000.";
+mes "Each Shop from the Menu may purchase using ^FF0000Gold Coin^000000.";
 mes "^00FF00____________________________^000000";
 mes "So,Which shop you would like to look at it";
 next;
@@ -46,9 +46,9 @@ function	ShopSettings	{
 			// Currency [ Item ID / Variable Name ]
 			set @Currency$,"7929";
 			// Item ID Lists
-			setarray @ItemLists[0],2629,2630,2639,2638,2658;
+			setarray @ItemLists[0],7086,7090,7077,7091,7092,7083,7089,7088;
 			// Item Price
-			setarray @ItemCost[0],50,50,50,50,50;
+			setarray @ItemCost[0],1,1,1,1,1,1,1,1;
 			break;
 		
 		// Case 4,5,6.....etc...
