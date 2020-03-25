@@ -4583,7 +4583,7 @@
 12013,Shadow_Arrow_Container,Shadow Arrow Quiver,2,2,,250,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 1767,500; },{},{}
 12014,Imma_Arrow_Container,Immaterial Arrow Quiver,2,2,,250,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 1757,500; },{},{}
 12015,Rusty_Arrow_Container,Rusty Arrow Quiver,2,2,,250,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 1762,500; },{},{}
-12016,Speed_Up_Potion,Speed Potion,2,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SPEEDUP1,5000,50; },{},{}
+12016,Speed_Up_Potion,Speed Potion,2,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SPEEDUP0,20000,75; },{},{}
 12017,Slow_Down_Potion,Slow Potion,2,2,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ sc_start SC_SlowDown,5000,0; },{},{}
 12018,Fire_Cracker,Firecracker,2,2,,20,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12019,Holy_Egg,Holy Egg,11,2,,150,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "ALL_RESURRECTION",2; },{},{}
@@ -10418,3 +10418,5 @@
 40265,Spirit_PRI,Spirit of Priest,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_PRIEST",1;  },{},{}
 40266,Spirit_WIZ,Spirit of Wizard,11,0,,100,,,,,0xFFFFFFFF,7,2,,,,,,{ itemskill "SL_WIZARD",1;  },{},{}
 40300,Box_of_Thunder_Box,Box of Thunder Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12028,100; },{},{}
+40301,Fish_Slice_Box,Fish Slice Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 14524,100; },{},{}
+40302,Speed_Potion_Box,Speed Potion Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12016,100; },{},{}
