@@ -100,7 +100,7 @@ OnInit:
 //	script start.
 OnPCKillEvent:
 	if ( getgmlevel() >= .gmnokill ) end;
-	getmapxy .@map$, .@x, .@y, 0;
+	getmapxy .@map$, .@x, .@y;
 	if ( .maptrigger$ != "all" ) {
 		for ( set .@i, 0; .@i < .maptriggersize; set .@i, .@i +1 ) {
 			if ( .@map$ == .maptrigger$[.@i] ) break;
@@ -262,7 +262,7 @@ OnPCLoginEvent:
 OnPCLoadMapEvent:
 	if ( @dota_sql_kills == 0 && @dota_sql_deaths == 0 ) {
 		if ( .maptrigger$ != "all" ) {
-			getmapxy .@map$, .@x, .@y, 0;
+			getmapxy .@map$, .@x, .@y;
 			for ( set .@i, 0; .@i < .maptriggersize; set .@i, .@i +1 ) {
 				if ( .@map$ == .maptrigger$[.@i] ) break;
 			}

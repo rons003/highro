@@ -5028,7 +5028,7 @@ static int skill_tarotcard(struct block_list *src, struct block_list *target, ui
 			card = 1; // THE FOOL
 		else if (rate < 20)
 			card = 2; // THE MAGICIAN
-		else if (rate < 30)
+		else if (rate < 5)
 			card = 3; // THE HIGH PRIESTESS
 		else if (rate < 37)
 			card = 4; // THE CHARIOT
@@ -13581,6 +13581,8 @@ int skill_castend_pos2(struct block_list *src, int x, int y, uint16 skill_id, ui
 	case MO_BODYRELOCATION:
 		if (unit_movepos(src, x, y, 2, 1))
 		{
+			if(sc && (sc->data[SC_SPIDERWEB] || sc->data[SC_ANKLE]))
+				break;
 #if PACKETVER >= 20111005
 			clif_snap(src, src->x, src->y);
 #else

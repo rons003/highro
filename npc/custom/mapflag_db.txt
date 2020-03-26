@@ -21,7 +21,6 @@
 
 // Cities ======================
 ayo_in01	mapflag	nobranch
-alb_ship 1	mapflag	nobranch
 alb2trea	mapflag	nobranch
 alberta	mapflag	nobranch
 alberta_in	mapflag	nobranch
@@ -180,16 +179,10 @@ orcsdun01	mapflag	nobranch
 orcsdun02	mapflag	nobranch
 ordeal_1-1	mapflag	nobranch
 ordeal_1-2	mapflag	nobranch
-ordeal_1-3	mapflag	nobranch
-ordeal_1-4	mapflag	nobranch
 ordeal_2-1	mapflag	nobranch
 ordeal_2-2	mapflag	nobranch
-ordeal_2-3	mapflag	nobranch
-ordeal_2-4	mapflag	nobranch
 ordeal_3-1	mapflag	nobranch
 ordeal_3-2	mapflag	nobranch
-ordeal_3-3	mapflag	nobranch
-ordeal_3-4	mapflag	nobranch
 pay_arche	mapflag	nobranch
 pay_dun00	mapflag	nobranch
 pay_dun01	mapflag	nobranch

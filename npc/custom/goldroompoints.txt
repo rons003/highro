@@ -1,0 +1,86 @@
+prontera,177,173,3	script	Ordeal Gold Room	1086,{
+set .@nombre$, "[^0000FFCucaracha de Oro^000000]";
+mes .@nombre$;
+if (gold > 0) {
+        mes "BZbRzBrZ !!";
+        next;
+        mes .@nombre$;
+        mes "Now I can talk!! Hey, do you want to exchange gold points to gold item?";
+        next;
+        if (select("Sure!:Nope") == 2) close;
+        mes .@nombre$;
+        mes "Done ^^ BzBzBZ!!";
+        getitem 969,gold;
+        set gold, 0;
+        next;
+        mes .@nombre$;
+} // End if
+mes "Bz Bz BZ!??!";
+next;
+if (select("Gold BzBz!!:A bug?") == 2) close;
+close2;
+warp "ordeal_3-2",154,154;
+end;
+} // End Script
+ 
+// Script Gold v1.0
+-	script	GoldRoom	-1,{
+OnNPCKillEvent:
+if (strcharinfo(3) != "ordeal_3-2") end;
+if (killedrid != 1233) end;
+switch (rand(3)) {
+        case 0:
+                set .@g, 1;
+                set gold, gold + .@g;
+                break;
+                
+        case 1:
+                set .@g, 2;
+                set gold, gold + .@g;
+                break;
+                
+        case 2:
+                set .@g, 3;
+                set gold, gold + .@g;
+                break;
+} // End switch
+dispbottom "You earned " +.@g +" Gold Points, you have at the moment " +gold +" gold points.";
+end;
+ 
+OnPCDieEvent:
+if (strcharinfo(3) != "ordeal_3-2") end;
+dispbottom "You have lost all your gold points, you have been killed by a player inside the gold room.";
+set gold, 0;
+end;
+} // End Script
+ 
+// Warps a prontera v1.0
+-	script	Retorno::Retorno	45,2,2,{
+end;
+OnTouch:
+warp "prontera",153,193;
+end;
+} // End Script
+ 
+// Duplicados Warps v1.0
+ordeal_3-2,24,228,0	duplicate(Retorno)	Retorno#r1	45
+ordeal_3-2,25,58,0	duplicate(Retorno)	Retorno#r2	45
+ordeal_3-2,289,130,0	duplicate(Retorno)	Retorno#r3	45
+ordeal_3-2,283,230,0	duplicate(Retorno)	Retorno#r4	45
+ordeal_3-2,210,203,0	duplicate(Retorno)	Retorno#r5	45
+ 
+// Natural Monsters v1.0
+ordeal_3-2,154,154,0,0	monster	Gold Peco Peco	1233,35,0,0,0
+ordeal_3-2,0,0,0,0	monster	Gold Peco Peco	1233,70,0,0,0
+ordeal_3-2,0,0,0,0	monster	Gold Peco Peco	1233,70,0,0,0
+ordeal_3-2,0,0,0,0	monster	Gold Peco Peco	1233,70,0,0,0
+ordeal_3-2,0,0,0,0	monster	Gold Guardian	1439,70,0,0,0
+ordeal_3-2,154,154,0,0	monster	Gold Guardian	1439,5,0,0,0
+ 
+// Map Flags v1.0
+ordeal_3-2	mapflag	nowarp
+ordeal_3-2	mapflag	nobranch
+ordeal_3-2	mapflag	nomemo
+ordeal_3-2	mapflag	nowarpto
+ordeal_3-2	mapflag	nopenalty
+ordeal_3-2	mapflag	noskill
