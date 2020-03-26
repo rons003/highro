@@ -829,7 +829,7 @@
 12531,475,100	// White Potion Box
 12532,475,100	// Royal Jelly Box2
 12533,475,100	// Blue Herb Box2
-12534,475,100	// Yggdrasil Seed Box
+//12534,475,100	// Yggdrasil Seed Box
 12535,475,100	// Iggdrasilberry Box
 12540,499,100	// GM Warp Box
 12541,499,100	// Fortune Cookie1

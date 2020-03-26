@@ -197,3 +197,5 @@ thana_step	mapflag	nowarpto
 
 //=====GoldRoom
 ordeal_3-2	mapflag	nowarpto
+pvp_y_8-2	mapflag	nowarpto
+
