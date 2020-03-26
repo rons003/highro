@@ -2331,7 +2331,7 @@
 5148,Phrygian_Cap,Phrygian Cap,4,0,,500,,0,,0,0xFFFFFFFF,7,2,256,,0,1,217,{ bonus bInt,2; },{},{}
 5149,Silver_Tiara,Silver Tiara,4,0,,100,,0,,0,0xFFFFFFFF,7,2,256,,0,1,218,{ bonus bInt,2; },{},{}
 5150,Joker_Jester_,Joker Jester,4,20,,100,,1,,0,0xFFFFFFFF,7,2,256,,0,0,219,{ bonus bSpeedRate,25; },{},{}
-5151,Headset_OST,Note Headphones,4,20,,200,,4,,1,0xFFFFFFFF,7,2,768,,0,1,220,{ bonus bMdef,3; bonus2 bResEff,Eff_Stun,1000; bonus2 bResEff,Eff_Freeze,1000; },{},{}
+5151,Headset_OST,Note Headphones,4,20,,200,,4,,1,0xFFFFFFFF,7,2,256,,0,1,220,{ bonus bMdef,3; bonus2 bResEff,Eff_Stun,1000; bonus2 bResEff,Eff_Freeze,1000; },{},{}
 5152,Chinese_Crown,Chinese Crown,4,20,,2000,,2,,0,0xFFFFFFFF,7,2,768,,1,1,221,{ bonus2 bResEff,Eff_Stun,1000; bonus bInt,1; },{},{}
 5153,Angeling_Hairpin,Angeling Hairpin,4,20,,700,,3,,0,0xFFFFFFFF,7,2,256,,0,1,222,{ bonus bFlee,5; },{},{}
 5154,Sunglasses_F,Father's Sunglasses,4,20,,100,,3,,0,0xFFFFFFFF,7,2,512,,0,0,12,{},{},{}
@@ -10323,7 +10323,7 @@
 3004,dragonwings,Dragon Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3004,{ bonus bStr,5; bonus bAgi,5; bonus bVit,5; bonus bDex,5; bonus bInt,5; bonus bLuk,5; bonus2 bAddRace,RC_DemiHuman,10; bonus2 bAddRace,RC_Player,10; bonus2 bAddEff,Eff_Curse,500; bonus bAtkEle,Ele_Wind; },{},{}
 3005,gargwings,Gargoyle Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3005,{ bonus bDex,10;  bonus2 bAddEff,Eff_Stone,100; },{},{}
 3006,icawings,Icarus Wings,4,20,,100,,4,,0,0xFFFFFFFF,7,2,1,,0,0,3006,{ bonus bAgi,15; bonus2 bSubEle,Ele_Fire,15; bonus2 bSubEle,Ele_Dark,15; bonus2 bSubEle,Ele_Holy,15; bonus2 bSubEle,Ele_Poison,15; bonus2 bSubEle,Ele_Ghost,15; bonus2 bSubEle,Ele_Earth,15; bonus2 bSubEle,Ele_Water,15; bonus2 bSubEle,Ele_Wind,15;},{},{}
-3007,phxwings,Phoenix Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3007,{ bonus bVit,10;  bonus2 bAddEff,Eff_Blind,100; bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3;  },{},{}
+3007,phxwings,Phoenix Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3007,{ bonus bVit,10;  bonus2 bAddEff,Eff_Blind,100; bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3;bonus bMaxHPrate,10; },{},{}
 3008,tornwings,Torn Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,0,0,3008,{ bonus bLuk,10; bonus bFlee2,5; bonus2 bSubEle,Ele_Wind,10; bonus2 bAddEff,Eff_Silence,100;   },{},{}
 3009,wbwings,White Butterfly Wings,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3009,{ bonus bAgi,10; bonus bFlee,30; },{},{}
 
@@ -10348,7 +10348,7 @@
 
 // Custom Weapons
 3500,ICA_SWORD,Icarus Sword,5,49000,,500,120,,1,4,0x000654E2,7,2,2,3,27,1,2,{ bonus3 bAutoSpell,"MO_CALLSPIRITS",5,2;  },{},{}
-3501,ICA_BOW,Icarus Bow,5,20,,1200,120,,5,3,0x000A0808,7,2,34,4,48,1,11,{ skill "AL_HEAL",5; },{},{}
+3501,ICA_BOW,Icarus Bow,5,20,,1200,120,,5,4,0x000A0808,7,2,34,4,48,1,11,{ skill "AL_HEAL",5; },{},{}
 3502,ICA_STAFF,Icarus Staff,5,2500,,400,25,,1,4,0x00818315,7,2,2,2,12,1,10,{ bonus bDex,2; bonus bInt,2; bonus bMatkRate,15; if(BaseJob == Job_Wizard) bonus bMatkRate,(getequiprefinerycnt(EQI_HAND_R)*2);},{},{}
 3503,First_of_Fury,Fist of Fury,5,50000,,1200,120,,1,4,0x0004C5B2,7,2,2,3,27,1,8,{},{},{}
 3504,Skewer_,Skewer,5,20,,1000,120,,1,3,0x028F5EEE,7,2,2,4,36,1,1,{ bonus bVit,5; },{},{}
@@ -10385,6 +10385,8 @@
 3685,sharingan,Sharingan,4,30,,50,,5,,0,0xFFFFFFFF,7,2,512,,0,0,3185,{  },{},{}
 3686,warhelmofflame,War Helm of Flame,4,30,,50,,5,,1,0xFFFFFFFF,7,2,256,,0,0,3186,{  },{},{}
 3687,blhzaura,Black Lighthalzen Aura,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3187,{  },{},{}
+
+3999,sheriff,Sheriff Hat,4,30,,50,,5,,0,0xFFFFFFFF,7,2,256,,0,0,3499,{  },{},{}
 
 //
 8420,rcyc,Lord Cyclop's Eye,4,0,,200,,0,,1,0xFFFFFFFE,7,2,512,,1,0,3920,{ bonus bVit,3; bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3; bonus bFlee,20; },{},{}

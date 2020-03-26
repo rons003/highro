@@ -156,7 +156,7 @@ if(hen_hen < 1)
 
     mes "my nephews who hold the valkyries";
 
-    announce "Wowowow "+strcharinfo(0)+" has just broken the seal!! and will start the quest of valkyrie","0x33FF66";
+    announce strcharinfo(0)+" has just broken the seal!! and will start the quest of valkyrie","0x33FF66";
 
     close2;
 

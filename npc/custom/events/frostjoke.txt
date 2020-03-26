@@ -44,4 +44,4 @@ quiz_02	mapflag	nomemo
 quiz_02	mapflag	nobranch
 quiz_02	mapflag	noloot
 quiz_02	mapflag	nopenalty
-quiz_02	mapflag	nocommand	80
+quiz_02	mapflag	nocommand	1

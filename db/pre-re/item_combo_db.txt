@@ -171,5 +171,5 @@
 3502:3006,{ bonus3 bAutoSpellWhenHit,"MG_FIREBOLT",3,20; bonus3 bAutoSpellWhenHit,"MG_COLDBOLT",3,20;bonus bSpeedRate,10; }
 3503:3007,{bonus bUnbreakableWeapon; bonus bAspdRate,10; bonus bCritAtkRate,10;bonus3 bAutoSpell,"MO_EXPLOSIONSPIRITS",3,10;}
 3504:3008,{bonus bCritAtkRate,20; bonus bCritical,10; bonus bFlee2,-5;}
-30089:30091:30092,{ bonus2 bResEff,Eff_Freeze,10000;bonus bMaxHPrate,5; bonus bMaxSPrate,5; bonus2 bSubEle,Ele_Fire,-10; bonus2 bSubEle,Ele_Dark,-10; bonus2 bSubEle,Ele_Holy,-10; bonus2 bSubEle,Ele_Poison,-10; bonus2 bSubEle,Ele_Ghost,-10; bonus2 bSubEle,Ele_Earth,-10; bonus2 bSubEle,Ele_Water,-10; bonus2 bSubEle,Ele_Wind,-10;bonus2 bSubEle,Ele_Neutral,-10;}
-
+30089:30091:30092,{ bonus2 bResEff,Eff_Freeze,10000;bonus bMaxHPrate,5; bonus bMaxSPrate,5; bonus2 bSubEle,Ele_Fire,-10; bonus2 bSubEle,Ele_Dark,-10; bonus2 bSubEle,Ele_Holy,-10; bonus2 bSubEle,Ele_Poison,-10; bonus2 bSubEle,Ele_Earth,-10; bonus2 bSubEle,Ele_Water,-10; bonus2 bSubEle,Ele_Wind,-10; }
+3004:3019,{ bonus bMaxHPrate,5; }
