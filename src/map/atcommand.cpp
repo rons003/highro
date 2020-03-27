@@ -11234,145 +11234,145 @@ ACMD_FUNC(resurrect)
 * @whosell - List who is vending the item (amount, price, and location).
 * revamped by VoidLess, original by zephyrus_cr
 *------------------------------------------*/
-ACMD_FUNC(whosell)
-{
-	char item_name[100];
-	int item_id = 0, j, count = 0, sat_num = 0;
-	int s_type = 1; // search bitmask: 0-name,1-id, 2-card, 4-refine
-	int refine = 0, card_id = 0;
-	bool flag = 0; // place dot on the minimap?
-	struct map_session_data *pl_sd;
-	struct s_mapiterator *iter;
-	unsigned int MinPrice = battle_config.vending_max_value, MaxPrice = 0;
-	struct item_data *item_data;
-	nullpo_retr(-1, sd);
-	if (!message || !*message)
-	{
-		clif_displaymessage(fd, "Use: @whosell (<+refine> )(<item_id>)(<[card_id]>) or @whosell <name>");
-		return -1;
-	}
-	if (sscanf(message, "+%d %d[%d]", &refine, &item_id, &card_id) == 3)
-	{
-		s_type = 1 + 2 + 4;
-	}
-	else if (sscanf(message, "+%d %d", &refine, &item_id) == 2)
-	{
-		s_type = 1 + 4;
-	}
-	else if (sscanf(message, "+%d [%d]", &refine, &card_id) == 2)
-	{
-		s_type = 2 + 4;
-	}
-	else if (sscanf(message, "%d[%d]", &item_id, &card_id) == 2)
-	{
-		s_type = 1 + 2;
-	}
-	else if (sscanf(message, "[%d]", &card_id) == 1)
-	{
-		s_type = 2;
-	}
-	else if (sscanf(message, "+%d", &refine) == 1)
-	{
-		s_type = 4;
-	}
-	else if (sscanf(message, "%d", &item_id) == 1 && item_id == atoi(message))
-	{
-		//names, that start on num are not working
-		//so implemented minumum item_id>500
-		//or better make item_id == atoi(message) ?
-		s_type = 1;
-	}
-	else if (sscanf(message, "%99[^\n]", item_name) == 1)
-	{
-		s_type = 1;
-		if ((item_data = itemdb_searchname(item_name)) == NULL)
-		{
-			clif_displaymessage(fd, "Not found item with this name");
-			return -1;
-		}
-		item_id = item_data->nameid;
-	}
-	else
-	{
-		clif_displaymessage(fd, "Use: @whosell (<+refine> )(<item_id>)(<[card_id]>) or @whosell <name>");
-		return -1;
-	}
+// ACMD_FUNC(whosell)
+// {
+// 	char item_name[100];
+// 	int item_id = 0, j, count = 0, sat_num = 0;
+// 	int s_type = 1; // search bitmask: 0-name,1-id, 2-card, 4-refine
+// 	int refine = 0, card_id = 0;
+// 	bool flag = 0; // place dot on the minimap?
+// 	struct map_session_data *pl_sd;
+// 	struct s_mapiterator *iter;
+// 	unsigned int MinPrice = battle_config.vending_max_value, MaxPrice = 0;
+// 	struct item_data *item_data;
+// 	nullpo_retr(-1, sd);
+// 	if (!message || !*message)
+// 	{
+// 		clif_displaymessage(fd, "Use: @whosell (<+refine> )(<item_id>)(<[card_id]>) or @whosell <name>");
+// 		return -1;
+// 	}
+// 	if (sscanf(message, "+%d %d[%d]", &refine, &item_id, &card_id) == 3)
+// 	{
+// 		s_type = 1 + 2 + 4;
+// 	}
+// 	else if (sscanf(message, "+%d %d", &refine, &item_id) == 2)
+// 	{
+// 		s_type = 1 + 4;
+// 	}
+// 	else if (sscanf(message, "+%d [%d]", &refine, &card_id) == 2)
+// 	{
+// 		s_type = 2 + 4;
+// 	}
+// 	else if (sscanf(message, "%d[%d]", &item_id, &card_id) == 2)
+// 	{
+// 		s_type = 1 + 2;
+// 	}
+// 	else if (sscanf(message, "[%d]", &card_id) == 1)
+// 	{
+// 		s_type = 2;
+// 	}
+// 	else if (sscanf(message, "+%d", &refine) == 1)
+// 	{
+// 		s_type = 4;
+// 	}
+// 	else if (sscanf(message, "%d", &item_id) == 1 && item_id == atoi(message))
+// 	{
+// 		//names, that start on num are not working
+// 		//so implemented minumum item_id>500
+// 		//or better make item_id == atoi(message) ?
+// 		s_type = 1;
+// 	}
+// 	else if (sscanf(message, "%99[^\n]", item_name) == 1)
+// 	{
+// 		s_type = 1;
+// 		if ((item_data = itemdb_searchname(item_name)) == NULL)
+// 		{
+// 			clif_displaymessage(fd, "Not found item with this name");
+// 			return -1;
+// 		}
+// 		item_id = item_data->nameid;
+// 	}
+// 	else
+// 	{
+// 		clif_displaymessage(fd, "Use: @whosell (<+refine> )(<item_id>)(<[card_id]>) or @whosell <name>");
+// 		return -1;
+// 	}
 
-	//check card
-	if (s_type & 2 && ((item_data = itemdb_exists(card_id)) == NULL || item_data->type != IT_CARD))
-	{
-		clif_displaymessage(fd, "Not found a card with than ID");
-		return -1;
-	}
-	//check item
-	if (s_type & 1 && (item_data = itemdb_exists(item_id)) == NULL)
-	{
-		clif_displaymessage(fd, "Not found an item with than ID");
-		return -1;
-	}
-	//check refine
-	if (s_type & 4)
-	{
-		if (refine < 0 || refine > 10)
-		{
-			clif_displaymessage(fd, "Refine out of bounds: 0 - 10");
-			return -1;
-		}
-		/*if(item_data->type != IT_WEAPON && item_data->type != IT_ARMOR){
-	    clif_displaymessage(fd, "Use refine only with weapon or armor");
-	    return -1;
-    }*/
-	}
-	iter = mapit_getallusers();
-	for (pl_sd = (TBL_PC *)mapit_first(iter); mapit_exists(iter); pl_sd = (TBL_PC *)mapit_next(iter))
-	{
-		if (pl_sd->vender_id) //check if player is vending
-		{
-			for (j = 0; j < pl_sd->vend_num; j++)
-			{
-				if ((item_data = itemdb_exists(pl_sd->cart.u.items_cart[pl_sd->vending[j].index].nameid)) == NULL)
-					continue;
-				if (s_type & 1 && pl_sd->cart.u.items_cart[pl_sd->vending[j].index].nameid != item_id)
-					continue;
-				if (s_type & 2 && ((item_data->type != IT_ARMOR && item_data->type != IT_WEAPON) ||
-								   (pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[0] != card_id &&
-									pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[1] != card_id &&
-									pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[2] != card_id &&
-									pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[3] != card_id)))
-					continue;
-				if (s_type & 4 && ((item_data->type != IT_ARMOR && item_data->type != IT_WEAPON) || pl_sd->cart.u.items_cart[pl_sd->vending[j].index].refine != refine))
-					continue;
-				if (item_data->type == IT_ARMOR)
-					snprintf(atcmd_output, CHAT_SIZE_MAX, "+%d %d[%d] | Price %d | Amount %d | Map %s[%d,%d] | Seller %s", pl_sd->cart.u.items_cart[pl_sd->vending[j].index].refine, pl_sd->cart.u.items_cart[pl_sd->vending[j].index].nameid, pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[0], pl_sd->vending[j].value, pl_sd->vending[j].amount, mapindex_id2name(pl_sd->mapindex), pl_sd->bl.x, pl_sd->bl.y, pl_sd->status.name);
-				else if (item_data->type == IT_WEAPON)
-					snprintf(atcmd_output, CHAT_SIZE_MAX, "+%d %d[%d,%d,%d,%d] | Price %d | Amount %d | Map %s[%d,%d] | Seller %s", pl_sd->cart.u.items_cart[pl_sd->vending[j].index].refine, pl_sd->cart.u.items_cart[pl_sd->vending[j].index].nameid, pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[0], pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[1], pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[2], pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[3], pl_sd->vending[j].value, pl_sd->vending[j].amount, mapindex_id2name(pl_sd->mapindex), pl_sd->bl.x, pl_sd->bl.y, pl_sd->status.name);
-				else
-					snprintf(atcmd_output, CHAT_SIZE_MAX, "ID %d | Price %d | Amount %d | Map %s[%d,%d] | Seller %s", pl_sd->cart.u.items_cart[pl_sd->vending[j].index].nameid, pl_sd->vending[j].value, pl_sd->vending[j].amount, mapindex_id2name(pl_sd->mapindex), pl_sd->bl.x, pl_sd->bl.y, pl_sd->status.name);
-				if (pl_sd->vending[j].value < MinPrice)
-					MinPrice = pl_sd->vending[j].value;
-				if (pl_sd->vending[j].value > MaxPrice)
-					MaxPrice = pl_sd->vending[j].value;
-				clif_displaymessage(fd, atcmd_output);
-				count++;
-				flag = 1;
-			}
-			if (flag && pl_sd->mapindex == sd->mapindex)
-			{
-				clif_viewpoint(sd, 1, 1, pl_sd->bl.x, pl_sd->bl.y, ++sat_num, 0xFFFFFF);
-				flag = 0;
-			}
-		}
-	}
-	mapit_free(iter);
-	if (count > 0)
-	{
-		snprintf(atcmd_output, CHAT_SIZE_MAX, "Found %d ea. Prices from %dz to %dz", count, MinPrice, MaxPrice);
-		clif_displaymessage(fd, atcmd_output);
-	}
-	else
-		clif_displaymessage(fd, "Nobody is selling it now.");
-	return 0;
-}
+// 	//check card
+// 	if (s_type & 2 && ((item_data = itemdb_exists(card_id)) == NULL || item_data->type != IT_CARD))
+// 	{
+// 		clif_displaymessage(fd, "Not found a card with than ID");
+// 		return -1;
+// 	}
+// 	//check item
+// 	if (s_type & 1 && (item_data = itemdb_exists(item_id)) == NULL)
+// 	{
+// 		clif_displaymessage(fd, "Not found an item with than ID");
+// 		return -1;
+// 	}
+// 	//check refine
+// 	if (s_type & 4)
+// 	{
+// 		if (refine < 0 || refine > 10)
+// 		{
+// 			clif_displaymessage(fd, "Refine out of bounds: 0 - 10");
+// 			return -1;
+// 		}
+// 		/*if(item_data->type != IT_WEAPON && item_data->type != IT_ARMOR){
+// 	    clif_displaymessage(fd, "Use refine only with weapon or armor");
+// 	    return -1;
+//     }*/
+// 	}
+// 	iter = mapit_getallusers();
+// 	for (pl_sd = (TBL_PC *)mapit_first(iter); mapit_exists(iter); pl_sd = (TBL_PC *)mapit_next(iter))
+// 	{
+// 		if (pl_sd->vender_id) //check if player is vending
+// 		{
+// 			for (j = 0; j < pl_sd->vend_num; j++)
+// 			{
+// 				if ((item_data = itemdb_exists(pl_sd->cart.u.items_cart[pl_sd->vending[j].index].nameid)) == NULL)
+// 					continue;
+// 				if (s_type & 1 && pl_sd->cart.u.items_cart[pl_sd->vending[j].index].nameid != item_id)
+// 					continue;
+// 				if (s_type & 2 && ((item_data->type != IT_ARMOR && item_data->type != IT_WEAPON) ||
+// 								   (pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[0] != card_id &&
+// 									pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[1] != card_id &&
+// 									pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[2] != card_id &&
+// 									pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[3] != card_id)))
+// 					continue;
+// 				if (s_type & 4 && ((item_data->type != IT_ARMOR && item_data->type != IT_WEAPON) || pl_sd->cart.u.items_cart[pl_sd->vending[j].index].refine != refine))
+// 					continue;
+// 				if (item_data->type == IT_ARMOR)
+// 					snprintf(atcmd_output, CHAT_SIZE_MAX, "+%d %d[%d] | Price %d | Amount %d | Map %s[%d,%d] | Seller %s", pl_sd->cart.u.items_cart[pl_sd->vending[j].index].refine, pl_sd->cart.u.items_cart[pl_sd->vending[j].index].nameid, pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[0], pl_sd->vending[j].value, pl_sd->vending[j].amount, mapindex_id2name(pl_sd->mapindex), pl_sd->bl.x, pl_sd->bl.y, pl_sd->status.name);
+// 				else if (item_data->type == IT_WEAPON)
+// 					snprintf(atcmd_output, CHAT_SIZE_MAX, "+%d %d[%d,%d,%d,%d] | Price %d | Amount %d | Map %s[%d,%d] | Seller %s", pl_sd->cart.u.items_cart[pl_sd->vending[j].index].refine, pl_sd->cart.u.items_cart[pl_sd->vending[j].index].nameid, pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[0], pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[1], pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[2], pl_sd->cart.u.items_cart[pl_sd->vending[j].index].card[3], pl_sd->vending[j].value, pl_sd->vending[j].amount, mapindex_id2name(pl_sd->mapindex), pl_sd->bl.x, pl_sd->bl.y, pl_sd->status.name);
+// 				else
+// 					snprintf(atcmd_output, CHAT_SIZE_MAX, "ID %d | Price %d | Amount %d | Map %s[%d,%d] | Seller %s", pl_sd->cart.u.items_cart[pl_sd->vending[j].index].nameid, pl_sd->vending[j].value, pl_sd->vending[j].amount, mapindex_id2name(pl_sd->mapindex), pl_sd->bl.x, pl_sd->bl.y, pl_sd->status.name);
+// 				if (pl_sd->vending[j].value < MinPrice)
+// 					MinPrice = pl_sd->vending[j].value;
+// 				if (pl_sd->vending[j].value > MaxPrice)
+// 					MaxPrice = pl_sd->vending[j].value;
+// 				clif_displaymessage(fd, atcmd_output);
+// 				count++;
+// 				flag = 1;
+// 			}
+// 			if (flag && pl_sd->mapindex == sd->mapindex)
+// 			{
+// 				clif_viewpoint(sd, 1, 1, pl_sd->bl.x, pl_sd->bl.y, ++sat_num, 0xFFFFFF);
+// 				flag = 0;
+// 			}
+// 		}
+// 	}
+// 	mapit_free(iter);
+// 	if (count > 0)
+// 	{
+// 		snprintf(atcmd_output, CHAT_SIZE_MAX, "Found %d ea. Prices from %dz to %dz", count, MinPrice, MaxPrice);
+// 		clif_displaymessage(fd, atcmd_output);
+// 	}
+// 	else
+// 		clif_displaymessage(fd, "Nobody is selling it now.");
+// 	return 0;
+// }
 
 #include "../custom/atcommand.inc"
 
@@ -11688,7 +11688,7 @@ void atcommand_basecommands(void)
 		ACMD_DEFR(changedress, ATCMD_NOCONSOLE | ATCMD_NOAUTOTRADE),
 		ACMD_DEFR(camerainfo, ATCMD_NOCONSOLE | ATCMD_NOAUTOTRADE),
 		ACMD_DEFR(resurrect, ATCMD_NOCONSOLE),
-		ACMD_DEF(whosell),
+		// ACMD_DEF(whosell),
 	};
 	AtCommandInfo *atcommand;
 	int i;
