@@ -70,10 +70,10 @@ ordeal_3-2,283,230,0	duplicate(Retorno)	Retorno#r4	45
 ordeal_3-2,210,203,0	duplicate(Retorno)	Retorno#r5	45
  
 // Natural Monsters v1.0
-ordeal_3-2,154,154,0,0	monster	Gold Peco Peco	1233,35,0,0,0
-ordeal_3-2,0,0,0,0	monster	Gold Peco Peco	1233,70,0,0,0
-ordeal_3-2,0,0,0,0	monster	Gold Peco Peco	1233,70,0,0,0
-ordeal_3-2,0,0,0,0	monster	Gold Peco Peco	1233,70,0,0,0
+ordeal_3-2,0,0	monster	Gold Peco Peco	1233,150,0,0,0
+ordeal_3-2,0,0,0,0	monster	Gold Peco Peco	1233,150,0,0,0
+ordeal_3-2,0,0,0,0	monster	Gold Peco Peco	1233,150,0,0,0
+ordeal_3-2,0,0,0,0	monster	Gold Peco Peco	1233,150,0,0,0
 ordeal_3-2,0,0,0,0	monster	Gold Guardian	1439,70,0,0,0
 ordeal_3-2,154,154,0,0	monster	Gold Guardian	1439,5,0,0,0
  
