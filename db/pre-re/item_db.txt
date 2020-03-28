@@ -10389,7 +10389,7 @@
 3999,sheriff,Sheriff Hat,4,30,,50,,5,,0,0xFFFFFFFF,7,2,256,,0,0,3499,{  },{},{}
 
 //
-8420,rcyc,Lord Cyclop's Eye,4,0,,200,,0,,1,0xFFFFFFFE,7,2,512,,1,0,3920,{ bonus bVit,3; bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3; bonus bFlee,20; },{},{}
+8420,rcyc,Lord Cyclop's Eye,4,0,,200,,0,,1,0xFFFFFFFE,7,2,512,,1,0,3920,{ bonus bVit,3; bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3; bonus bFlee,20; skill "MG_SIGHT",1; },{},{ sc_end SC_SIGHT; }
 8461,danzobandage,Danzo Bandage,4,30,,50,,5,,1,0xFFFFFFFF,7,2,512,,0,0,3961,{ bonus bAllStats,3; },{},{}
 8469,flameaura,Flame Aura,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3969,{  bonus bAtkEle,Ele_Fire; bonus bAllStats,5; bonus bMatkRate,30; bonus2 bAddRace,RC_DemiHuman,10; bonus2 bAddRace,RC_Player,10; if(BaseJob==Job_Wizard) bonus3 bAutoSpellWhenHit,"NPC_EARTHQUAKE",2,10; },{},{}
 8473,goldrunesofpower,Rune's of Power,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3973,{ bonus bVit,10; bonus bAgi,10; bonus bDex,10; bonus bMaxHPrate,15;bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3; },{},{}

@@ -4411,8 +4411,8 @@ int status_calc_pc_sub(struct map_session_data *sd, enum e_status_calc_opt opt)
 
 	if (sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_STAR)
 	{
-		sd->right_weapon.addrace[CLASS_BOSS] += 100;
-		sd->left_weapon.addrace[CLASS_BOSS] += 100;
+		sd->right_weapon.addclass[CLASS_BOSS] += 100;
+		sd->left_weapon.addclass[CLASS_BOSS] += 100;
 		sd->right_weapon.addele[ELE_HOLY] += 100;
 		sd->left_weapon.addele[ELE_HOLY] += 100;
 	}
