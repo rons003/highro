@@ -96,7 +96,7 @@ OnGMStart:
 	announce "(Poring Manager) : If you want to join, warp at the middle of Prontera, enter the warp portal.",0;
 	enablenpc "PoringCatcher";
 	sleep 2000;
-	announce "(Poring Manager) : Prize: will be TCG and Gold Coins",0;
+	announce "(Poring Manager) : Prize: will be Credit",0;
 	sleep 2000;
 	announce "(Poring Manager) : The portal is going to close in one minute.",0;  
 	sleep 60000;
