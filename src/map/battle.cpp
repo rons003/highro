@@ -3681,7 +3681,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 		case PA_SHIELDCHAIN:
 			skillratio += 30 * skill_lv;
 			if (sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_CRUSADER)	
-			skillratio *= (double)(1.5);
+			skillratio += 150;
 			break;
 		case WS_CARTTERMINATION:
 			i = 10 * (16 - skill_lv);
