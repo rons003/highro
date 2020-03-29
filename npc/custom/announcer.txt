@@ -4,8 +4,6 @@ set .Time,300;		// Announce every x Minute.
 
 setarray .News$[0],	// Random Message to be Announced
 		"Feel free to use @request if you have any concerns regarding the game.",
-		"Like and Support Komika Esports Facebook page at www.facebook.com/komikaph.",
-		"For more details about Komika Esports, please visit our website at www.komikaesports.com.",
 		"Welcome to Eutopia Ragnarok Online! Please report all bugs that you find immediately by using @request.",
 		"Like and Share Event on our Facebook page at www.facebook.com/eutopiaro.";
 		
