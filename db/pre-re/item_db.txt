@@ -2010,7 +2010,7 @@
 4369,Venatu_Card,Venatu Card,6,20,,10,,,,,,,,16,,,,,{ bonus bLuk,readparam(bAgi)/18; },{},{}
 4370,Dimik_Card,Dimik Card,6,20,,10,,,,,,,,16,,,,,{ bonus bVit,getrefine()-5; },{},{}
 4371,Archdam_Card,Archdam Card,6,20,,10,,,,,,,,16,,,,,{ bonus bBaseAtk,10; bonus bCastrate,20; },{},{}
-4372,Bacsojin_Card,White Lady Card,6,20,,10,,,,,,,,769,,,,,{ bonus bHealPower,30; bonus bUseSPrate,15; },{},{}
+4372,Bacsojin_Card,White Lady Card,6,20,,10,,,,,,,,2,,,,,{ bonus bHealPower,30; bonus bUseSPrate,15; },{},{}
 4373,Chung_E_Card,Green Maiden Card,6,20,,10,,,,,,,,4,,,,,{ bonus bLuk,getrefine()-5; bonus bCritical,getrefine(); },{},{}
 4374,Apocalips_H_Card,Vesper Card,6,20,,10,,,,,,,,769,,,,,{ bonus bDex,2; bonus2 bIgnoreMdefClassRate,Class_Boss,30; },{},{}
 4375,Orc_Baby_Card,Orc Baby Card,6,20,,10,,,,,,,,4,,,,,{ if(getrefine()>=9) { bonus2 bSubEle,Ele_Neutral,15; bonus bFlee,15; } else { bonus2 bSubEle,Ele_Neutral,10; bonus bFlee,10; } },{},{}
@@ -10350,7 +10350,7 @@
 3500,ICA_SWORD,Icarus Sword,5,49000,,500,120,,1,4,0x000654E2,7,2,2,3,27,1,2,{ bonus3 bAutoSpell,"MO_CALLSPIRITS",5,2;  },{},{}
 3501,ICA_BOW,Icarus Bow,5,20,,1200,120,,5,4,0x000A0808,7,2,34,4,48,1,11,{ skill "AL_HEAL",5; },{},{}
 3502,ICA_STAFF,Icarus Staff,5,2500,,400,25,,1,4,0x00818315,7,2,2,2,12,1,10,{ bonus bDex,2; bonus bInt,2; bonus bMatkRate,15; if(BaseJob == Job_Wizard) bonus bMatkRate,(getequiprefinerycnt(EQI_HAND_R)*2);},{},{}
-3503,First_of_Fury,Fist of Fury,5,50000,,1200,120,,1,4,0x0004C5B2,7,2,2,3,27,1,8,{},{},{}
+3503,First_of_Fury,Fist of Fury,5,50000,,1200,100,,1,4,0x0004C5B2,7,2,2,3,27,1,8,{},{},{}
 3504,Skewer_,Skewer,5,20,,1000,120,,1,3,0x028F5EEE,7,2,2,4,36,1,1,{ bonus bVit,5; },{},{}
 3505,banryu,Banryu,5,2900,,700,53,,1,4,0x000654E3,7,2,2,1,2,1,2,{},{},{}
 
