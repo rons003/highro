@@ -5028,7 +5028,7 @@ static int skill_tarotcard(struct block_list *src, struct block_list *target, ui
 			card = 1; // THE FOOL
 		else if (rate < 20)
 			card = 2; // THE MAGICIAN
-		else if (rate < 5)
+		else if (rate < 10)
 			card = 3; // THE HIGH PRIESTESS
 		else if (rate < 37)
 			card = 4; // THE CHARIOT
