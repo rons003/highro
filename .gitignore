@@ -127,3 +127,4 @@ Thumbs.db
 
 # CMakeFiles
 /CMakeFiles/
+/conf/gepard_shield.conf

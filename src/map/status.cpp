@@ -4412,9 +4412,9 @@ int status_calc_pc_sub(struct map_session_data *sd, enum e_status_calc_opt opt)
 	if (sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_STAR)
 	{
 		sd->right_weapon.addclass[CLASS_BOSS] += 100;
-		sd->left_weapon.addclass[CLASS_BOSS] += 100;
+		//sd->left_weapon.addclass[CLASS_BOSS] += 100;
 		sd->right_weapon.addele[ELE_HOLY] += 100;
-		sd->left_weapon.addele[ELE_HOLY] += 100;
+		//sd->left_weapon.addele[ELE_HOLY] += 100;
 	}
 
 	if (sc->count)
@@ -10603,7 +10603,7 @@ int status_change_start(struct block_list *src, struct block_list *bl, enum sc_t
 			{ // Self effect
 				val2 = tick / 10000;
 				tick_time = 10000;															  // [GodLesZ] tick time
-				status_change_clear_buffs(bl, SCCB_BUFFS | SCCB_DEBUFFS | SCCB_CHEM_PROTECT); // Remove buffs/debuffs
+				status_change_clear_buffs(bl, SCCB_BUFFS | SCCB_DEBUFFS); // Remove buffs/debuffs
 			}
 			break;
 
