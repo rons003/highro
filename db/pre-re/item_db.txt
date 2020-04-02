@@ -10422,3 +10422,8 @@
 40300,Box_of_Thunder_Box,Box of Thunder Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12028,100; },{},{}
 40301,Fish_Slice_Box,Fish Slice Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 14524,100; },{},{}
 40302,Speed_Potion_Box,Speed Potion Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12016,100; },{},{}
+40303,FSB,Fusion Set Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12016,100; },{},{}
+40304,RTCB,RTC Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 7227,100; },{},{}
+
+// Headgear
+40400,Magical_Booster,,4,0,,0,,,,1,0xFFFFFFFF,63,2,512,,1,0,873,{},{},{}

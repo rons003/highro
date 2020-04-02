@@ -3,35 +3,35 @@ Header:
   Version: 1
 
 Body:
-  - Start: 20200322
-    End: 20200331
+  - Start: 20200403
+    End: 20200412
     Rewards:
       - Day: 1
         ItemId: 7227
         Amount: 100
       - Day: 2
-        ItemId: 14524
+        ItemId: 7227
         Amount: 100
       - Day: 3
         ItemId: 7227
         Amount: 100
       - Day: 4
-        ItemId: 14524
+        ItemId: 7227
         Amount: 100
       - Day: 5
         ItemId: 7227
         Amount: 100
       - Day: 6
-        ItemId: 14524
+        ItemId: 7227
         Amount: 100
       - Day: 7
         ItemId: 7227
         Amount: 100
       - Day: 8
-        ItemId: 14524
+        ItemId: 7227
         Amount: 100
       - Day: 9
         ItemId: 7227
-        Amount: 150
+        Amount: 100
       - Day: 10
-        ItemId: 5377
+        ItemId: 40400
