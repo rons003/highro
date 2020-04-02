@@ -142,3 +142,13 @@ spl_in01	mapflag	pvp	off
 spl_in02	mapflag	pvp	off
 
 //evt_zombie	mapflag	pvp	off
+
+
+// Custom EutopiaRO
+force_1-1	mapflag	pvp	off
+gef_fild13	mapflag	pvp	off
+prt_gld	mapflag	pvp	off
+aru_gld	mapflag	pvp	off
+pay_gld	mapflag	pvp	off
+alde_gld	mapflag	pvp	off
+dewata	mapflag	pvp	off
