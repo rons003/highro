@@ -484,7 +484,7 @@
 1131,Ice_Falchon,Ice Falchion,5,20,,600,100,,1,0,0x000654E2,7,2,2,4,40,1,2,{ bonus bAtkEle,Ele_Water; bonus2 bAddEff,Eff_Freeze,500; bonus2 bAddEff2,Eff_Freeze,10; skill "MG_COLDBOLT",3; bonus3 bAutoSpell,"MG_COLDBOLT",3,100; },{},{}
 1132,Edge,Edge,5,20,,700,115,,1,0,0x000654E2,7,2,2,4,40,1,2,{ bonus2 bAddEff,Eff_Curse,30; bonus2 bComaClass,Class_Normal,10; },{},{}
 1133,Fire_Brand,Fireblend,5,20,,500,100,,1,0,0x000654E2,7,2,2,4,40,1,2,{ bonus bAtkEle,Ele_Fire; skill "MG_FIREBOLT",3; bonus3 bAutoSpell,"MG_FIREBOLT",3,100; },{},{}
-1134,Scissores_Sword,Caesar's Sword,5,20,,700,140,,1,0,0x000654E2,7,2,2,4,40,1,2,{ bonus2 bAddRace,RC_Plant,25; bonus bIgnoreDefRace,RC_Plant; },{},{}
+1134,Scissores_Sword,Caesar's Sword,5,20,,0,200,,1,4,0x000654E2,7,2,2,4,40,1,2,{ bonus2 bAddRace,RC_Plant,25; bonus bIgnoreDefRace,RC_Plant; },{},{}
 1135,Cutlas,Cutlus,5,20,,900,150,,1,0,0x000654E2,7,2,2,4,40,1,2,{ skill "SM_BASH",5; bonus bStr,2; bonus bDef,1; },{},{}
 1136,Solar_Sword,Solar Sword,5,20,,1200,85,,1,0,0x000654E2,7,2,2,4,40,1,2,{ bonus bAtkEle,Ele_Fire; bonus2 bHPDrainRate,1000,1; bonus2 bSPLossRate,15,10000; },{},{}
 1137,Excalibur,Excalibur,5,20,,1200,150,,1,0,0x000654E2,7,2,2,4,40,1,2,{ bonus bInt,5; bonus bLuk,10; bonus bDex,-1; bonus bAtkEle,Ele_Holy; },{},{}
@@ -1540,7 +1540,7 @@
 2717,Pocket_Watch_,Pocket Watch,4,20,,200,,0,,0,0x00810204,7,2,136,,80,0,0,{},{},{}
 2718,Lunatic_Brooch,Lunatic Brooch,4,20,,200,,0,,1,0x00080808,7,2,136,,65,0,0,{},{},{}
 2719,Iron_Wrist,Iron Wrist,4,20,,700,,1,,0,0x000444A2,7,2,136,,50,0,0,{ bonus2 bSkillAtk,"SM_BASH",6; bonus2 bSkillAtk,"MC_MAMMONITE",6; },{},{}
-2720,Medal_Swordman,Medal of Honor,4,20,,0,,1,,0,0x00404082,7,2,136,,70,0,0,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,5; bonus bHit,10; bonus bMaxHP,500; bonus bMaxSP,50; bonus3 bAddEff,Eff_Stun,100,ATF_SHORT; },{},{}
+2720,Medal_Swordman,Medal of Honor,4,20,,0,,1,,0,0x00404082,7,2,136,,70,0,0,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,5; bonus bHit,10; bonus bMaxHP,500; bonus bMaxSP,50; bonus3 bAddEff,Eff_Stun,100,ATF_SHORT; bonus bAllStats,10; bonus bHit,50; },{},{}
 2721,Medal_Thief,Medal of Honor,4,20,,0,,1,,0,0x02021040,7,2,136,,70,0,0,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,5; bonus bFlee,10; bonus bMaxHP,300; bonus bMaxSP,80; bonus3 bAddEff,Eff_Poison,100,ATF_SHORT; },{},{}
 2722,Medal_Acolyte,Medal of Honor,4,20,,0,,1,,0,0x00008110,7,2,136,,70,0,0,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,5; bonus bMdef,6; bonus bMaxHP,600; bonus3 bAddEff,Eff_Silence,100,ATF_SHORT; },{},{}
 2723,Medal_Mage,Medal of Honor,4,20,,0,,1,,0,0x00810204,7,2,136,,70,0,0,{ bonus2 bAddClass,Class_All,5; bonus bMatkRate,5; bonus bMdef,6; bonus bMaxHP,600; bonus2 bAddEffWhenHit,Eff_Stone,100; },{},{}
@@ -1872,11 +1872,12 @@
 4231,Increase_Soil_Card,Mi Gao Card,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubRace2,RC2_Guardian,50; },{},{}
 4232,Wild_Ginseng_Card,Hermit Plant Card,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddItemGroupHealRate,IG_Herb,50; bonus3 bAddMonsterDropItem,507,RC_Plant,300; bonus3 bAddMonsterDropItem,508,RC_Plant,200; bonus3 bAddMonsterDropItem,509,RC_Plant,100; },{},{}
 4233,Baby_Leopard_Card,Baby Leopard Card,6,20,,10,,,,,,,,16,,,,,{ bonus bLuk,3; if(BaseClass==Job_Merchant) bonus bUnbreakableArmor; },{},{}
-4234,Anolian_Card,Anolian Card,6,20,,10,,,,,,,,16,,,,,{ bonus3 bAutoSpellWhenHit,"AC_CONCENTRATION",1+9*(getskilllv("AC_CONCENTRATION")==10),30; },{},{}
+4234,Anolian_Card,Anolian Card,6,20,,10,,,,,,,,16,,,,,{ bonus3 b
+Hit,"AC_CONCENTRATION",1+9*(getskilllv("AC_CONCENTRATION")==10),30; },{},{}
 4235,Cookie_XMAS_Card,Christmas Cookie Card,6,20,,10,,,,,,,,64,,,,,{ bonus2 bSubRace,RC_Angel,-20; bonus2 bExpAddRace,RC_Angel,10; },{},{}
 4236,Amon_Ra_Card,Amon Ra Card,6,20,,10,,,,,,,,64,,,,,{ bonus bAllStats,1; bonus3 bAutoSpellWhenHit,"PR_KYRIE",10,(30+70*(readparam(bInt)>=99)); },{},{}
 4237,Owl_Duke_Card,Owl Duke Card,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAutoSpell,"PR_IMPOSITIO",3,3; },{},{}
-4238,Owl_Baron_Card,Owl Baron Card,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAutoSpell,"PR_LEXAETERNA",1,30; },{},{}
+4238,Owl_Baron_Card,Owl Baron Card,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAutoSpell,"PR_LEXAETERNA",1,30;  bonus3 bAutoSpellWhenHit,"PR_LEXAETERNA",1,30; bonus5 bAutoSpell,"PR_LEXAETERNA",1,30,BF_SKILL,1; },{},{}
 4239,Iron_Fist_Card,Iron Fist Card,6,20,,10,,,,,,,,64,,,,,{ bonus2 bSubRace,RC_Formless,-20; bonus2 bExpAddRace,RC_Formless,10; },{},{}
 4240,Arclouse_Card,Arclouze Card,6,20,,10,,,,,,,,32,,,,,{ if(getrefine()<6) { bonus bDef,2; bonus bMdef,3; } },{},{}
 4241,Archangeling_Card,Arc Angeling Card,6,20,,10,,,,,,,,769,,,,,{ bonus bMaxHP,300; if(readparam(bLuk)>=77) { bonus bHPrecovRate,100; bonus bSPrecovRate,100; } },{},{}
@@ -7578,7 +7579,7 @@
 20067,C_White_Rabbit_Headband,Costume White Rabbit Headband,4,0,,0,,,,,0xFFFFFFFF,63,2,1024,,1,,719,{},{},{}
 20068,C_Black_Rabbit_Headband,Costume Black Rabbit Headband,4,0,,0,,,,,0xFFFFFFFF,63,2,1024,,1,,718,{},{},{}
 20069,C_Gryphon_Hairband,Costume Gryphon Hairband,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1233,{},{},{}
-20070,C_Alpaca_Hood,Costume Alpaca Hood,4,0,,0,,,,0,0xFFFFFFFF,63,2,7168,,1,0,1234,{},{},{}
+20070,C_Alpaca_Hood,Costume Alpaca Hood,4,0,,0,,,,0,0xFFFFFFFF,63,2,256,,1,0,1234,{},{},{}
 20071,C_Worg_In_Mouth,Costume Worg In Mouth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1235,{},{},{}
 20073,C_Hair_Band,Costume Hair Band,4,0,,0,,,,,0xFFFFFFFF,63,2,1024,,1,,9,{},{},{}
 20074,C_Biretta,Costume Biretta,4,0,,0,,,,,0xFFFFFFFF,63,2,1024,,1,,11,{},{},{}
@@ -10389,7 +10390,7 @@
 3999,sheriff,Sheriff Hat,4,30,,50,,5,,0,0xFFFFFFFF,7,2,256,,0,0,3499,{  },{},{}
 
 //
-8420,rcyc,Lord Cyclop's Eye,4,0,,200,,0,,1,0xFFFFFFFE,7,2,512,,1,0,3920,{ bonus bVit,3; bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3; bonus bFlee,20; skill "MG_SIGHT",1; },{},{ sc_end SC_SIGHT; }
+8420,rcyc,Lord Cyclop's Eye,4,0,,200,,0,,1,0xFFFFFFFE,7,2,512,,1,0,3920,{ bonus bVit,3; bonus bStr,3; bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3; skill "MG_SIGHT",1; },{},{ sc_end SC_SIGHT; }
 8461,danzobandage,Danzo Bandage,4,30,,50,,5,,1,0xFFFFFFFF,7,2,512,,0,0,3961,{ bonus bAllStats,3; },{},{}
 8469,flameaura,Flame Aura,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3969,{  bonus bAtkEle,Ele_Fire; bonus bAllStats,5; bonus bMatkRate,30; bonus2 bAddRace,RC_DemiHuman,10; bonus2 bAddRace,RC_Player,10; if(BaseJob==Job_Wizard) bonus3 bAutoSpellWhenHit,"NPC_EARTHQUAKE",10,10; },{},{}
 8473,goldrunesofpower,Rune's of Power,4,20,,100,,2,,0,0xFFFFFFFF,7,2,1,,20,0,3973,{ bonus bVit,10; bonus bAgi,10; bonus bDex,10; bonus bMaxHPrate,15;bonus2 bSubRace,RC_DemiHuman,3; bonus2 bSubRace,RC_Player,3; },{},{}
@@ -10422,7 +10423,7 @@
 40300,Box_of_Thunder_Box,Box of Thunder Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12028,100; },{},{}
 40301,Fish_Slice_Box,Fish Slice Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 14524,100; },{},{}
 40302,Speed_Potion_Box,Speed Potion Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12016,100; },{},{}
-40303,FSB,Fusion Set Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12016,100; },{},{}
+40303,FSB,Fusion Set Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12016,100; getitem 30089,1; getitem 30090,1; getitem 30091,1; getitem 30092,1; },{},{}
 40304,RTCB,RTC Box,0,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 7227,100; },{},{}
 
 // Headgear

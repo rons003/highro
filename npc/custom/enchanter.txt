@@ -12,7 +12,7 @@
 //===== Description: =========================================
 //============================================================
 //============================================================
-prontera,187,209,6	script	sader enchant	998,{
+prontera,146,157,6	script	Sader Enchant	637,{
 	callsub s_check_menu;
 end;
 
@@ -160,7 +160,7 @@ s_select_slot:
 		.@card1 = getequipcardid(.s_all_loc[s_all_selected],1);
 		.@card2 = getequipcardid(.s_all_loc[s_all_selected],2);
 		.@card3 = getequipcardid(.s_all_loc[s_all_selected],3);
-	for(.@i=getd(".slot_count_" + .s_all$[s_all_selected]); .@i<4; .@i++)
+	for(.@i=1; .@i<2; .@i++)
 		if(getequipcardid(.s_all_loc[s_all_selected],.@i)!= null) {
 			set .@slot_menu$, .@slot_menu$ + " [ ^E81B02" + getitemname(getequipcardid(.s_all_loc[s_all_selected],.@i)) + "^000000 ]:";
 		}else{
@@ -221,7 +221,7 @@ s_enchant_success:
 		.@card3 = getequipcardid(.s_all_loc[s_all_selected],3);
 	mes "We did it!";
 		specialeffect2 154;
-		setd(".@card" + s_slot_selected, selected_orb_id);
+		setd(".@card" + 1, selected_orb_id);
 		set .@item, getequipid(.s_all_loc[s_all_selected]);
 		delitem .@item,1;
 		getitem2 .@item, 1, 1, s_item_refine, 0, .@card0, .@card1, .@card2, .@card3;
@@ -278,17 +278,17 @@ OnInit:
 	//--------------------------------------------------------------//
 	//if you want to remove one from the menu you need to remove it down too!! /or add
 	//--------------------------------------------------------------//
-	setarray .s_all$,"Weapon","Armor","Shield","Germent","Shose","Accessary","Upper","Middel","Lower";
-	setarray .s_all_loc,EQI_HAND_R,EQI_ARMOR,EQI_HAND_L,EQI_GARMENT,EQI_SHOES,EQI_ACC_L,EQI_HEAD_TOP,EQI_HEAD_MID,EQI_HEAD_LOW;
+	setarray .s_all$,"Armor","Shield","Germent","Shose";
+	setarray .s_all_loc,EQI_ARMOR,EQI_HAND_L,EQI_GARMENT,EQI_SHOES;
 	
 	//--------------------------------------------------------------//
 	//Orbs IDs (Note : Shield = left hand so the weapon on the left hand count as Shield too!
 	//--------------------------------------------------------------//
 	setarray .Weapon$,4741,4933,4861,4762,4934;	//right handed weapons
-	setarray .Armor$,4933,4861,4762,4934;	//Armors
-	setarray .Shield$,4861,4762,4934;	//Shields and left hand weapons
-	setarray .Germent$,4741,4933,4861,4762,4934;	//Germent
-	setarray .Shose$,4741,4933,4861,4762,4934;	//Shose
+	setarray .Armor$,4700,4710,4720,4730,4740,4750,4701,4711,4721,4731,4741,4751,4702,4712,4722,4732,4742,4752;	//Armors
+	setarray .Shield$,4700,4710,4720,4730,4740,4750,4701,4711,4721,4731,4741,4751;	//Shields and left hand weapons
+	setarray .Germent$,4700,4710,4720,4730,4740,4750,4701,4711,4721,4731,4741,4751,4702,4712,4722,4732,4742,4752;	//Germent
+	setarray .Shose$,4700,4710,4720,4730,4740,4750,4701,4711,4721,4731,4741,4751,4702,4712,4722,4732,4742,4752;	//Shose
 	setarray .Accessary$,4741,4933,4861,4762,4934;	//orbs id
 	setarray .Upper$,4741,4933,4861,4762,4934;	//Accessary
 	setarray .Middel$,4741,4933,4861,4762,4934;	//Middel
@@ -298,10 +298,10 @@ OnInit:
 	//if you want to put specific IDs for kind of gear put it to 1
 	//--------------------------------------------------------------//
 	.specific_Weapons = 1;
-	.specific_Armors = 1;
-	.specific_Shields = 1;
-	.specific_Germents = 1;
-	.specific_Shoses = 1;
+	.specific_Armors = 0;
+	.specific_Shields = 0;
+	.specific_Germents = 0;
+	.specific_Shoses = 0;
 	.specific_Accessarys = 1;
 	.specific_Uppers = 1;
 	.specific_Middels =1;
@@ -342,17 +342,17 @@ OnInit:
 	//--------------------------------------------------------------//
 	//other configuration
 	//--------------------------------------------------------------//
-	setarray .s_level_required,0,175;	//the level required to use the npc
+	setarray .s_level_required,0,255;	//the level required to use the npc
 	.s_only_vip = 0;	//if you want only vip to use it put it to 1
-	setarray .success_chanse,100,80,60,40;	//success chanse [1st_slot_chanse,2nd_slot_chanse,3rd_slot_chanse,4th_slot_chanse]
-	.s_zeny = 10000;	//if you don't want zeny requirment set it to 0
-	.s_zeny_remove = 100000;	//this for enchantment reset
+	setarray .success_chanse,100,50,50,50;	//success chanse [1st_slot_chanse,2nd_slot_chanse,3rd_slot_chanse,4th_slot_chanse]
+	.s_zeny = 500000000;	//if you don't want zeny requirment set it to 0
+	.s_zeny_remove = 0;	//this for enchantment reset
 	.item_is_required = 0;	//if you want the orb it self to be required 1 = yes , 0 = no
-	.s_enchant_overwrite = 0;	//if 1 then you can overwrite the enchant
+	.s_enchant_overwrite = 1;	//if 1 then you can overwrite the enchant
 	.progress_time = 7;	//the time that needed to wait until the socket end
 	.chosse_orb = 0;	//0 = random ,1 = yes
-	.brack_chance = 50;	//the chanse that it will brack if it fail
-	.remove_enchant = 1;	//0 = no ,1 = yes
+	.brack_chance = 0;	//the chanse that it will brack if it fail
+	.remove_enchant = 0;	//0 = no ,1 = yes
 	
 	//--------------------------------------------------------------//
 	//this will only show the items that the npc can enchant in a shop but no one can buy from it as long as you don't give them the value
