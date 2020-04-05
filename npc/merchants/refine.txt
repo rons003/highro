@@ -1130,6 +1130,22 @@ sch_gld,340,80,7	script	Repairman#sch_gld	86,{
 	end;
 }
 
+// SP repair
+ayothaya,144,117,6	script	Repairman#ayot	86,{
+	callfunc "repairmain","Repairman";
+	end;
+}
+
+xmas,141,119,6	script	Repairman#lutie	86,{
+	callfunc "repairmain","Repairman";
+	end;
+}
+
+gonryun,163,131,4	script	Repairman#gon	86,{
+	callfunc "repairmain","Repairman";
+	end;
+}
+
 // Equipment Repair Function
 //============================================================
 function	script	repairmain	{

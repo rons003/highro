@@ -37,7 +37,7 @@ force_1-1,120,96,3	shop	Alchemist Shop	749,7136:500,7135:500,7137:300,7138:3000,
 force_1-1,116,96,3	shop	StreetDealer	880,601:-1,602:-1,504:-1,505:-1,506:40,645:-1,656:-1,657:-1,610:4000,545:150,546:600,547:1650
 force_1-1,118,96,3	shop	ETC	63,1065:100,985:30000,984:25000,715:5000,716:5000,717:500,999:2000,1000:4500,998:100,990:1000,991:1000,992:1000,993:1000,994:3000,995:3000,996:3000,997:3000,1025:184,7433:4000,612:150,613:1000,614:3000,615:5000
 //====TALISMAN
-force_1-1,114,96,3	shop	Spirit Dealer	62,40252:100000,40253:100000,40254:100000,40255:100000,40256:100000,40257:100000,40258:100000,40259:100000,40260:100000,40261:100000,40262:100000,40263:100000,40264:100000,40265:100000,40266:100000
+force_1-1,114,96,3	shop	Spirit Dealer	96,40252:100000,40253:100000,40254:100000,40255:100000,40256:100000,40257:100000,40258:100000,40259:100000,40260:100000,40261:100000,40262:100000,40263:100000,40264:100000,40265:100000,40266:100000
 
 //=======DB NPC
 new_1-3,111,70,4	shop	Branch Seller 1	99,12103:1000000,604:500000,12109:250000
@@ -45,3 +45,21 @@ new_2-3,111,70,4	shop	Branch Seller 2	99,12103:1000000,604:500000,12109:250000
 new_3-3,111,70,4	shop	Branch Seller 3	99,12103:1000000,604:500000,12109:250000
 new_4-3,111,70,4	shop	Branch Seller 4	99,12103:1000000,604:500000,12109:250000
 new_5-3,111,70,4	shop	Branch Seller 5	99,12103:1000000,604:500000,12109:250000
+
+
+// Duplicate NPC
+// Ayothaya
+ayothaya,156,110,4	duplicate(Spirit Dealer)	Spirit Dealer#ayot_spiritdealer	96
+ayothaya,156,107,4	duplicate(StreetDealer)	StreetDealer#ayot_streetdealer	880
+ayothaya,156,104,4	duplicate(ETC)	ETC#ayot_etc	63
+ayothaya,143,107,6	duplicate(Ammunition)	Ammunition#ayot_ammunition	716
+// Lutie
+xmas,135,134,6	duplicate(Spirit Dealer)	Spirit Dealer#xmas_spiritdealer	96
+xmas,135,137,6	duplicate(StreetDealer)	StreetDealer#xmas_streetdealer	880
+xmas,135,140,2	duplicate(ETC)	ETC#xmas_etc	63
+xmas,141,124,6	duplicate(Ammunition)	Ammunition#xmas_ammunition	716
+// Gonryun
+gonryun,167,117,4	duplicate(Spirit Dealer)	Spirit Dealer#gon_spiritdealer	96
+gonryun,167,114,4	duplicate(StreetDealer)	StreetDealer#gon_streetdealer	880
+gonryun,167,111,4	duplicate(ETC)	ETC#gon_etc	63
+gonryun,151,111,6	duplicate(Ammunition)	Ammunition#gon_ammunition	716

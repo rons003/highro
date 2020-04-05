@@ -129,7 +129,7 @@ s_specific_gears:
 end;
 
 Q_shop:
-	switch(select("Weapons:Armors:Shields:Germents:Shoses:Accessarys:Uppers:Middels:Lowers")){
+	switch(select("Weapons:Armors:Germents:Shoses:Accessarys:Uppers:Middels:Lowers")){
 	case 1: callshop "enchantable_items_Weapon",1; break;
 	case 2: callshop "enchantable_items_Armor",1; break;
 	case 3: callshop "enchantable_items_Shield",1; break;
@@ -278,8 +278,8 @@ OnInit:
 	//--------------------------------------------------------------//
 	//if you want to remove one from the menu you need to remove it down too!! /or add
 	//--------------------------------------------------------------//
-	setarray .s_all$,"Armor","Shield","Germent","Shose";
-	setarray .s_all_loc,EQI_ARMOR,EQI_HAND_L,EQI_GARMENT,EQI_SHOES;
+	setarray .s_all$,"Armor","Germent","Shose";
+	setarray .s_all_loc,EQI_ARMOR,EQI_GARMENT,EQI_SHOES;
 	
 	//--------------------------------------------------------------//
 	//Orbs IDs (Note : Shield = left hand so the weapon on the left hand count as Shield too!

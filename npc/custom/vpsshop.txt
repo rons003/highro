@@ -11,12 +11,22 @@
 
 
 prontera,174,154,4	script	RTC Shop	757,{
+
+.@weight = 100 * Weight / MaxWeight;
+    if( 50 <= .@weight ) {
+		mes .n$;
+        mes "You are currently at "+ .@weight +" percent of your maximum weight.";
+        close;
+    }
+
 function ShopSettings;
 function ValidateCost;
 function CurrencyInfo;
 function ClearData;
 function ValueConvert;
 function ErrorNotice;
+
+
 
 mes "Each Shop from the Menu may purchase using ^FF0000RTC Card^000000.";
 mes "^00FF00____________________________^000000";

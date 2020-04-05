@@ -1872,12 +1872,11 @@
 4231,Increase_Soil_Card,Mi Gao Card,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubRace2,RC2_Guardian,50; },{},{}
 4232,Wild_Ginseng_Card,Hermit Plant Card,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddItemGroupHealRate,IG_Herb,50; bonus3 bAddMonsterDropItem,507,RC_Plant,300; bonus3 bAddMonsterDropItem,508,RC_Plant,200; bonus3 bAddMonsterDropItem,509,RC_Plant,100; },{},{}
 4233,Baby_Leopard_Card,Baby Leopard Card,6,20,,10,,,,,,,,16,,,,,{ bonus bLuk,3; if(BaseClass==Job_Merchant) bonus bUnbreakableArmor; },{},{}
-4234,Anolian_Card,Anolian Card,6,20,,10,,,,,,,,16,,,,,{ bonus3 b
-Hit,"AC_CONCENTRATION",1+9*(getskilllv("AC_CONCENTRATION")==10),30; },{},{}
+4234,Anolian_Card,Anolian Card,6,20,,10,,,,,,,,16,,,,,{ bonus3 bHit,"AC_CONCENTRATION",1+9*(getskilllv("AC_CONCENTRATION")==10),30; },{},{}
 4235,Cookie_XMAS_Card,Christmas Cookie Card,6,20,,10,,,,,,,,64,,,,,{ bonus2 bSubRace,RC_Angel,-20; bonus2 bExpAddRace,RC_Angel,10; },{},{}
 4236,Amon_Ra_Card,Amon Ra Card,6,20,,10,,,,,,,,64,,,,,{ bonus bAllStats,1; bonus3 bAutoSpellWhenHit,"PR_KYRIE",10,(30+70*(readparam(bInt)>=99)); },{},{}
 4237,Owl_Duke_Card,Owl Duke Card,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAutoSpell,"PR_IMPOSITIO",3,3; },{},{}
-4238,Owl_Baron_Card,Owl Baron Card,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAutoSpell,"PR_LEXAETERNA",1,30;  bonus3 bAutoSpellWhenHit,"PR_LEXAETERNA",1,30; bonus5 bAutoSpell,"PR_LEXAETERNA",1,30,BF_SKILL,1; },{},{}
+4238,Owl_Baron_Card,Owl Baron Card,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAutoSpell,"PR_LEXAETERNA",1,30;  bonus3 bAutoSpellWhenHit,"PR_LEXAETERNA",1,30; },{},{}
 4239,Iron_Fist_Card,Iron Fist Card,6,20,,10,,,,,,,,64,,,,,{ bonus2 bSubRace,RC_Formless,-20; bonus2 bExpAddRace,RC_Formless,10; },{},{}
 4240,Arclouse_Card,Arclouze Card,6,20,,10,,,,,,,,32,,,,,{ if(getrefine()<6) { bonus bDef,2; bonus bMdef,3; } },{},{}
 4241,Archangeling_Card,Arc Angeling Card,6,20,,10,,,,,,,,769,,,,,{ bonus bMaxHP,300; if(readparam(bLuk)>=77) { bonus bHPrecovRate,100; bonus bSPrecovRate,100; } },{},{}

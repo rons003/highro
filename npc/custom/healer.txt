@@ -49,7 +49,7 @@
 alberta,183,143,6	duplicate(Healer)	Healer#alb	909
 aldebaran,135,118,6	duplicate(Healer)	Healer#alde	909
 amatsu,207,97,4	duplicate(Healer)	Healer#ama	909
-ayothaya,207,169,6	duplicate(Healer)	Healer#ayo	909
+ayothaya,150,123,6	duplicate(Healer)	Healer#ayo	678
 comodo,184,158,6	duplicate(Healer)	Healer#com	909
 einbech,57,36,6	duplicate(Healer)	Healer#einbe	909
 einbroch,57,202,6	duplicate(Healer)	Healer#einbr	909
@@ -72,7 +72,7 @@ rachel,125,116,6	duplicate(Healer)	Healer#rac	909
 splendide,201,153,4	duplicate(Healer)	Healer#spl	909
 thor_camp,249,74,4	duplicate(Healer)	Healer#thor	909
 umbala,105,148,3	duplicate(Healer)	Healer#umb	909
-veins,217,121,4	duplicate(Healer)	Healer#ve	909
+veins,217,121,4	duplicate(Healer)	Healer#ve	678
 xmas,143,132,5	duplicate(Healer)	Healer#xmas	909
 yuno,164,45,4	duplicate(Healer)	Healer#yuno	909
 hu_in01,264,99,5	duplicate(Healer)	Healer#hu_in	909
