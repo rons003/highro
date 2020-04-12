@@ -1,0 +1,87 @@
+-	script	TownInvasion	-1,{
+
+OnClock0030:
+OnClock0430:
+OnClock0830:
+OnClock1230:
+OnClock1630:
+OnClock2030:
+
+do {
+
+.@index = rand(.num_towns);
+
+} while (.@temp_check[.@index]);
+
+    .@temp_check[.@index] = 1;
+
+    announce .Town$[.@index]+" Guard: Help us! Our town is being invaded!",bc_blue|bc_all;
+
+    monster .Town$[.@index],0,0,"--ja--",.MvP[rand(getarraysize(.MvP))],1,strnpcinfo(1)+"::OnInvadeDeath";
+
+
+end;
+
+OnInvadeDeath:
+
+.@RandMvP = rand(getarraysize(.Prize));
+
+getitem .Prize[.@RandMvP],.PAmt[.@RandMvP];
+
+goto CheckWipe;
+
+end;
+
+OnMobsDeath:
+
+.@RandMob = rand(getarraysize(.Prize2));
+
+getitem .Prize2[.@RandMob],.PAmt2[.@RandMob];
+
+goto CheckWipe;
+
+end;
+
+CheckWipe:
+
+if(mobcount(strcharinfo(3),"OnInvadeDeath") < 1 && mobcount(strcharinfo(3),"OnMobsDeath") < 1)
+
+Saved++;
+
+if(Saved == 1) {
+
+announce "Thank you! All the cities have been saved!",bc_blue|bc_all;
+
+Saved = 0;
+
+}
+
+end;
+
+OnInit:
+
+//Towns to Invade
+
+setarray .Town$[0],"prontera","izlude","geffen","payon","alberta","aldebaran","yuno","lighthalzen","einbroch","einbech","comodo","umbala","amatsu","gonryun","ayothaya","louyang","hugel","rachel","veins";
+
+set .num_towns, getarraysize(.Town$);
+
+//MvPs to summon
+
+setarray .MvP[0],1916;
+
+//Prize to give MVP
+
+setarray .Prize[0],7960;
+
+setarray .PAmt[0],2;
+
+//Prize to give Mobs
+
+setarray .Prize2[0],607;
+
+setarray .PAmt2[0],10;
+
+end;
+
+}

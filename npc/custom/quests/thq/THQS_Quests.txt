@@ -229,7 +229,7 @@ N_QuestStart:
 }
 ///////Job list 3///////
 //3-1;
-moc_fild04,208,322,6	script	Clark	65,{
+moc_fild03,208,322,6	script	Clark	65,{
 	if (three_qset == 1 && countitem(1040) > 149) goto N_QuestComp;
 	if (three_qset == 1) goto N_QuestStart;
 	mes "[Clark]";
@@ -312,7 +312,7 @@ N_QuestStart:
 }
 //3-4
 mjolnir_02,87,357,6	script	Man#01	51,{
-	if (three_qset == 4 && countitem(1041) > 299) goto N_QuestComp;
+	if (three_qset == 4 && countitem(1041) > 349) goto N_QuestComp;
 	if (three_qset == 4) goto N_QuestStart;
 	mes "[Rudolfo]";
 	mes "Danger, the Coal Mine is now a hostile area.";
@@ -323,7 +323,7 @@ N_QuestComp:
 	mes "I had my doubts but thank you for your help.";
 	mes " ";
 	mes "Here have these 5 Treasure Tokens.";
-	delitem 1041,300;
+	delitem 1041,350;
 	set three_qset,0;
 	set On_Quest,0;
 	set #Treasure_Token,#Treasure_Token+5;
@@ -387,7 +387,7 @@ N_QuestComp:
 	next;
 	mes "[Zed]";
 	mes "Well you can take this crappy Treasure Token.";
-	delitem 1999,1;
+	delitem 1639,1;
 	set On_Quest,0;
 	set four_qset,0;
 	set #Treasure_Token,#Treasure_Token+3;

@@ -1146,6 +1146,11 @@ gonryun,163,131,4	script	Repairman#gon	86,{
 	end;
 }
 
+comodo,83,254,4	script	Repairman#com	88,{
+	callfunc "repairmain","Repairman";
+	end;
+}
+
 // Equipment Repair Function
 //============================================================
 function	script	repairmain	{

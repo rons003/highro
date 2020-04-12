@@ -1,0 +1,9 @@
+guild_vs2	mapflag	nowarp
+guild_vs2	mapflag	nowarpto
+guild_vs2	mapflag	noteleport
+guild_vs2	mapflag	nosave
+guild_vs2	mapflag	nomemo
+guild_vs2	mapflag	nobranch
+guild_vs2	mapflag	noloot
+guild_vs2	mapflag	nopenalty
+guild_vs2	mapflag	nocommand	1

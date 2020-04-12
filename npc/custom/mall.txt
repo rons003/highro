@@ -63,3 +63,8 @@ gonryun,167,117,4	duplicate(Spirit Dealer)	Spirit Dealer#gon_spiritdealer	96
 gonryun,167,114,4	duplicate(StreetDealer)	StreetDealer#gon_streetdealer	880
 gonryun,167,111,4	duplicate(ETC)	ETC#gon_etc	63
 gonryun,151,111,6	duplicate(Ammunition)	Ammunition#gon_ammunition	716
+// Comodo
+comodo,54,254,6	duplicate(Spirit Dealer)	Spirit Dealer#xmas_spiritdealer	96
+comodo,56,251,6	duplicate(StreetDealer)	StreetDealer#xmas_streetdealer	880
+comodo,56,248,2	duplicate(ETC)	ETC#xmas_etc	63
+comodo,54,240,6	duplicate(Ammunition)	Ammunition#xmas_ammunition	716

@@ -5038,7 +5038,8 @@ static int skill_tarotcard(struct block_list *src, struct block_list *target, ui
 			card = 6; // THE LOVERS
 		else if (rate < 63)
 			card = 7; // WHEEL OF FORTUNE
-		else if (rate < 69)
+		//else if (rate < 69)
+		else if (rate < 30)
 			card = 8; // THE HANGED MAN
 		else if (rate < 74)
 			card = 9; // DEATH
@@ -8515,7 +8516,7 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 			ARR_FIND( 0, MAX_INVENTORY, ii, sd->inventory.u.items_inventory[ii].nameid == item_id );
 			if ( ii < MAX_INVENTORY ) {
 				pc_delitem( sd, ii, 1, 0, 0, LOG_TYPE_CONSUME);
-				if(rand()%100 < 5){
+				if(rand()%100 < 15){
 					switch ( skill_id ) { 
 					case RG_STRIPWEAPON:
 						status_change_end( bl, SC_CP_WEAPON, INVALID_TIMER );

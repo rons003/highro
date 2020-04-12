@@ -1,0 +1,53 @@
+// https://rathena.org/board/topic/108276-hourly-points/
+ 
+-	script	hourly_point_main	-1,{
+   
+    OnInit:
+        .npc_name$ = strnpcinfo(3);
+        bindatcmd "check",.npc_name$+"::OnAtcommand";
+        end;
+       
+    OnAtcommand:
+        dispbottom "Accumulated: "+#daily_minute_count;
+        dispbottom "Cash Point: "+#CASHPOINTS;
+        end;
+       
+    OnUpdate:
+        #daily_minute_count++;
+        deltimer .npc_name$+"::OnUpdate";
+        dispbottom "Accumulated: "+#daily_minute_count+" minute(s)";
+        switch ( #daily_minute_count ) {
+            default:
+                break;
+            case 60: // 60 minutes
+                #CASHPOINTS += 25;
+                break;
+            case 120: // 120 minutes
+                #CASHPOINTS += 50;
+                break;
+            case 180: // 180 minutes
+                #CASHPOINTS += 75;
+                break;
+            case 240: // 240 minutes
+                #CASHPOINTS += 100;
+                break;
+            case 300: // 300 minutes
+                #CASHPOINTS += 125;
+                break;
+            case 360: // 360 minutes
+                #CASHPOINTS += 150;
+                break;
+            case 420: // 420 minutes
+                #CASHPOINTS += 175;
+                break;
+            case 480: // 480 minutes
+                #CASHPOINTS += 200;
+                #daily_minute_count = 0; // reset.
+                break;
+        }
+       
+    OnPCLoginEvent:
+        //#daily_minute_count = 0; // reset.
+        addtimer ( 60 * 1000 ), .npc_name$+"::OnUpdate";
+        end;
+}

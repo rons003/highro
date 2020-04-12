@@ -273,7 +273,7 @@ N_MWizard:
 	mes "Proto-type of a Staff must be delivered to Zed the Wizard.";
 	mes " ";
 	mes "Zed the Wizard has requested to try out a new un-named proto-type staff. It will be your job to deliver this to him. Zed tend to stay within the general area of Juno.";
-	getitem 1999,1; //Zed's_Staff
+	getitem 1639,1; //Zed's_Staff
 	set four_qset,2;
 	goto L_QuestGiven;
 
