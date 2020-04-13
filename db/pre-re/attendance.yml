@@ -3,35 +3,63 @@ Header:
   Version: 1
 
 Body:
-  - Start: 20200403
-    End: 20200412
+  - Start: 20200413
+    End: 20200502
     Rewards:
       - Day: 1
         ItemId: 7227
-        Amount: 100
+        Amount: 50
       - Day: 2
         ItemId: 7227
-        Amount: 100
+        Amount: 50
       - Day: 3
         ItemId: 7227
-        Amount: 100
+        Amount: 50
       - Day: 4
         ItemId: 7227
-        Amount: 100
+        Amount: 50
       - Day: 5
         ItemId: 7227
-        Amount: 100
+        Amount: 50
       - Day: 6
         ItemId: 7227
-        Amount: 100
+        Amount: 50
       - Day: 7
         ItemId: 7227
-        Amount: 100
+        Amount: 50
       - Day: 8
         ItemId: 7227
-        Amount: 100
+        Amount: 50
       - Day: 9
         ItemId: 7227
-        Amount: 100
+        Amount: 50
       - Day: 10
-        ItemId: 40400
+        ItemId: 5308
+      - Day: 11
+        ItemId: 7227
+        Amount: 50
+      - Day: 12
+        ItemId: 7227
+        Amount: 50
+      - Day: 13
+        ItemId: 7227
+        Amount: 50
+      - Day: 14
+        ItemId: 7227
+        Amount: 50
+      - Day: 15
+        ItemId: 5783
+      - Day: 16
+        ItemId: 7227
+        Amount: 50
+      - Day: 17
+        ItemId: 7227
+        Amount: 50
+      - Day: 18
+        ItemId: 7227
+        Amount: 50
+      - Day: 19
+        ItemId: 7227
+        Amount: 50
+      - Day: 20
+        ItemId: 18830

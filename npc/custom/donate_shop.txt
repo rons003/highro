@@ -61,7 +61,7 @@ OnInit:
 //	setarray .Shops$[1],"<Shop 1>","<Shop 2>"{,...};
 // -----------------------------------------------------------
 
-	setarray .Shops$[1],"Equipment","Valkyrie & Sleipnir","Accessory";
+	setarray .Shops$[1],"Equipment","Valkyrie & Sleipnir","Accessory","Weapon";
 
 // -----------------------------------------------------------
 //  Quest items -- do NOT use a reward item more than once!
@@ -93,7 +93,7 @@ OnInit:
 	Add(3,2678,1,15,0,7179,15);
 	Add(3,2679,1,15,0,7179,15);
 
-	
+	Add(4,40500,1,17,0,7179,17);
 
 
 

@@ -10542,7 +10542,7 @@ int status_change_start(struct block_list *src, struct block_list *bl, enum sc_t
 			if (!(flag & SCSTART_NOAVOID))
 			{
 				// val2 = 5 + 15 * val1;   // Damage reduction
-				val2 = 7 * val1;   // Damage reduction
+				val2 = 3 * val1;   // Damage reduction
 				val3 = 0;				// Unused, previously speed adjustment
 				val4 = 250 - 50 * val1; // Aspd adjustment
 
