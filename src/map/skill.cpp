@@ -17781,7 +17781,7 @@ bool skill_check_condition_castbegin(struct map_session_data *sd, uint16 skill_i
 
 	if (require.weapon && !pc_check_weapontype(sd, require.weapon) || 
 		(skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_KNIGHT && sd->status.weapon == W_1HSWORD)
-			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_BLACKSMITH && sd->status.weapon == W_1HAXE)
+			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_BLACKSMITH && (sd->status.weapon == W_1HAXE || sd->status.weapon == W_MACE))
 			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_KNIGHT && sd->status.weapon == W_1HSPEAR)
 			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_STAR) )
 	{
@@ -17983,7 +17983,7 @@ bool skill_check_condition_castend(struct map_session_data *sd, uint16 skill_id,
 	if (require.weapon && !pc_check_weapontype(sd, require.weapon))
 	{
 		if((skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_KNIGHT && sd->status.weapon == W_1HSWORD)
-			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_BLACKSMITH && sd->status.weapon == W_1HAXE)
+			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_BLACKSMITH && (sd->status.weapon == W_1HAXE || sd->status.weapon == W_MACE))
 			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_KNIGHT && sd->status.weapon == W_1HSPEAR)
 			|| (skill_id == LK_PARRYING && sc && sc->data[SC_SPIRIT] && sc->data[SC_SPIRIT]->val2 == SL_STAR))
 		{

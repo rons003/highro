@@ -769,3 +769,16 @@ dicastes01,192,191,4	script	Kafra Employee::kaf_discastes	116,{
 	savepoint "dicastes01",197,184,1,1;
 	callfunc "F_KafEnd",0,1,"in the city of Dicastes";
 }
+
+prontera,114,162,6	script	Kafra Employee::kaf_prontsideleft	116,{
+	cutin "kafra_02",2;
+	mes "[Kafra Employee]";
+	mes "Welcome to the";
+	mes "Kafra Corporation.";
+	mes "Kafra's Employees are";
+	mes "always ready to serve you.";
+	mes "How can I help you today?";
+	callfunc "F_Kafra",5,3,1,50,700;
+	savepoint "prontera",123,162,1,1;
+	callfunc "F_KafEnd",0,1,"in the city of Prontera";
+}

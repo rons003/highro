@@ -15,33 +15,33 @@
     OnUpdate:
         #daily_minute_count++;
         deltimer .npc_name$+"::OnUpdate";
-        dispbottom "Accumulated: "+#daily_minute_count+" minute(s)";
+        //dispbottom "Accumulated: "+#daily_minute_count+" minute(s)";
         switch ( #daily_minute_count ) {
             default:
                 break;
             case 60: // 60 minutes
-                #CASHPOINTS += 25;
+                #CASHPOINTS += 5;
                 break;
             case 120: // 120 minutes
-                #CASHPOINTS += 50;
+                #CASHPOINTS += 10;
                 break;
             case 180: // 180 minutes
-                #CASHPOINTS += 75;
+                #CASHPOINTS += 20;
                 break;
             case 240: // 240 minutes
-                #CASHPOINTS += 100;
+                #CASHPOINTS += 40;
                 break;
             case 300: // 300 minutes
-                #CASHPOINTS += 125;
+                #CASHPOINTS += 60;
                 break;
             case 360: // 360 minutes
-                #CASHPOINTS += 150;
+                #CASHPOINTS += 80;
                 break;
             case 420: // 420 minutes
-                #CASHPOINTS += 175;
+                #CASHPOINTS += 100;
                 break;
             case 480: // 480 minutes
-                #CASHPOINTS += 200;
+                #CASHPOINTS += 150;
                 #daily_minute_count = 0; // reset.
                 break;
         }
