@@ -498,8 +498,10 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 #else
 					damage *= 2;
 #endif
-					//Remove a unit group or end whole status change
-					status_change_end(target, SC_SPIDERWEB, INVALID_TIMER);
+					// //Remove a unit group or end whole status change
+					// status_change_end(target, SC_SPIDERWEB, INVALID_TIMER);
+					if (tsc->data[SC_SPIDERWEB]->val2 == 0)	
+						status_change_end(target, SC_SPIDERWEB, INVALID_TIMER);
 				}
 				if (tsc->data[SC_THORNSTRAP] && battle_getcurrentskill(src) != GN_CARTCANNON)
 					status_change_end(target, SC_THORNSTRAP, INVALID_TIMER);

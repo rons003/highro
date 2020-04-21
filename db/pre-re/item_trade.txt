@@ -187,8 +187,8 @@
 7586,499,100	// Guard's Third Proof
 7587,499,100	// Guard's Fourth Proof
 2673,507,100	// Warrior's Shining Ring
-1533,507,100	// Warrior's Balmung
-13020,507,100	// Warrior's Balmung
+//1533,507,100	// Warrior's Balmung
+13020,475,100	// Warrior's Balmung
 
 // Vietnam Event item
 7588,499,100	// IPOD Coupon

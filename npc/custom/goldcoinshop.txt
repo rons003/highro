@@ -46,9 +46,9 @@ function	ShopSettings	{
 			// Currency [ Item ID / Variable Name ]
 			set @Currency$,"7929";
 			// Item ID Lists
-			setarray @ItemLists[0],7086,7090,7077,7091,7092,7083,7089,7088;
+			setarray @ItemLists[0],7086,7090,7077,7091,7092,7083,7089,7088,7087,7075,7079,7076,7081,7080;
 			// Item Price
-			setarray @ItemCost[0],1,1,1,1,1,1,1,1;
+			setarray @ItemCost[0],1,1,1,1,1,1,1,1,1,1,1,1,1,1;
 			break;
 		
 		// Case 4,5,6.....etc...

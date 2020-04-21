@@ -173,3 +173,4 @@
 3504:3008,{bonus bCritAtkRate,20; bonus bCritical,10; bonus bFlee2,-5;}
 30089:30091:30092,{ bonus2 bResEff,Eff_Freeze,10000;bonus bMaxHPrate,5; bonus bMaxSPrate,5; bonus2 bSubEle,Ele_Fire,-10; bonus2 bSubEle,Ele_Dark,-10; bonus2 bSubEle,Ele_Holy,-10; bonus2 bSubEle,Ele_Poison,-10; bonus2 bSubEle,Ele_Earth,-10; bonus2 bSubEle,Ele_Water,-10; bonus2 bSubEle,Ele_Wind,-10; }
 3004:3019,{ bonus bMaxHPrate,5; skill "TF_HIDING",1; }
+3965:3966,{ bonus2 bAddRace,RC_DemiHuman,3; bonus2 bAddRace,RC_Player,3; }

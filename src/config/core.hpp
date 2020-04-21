@@ -44,7 +44,7 @@
 //#define SHOW_SERVER_STATS
 
 /// Uncomment to enable the job base HP/SP table (job_basehpsp_db.txt)
-#define HP_SP_TABLES
+//#define HP_SP_TABLES
 
 /// Uncomment to enable VIP system.
 //#define VIP_ENABLE

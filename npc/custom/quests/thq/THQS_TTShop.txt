@@ -513,7 +513,7 @@ N_AgitDrop:
 	mes "[Ash]";
 	mes "This is what we have to offer.";
 	next;
-	menu "Emblem of the Sun God - 300T",-,"Ripple - 300T",N_Ripple,"Silver Ornament - 350T",N_SilverO,"Billow - 300T",N_Billow,"Drifting Air - 300T",N_DriftingA,"Spirit of Fish - 300T",N_SoF,"Omen of Tempest - 300T",N_OoT,"Snow Crystal - 300T",N_SnowC,"Never mind",N_NVM;
+	menu "Emblem of the Sun God - 300T",-,"Ripple - 300T",N_Ripple,"Silver Ornament - 350T",N_SilverO,"Billow - 300T",N_Billow,"Drifting Air - 300T",N_DriftingA,"Spirit of Fish - 300T",N_SoF,"Omen of Tempest - 300T",N_OoT,"Snow Crystal - 300T",N_SnowC,"Breath of Spirit - 300T",N_BoS,"Iron Maiden - 300T",N_IronM,"Feather of Angel Wing - 300T",N_FAW,"Wheel of the Unknown - 300T",N_WheelU,"Woman's Moustache - 300T",N_WomansM,"Cat Thread - 300T",N_CatT,"Never mind",N_NVM;
 	if (#Treasure_Token < 300) goto N_NeedToken;
 	set #Treasure_Token,#Treasure_Token-300;
 	getitem 7086,1;
@@ -562,6 +562,43 @@ N_SnowC:
 	set #Treasure_Token,#Treasure_Token-300;
 	getitem 7088,1;
 	logmes "Treasure Token: Snow Crystal";
+	close;
+N_BoS:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7087,1;
+	logmes "Treasure Token: Breath of Spirit";
+	close;
+
+N_IronM:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7075,1;
+	logmes "Treasure Token: Iron Maiden";
+	close;
+N_FAW:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7079,1;
+	logmes "Treasure Token: Feather of Angel Wing";
+	close;
+N_WheelU:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7076,1;
+	logmes "Treasure Token: Wheel of the Unknown";
+	close;
+N_WomansM:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7081,1;
+	logmes "Treasure Token: Woman's Moustache";
+	close;
+N_CatT:
+	if (#Treasure_Token < 300) goto N_NeedToken;
+	set #Treasure_Token,#Treasure_Token-300;
+	getitem 7080,1;
+	logmes "Treasure Token: Cat Thread";
 	close;
 
 }

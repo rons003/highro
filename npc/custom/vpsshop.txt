@@ -33,7 +33,7 @@ mes "^00FF00____________________________^000000";
 mes "So,Which shop you would like to look at it";
 next;
 // Menu Selection
-select("Accessory","Armor","Headgear","Middle Gear","Usable");
+select("Accessory","Armor","Headgear","Middle Gear","Usable","Weapon");
 
 ClearData();
 ShopSettings( @menu );
@@ -91,6 +91,14 @@ function	ShopSettings	{
 			setarray @ItemLists[0],13710;
 			// Item Price
 			setarray @ItemCost[0],50;
+			break;
+		Case 6:
+			// Currency [ Item ID / Variable Name ]
+			set @Currency$,"7227";
+			// Item ID Lists
+			setarray @ItemLists[0],13020;
+			// Item Price
+			setarray @ItemCost[0],300;
 			break;
 
 		// Case 4,5,6.....etc...

@@ -1047,5 +1047,155 @@ mes "Go fly away";
 close;    
 
 
+}
+
+
+prt_in,45,112,5	script	Aivy	641,{
+
+
+
+if(aivy_aivy >= 1) goto L_tapospopoaivy;
+
+if(hen_hen >= 1) goto continueqaivy;    
+
+if(hen_hen < 1)    
+
+{
+
+mes "[ Aivy ]";    
+
+mes "Are you the delivery boy of army navy?";    
+
+mes "If not go way i don't need you";    
+
+close;    
+
+}    
+
+continueqaivy:
+
+
+
+mes "[ Aivy ]";    
+
+mes "Oh my grasya santisimo!!";    
+
+mes "You have spoken to uncle henry!";    
+
+next;
+
+mes "[ Aivy ]";    
+
+mes "By the way i am Aivy of EutopiaRO the crafter of the Bunch of Carnation";
+
+mes "would you like to have one?";
+
+menu "Yes",-,"No",L_ayawaivy;        
+
+next;    
+
+
+
+mes "[ Aivy ]";
+
+mes "This great accessory is very complicated, it needs very rare materials to craft it if you really want it go get me these";    
+
+next;    
+
+mes "4 Breathe Of Spirit";    
+
+mes "4 Iron Maiden";
+
+mes "30 Fragment of Rossata Stone ";        
+
+mes "100 Treasure Box";    
+
+mes "30 Credits (EutopiaRO Credit)";
+
+next;    
+
+mes "[ Aivy ]";    
+
+mes "I'll be waiting for you chosen one!";    
+
+if(countitem(7087) < 4 || countitem(7075) < 4 || countitem(7211) < 30 || countitem(7444) < 100 || countitem(3100) < 30) goto L_lateraivy;
+
+if(countitem(7087) >= 4 || countitem(7075) >= 4 || countitem(7211) >= 30 || countitem(7444) >= 100 || countitem(3100) >= 30) goto kontinueqaivy;
+
+close;    
+
+
+
+L_ayawaivy:        
+
+
+
+mes "[ Aivy ]";    
+
+mes "Wacha Wachi Wacho... go shoooo";
+
+mes "Just speak to me if you want it already";
+
+close;    
+
+
+
+
+
+L_lateraivy:    
+
+next;    
+
+mes "[ Aivy ]";    
+
+mes "As i said one missing material and all the others go to waste";    
+
+close;    
+
+
+
+kontinueqaivy:    
+
+next;
+
+mes "[ Aivy ]";    
+
+mes "Very well done my friend you have finished the valkyrie armor quest";        
+
+delitem 7087,4;    
+
+delitem 7075,4;    
+
+delitem 7211,30;
+
+delitem 7444,100;    
+
+delitem 3100,30;
+
+next;
+
+getitem 2646,1;
+
+set aivy_aivy,1;
+
+next;    
+
+mes "[ Aivy ]";    
+
+mes "Good job sir, enjoy your new accessory";        
+
+announce strcharinfo(0)+" has just created the Bunch of Carnation.",8;
+
+close;    
+
+
+
+L_tapospopoaivy:    
+
+mes "[ Aivy ]";    
+
+mes "This quest, once done no more repeating";     
+
+close;
 
 }    

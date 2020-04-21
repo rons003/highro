@@ -1211,7 +1211,6 @@
 7176,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Key of Gaiety"
 7177,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"A young guy in Lighthalzen"
 7178,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Destination of Deception, Delusion and Gaiety"
-7179,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Vicente, you dare!"
 7180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Message from Doomk"
 
 7181,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Karakas's ring"
