@@ -8517,7 +8517,7 @@ int skill_castend_nodamage_id(struct block_list *src, struct block_list *bl, uin
 			if (ii < MAX_INVENTORY)
 			{
 				pc_delitem(sd, ii, 1, 0, 0, LOG_TYPE_CONSUME);
-				if (rand() % 100 < 10)
+				if (rand() % 100 < 7)
 				{
 					switch (skill_id)
 					{

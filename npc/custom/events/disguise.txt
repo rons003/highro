@@ -20,7 +20,7 @@ prontera,203,241,6	script	Disguise Event	795,{
 	// Currently set to run every two hours.
 	// To change times, edit the OnClock labels below.
 
-	set .@GMLevel,60;	// GM level required to access NPC.
+	set .@GMLevel,99;	// GM level required to access NPC.
 	set .@n$,"[^0000FFDisguise NPC^000000]";
 
 	if (getgmlevel()>=.@GMLevel) {
