@@ -10438,4 +10438,4 @@
 40500,banryu,Banryu,5,2900,,700,200,,1,4,0x00004080,7,2,2,4,2,1,2,{ bonus bAgi,-2; },{},{}
 
 40600,c_imbahead,Poo Poo Hat Imba,4,10,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,,3019,{ skill "AS_CLOAKING",1;  bonus bUseSPrate,-80; bonus bHit,100; skill "TF_HIDING",1; bonus2 bResEff,Eff_Curse,10000; bonus bAtkEle,Ele_Fire; bonus bDelayRate,-70; bonus bDex,130; bonus bNoMagicDamage,50; bonus bUseSPrate,50; bonus2 bSubRace,RC_DemiHuman,25; bonus2 bSubRace,RC_Player,25;},{ },{ sc_end SC_CLOAKING; sc_end SC_HIDING;  }
-40601,i_Cyclops,Cyclops Eyes,4,10,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,,207,{ bonus bDefRate,-67; bonus bDef2Rate,-67; bonus bDelayRate,-85; bonus bIntravision;  bonus2 bResEff,Eff_Stun,10000; bonus bInt,80; bonus2 bSubRace,RC_DemiHuman,25; bonus2 bSubRace,RC_Player,25; },{},{}
+40601,i_Cyclops,Cyclops Eyes,4,10,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,,207,{ bonus2 bSubEle,Ele_Neutral,30; bonus bDefRate,-67; bonus bDef2Rate,-67; bonus bDelayRate,-85; bonus bIntravision;  bonus2 bResEff,Eff_Stun,10000; bonus bInt,80; bonus2 bSubRace,RC_DemiHuman,25; bonus2 bSubRace,RC_Player,25; },{},{}
