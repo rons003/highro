@@ -602,6 +602,7 @@ OnStop:
 	end;
 
 OnStartArena:
+	set brokeemp,brokeemp+1;
 	set .@GID,getcharid(2);
 	set .@region$, (compare(strnpcinfo(4),"arug"))?"Valfreyja":"Nithafjoll";
 	// Lower castle Economy
@@ -619,8 +620,8 @@ OnStartArena:
 		setcastledata strnpcinfo(4),.@i,0;
 	// Disable Kafra
 	disablenpc "Kafra Employee#"+strnpcinfo(2);
-
-	announce "The ["+getguildname(.@GID)+"] guild conquered the ["+.@region$+" "+charat(strnpcinfo(2),3)+"] stronghold of "+getcastlename(strnpcinfo(4))+"!",bc_all|bc_woe;
+	set .@breaker$, strcharinfo(0);
+	announce "["+.@breaker$+"] of the ["+getguildname(.@GID)+"] guild conquered the ["+.@region$+" "+charat(strnpcinfo(2),3)+"] stronghold of "+getcastlename(strnpcinfo(4))+"!",bc_all|bc_woe;
 	mapannounce strnpcinfo(4),"The emperium has been shattered!",bc_map,"0x00FF00",FW_NORMAL,20,0,40;
 	donpcevent "Manager#"+strnpcinfo(4)+"::OnReset";
 	maprespawnguildid strnpcinfo(4),getcastledata(strnpcinfo(4),CD_GUILD_ID),2;
