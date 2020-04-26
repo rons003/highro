@@ -1,4 +1,4 @@
-prontera,204,177,5	script	Earth Event	89,{
+prontera,204,177,5	script	Eutopia Event	89,{
 if (BaseLevel > 1) goto L_ClassLevel; //Change '1' to your desired level
 if (class == 0) goto L_Event; //Checks if the player is a Novice, if so, proceeds into the event.
 if (class > 0) goto L_ClassLevel; //Checks if the Player is NOT a Novice. If they aren't, they are not allowed to participate.
@@ -31,7 +31,7 @@ close;
 }
 
 OnInit:
-waitingroom "Earth Event",0;
+waitingroom "Eutopia Event",0;
 end;
 
 }
