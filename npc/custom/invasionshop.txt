@@ -46,25 +46,25 @@ function	ShopSettings	{
 			// Currency [ Item ID / Variable Name ]
 			set @Currency$,"7960";
 			// Item ID Lists
-			setarray @ItemLists[0],18847,5456,5658,18691,18669,18656,18651,18684,18662,18667,18641,18673,18640,19156,18848;
+			setarray @ItemLists[0],18847,5456,5658,18691,18669,18656,18651,18684,18662,18667,18641,18673,18640,19156,18848,18653,19177;
 			// Item Price
-			setarray @ItemCost[0],2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;
+			setarray @ItemCost[0],2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2;
 			break;
 		Case 2:
 			// Currency [ Item ID / Variable Name ]
 			set @Currency$,"7960";
 			// Item ID Lists
-			setarray @ItemLists[0],19109,18868,19155,18877,18682,18649,19138,19176;
+			setarray @ItemLists[0],19109,18868,19155,18877,18682,18649,19138,19176,18655,5006,18538,18576;
 			// Item Price
-			setarray @ItemCost[0],2,2,2,2,2,2,2,2;
+			setarray @ItemCost[0],2,2,2,2,2,2,2,2,2,2,2,2;
 			break;
 		Case 3:
 			// Currency [ Item ID / Variable Name ]
 			set @Currency$,"7960";
 			// Item ID Lists
-			setarray @ItemLists[0],18564,18948,18665,19173,18677,5775,5361;
+			setarray @ItemLists[0],18564,18948,18665,19173,18677,5775,5361,18627,18546,5548;
 			// Item Price
-			setarray @ItemCost[0],2,2,2,2,2,2,2;
+			setarray @ItemCost[0],2,2,2,2,2,2,2,2,2,2;
 			break;
 
 		

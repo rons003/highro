@@ -101,7 +101,7 @@ function ChangeAppr {
 	}
 	mes "Which class do you want to change your appearance to?";
 	next;
-	switch(select(jobname(roclass(eaclass()&EAJ_UPPERMASK)),jobname(roclass(eaclass()&EAJ_UPPERMASK|EAJL_UPPER)),jobname(roclass(eaclass()|EAJL_THIRD)),HasjROCostume() ? getlook(LOOK_BODY2) ? "Restore costume" : "New jRO costume" : "")) {
+	switch(select(jobname(roclass(eaclass()&EAJ_UPPERMASK)),jobname(roclass(eaclass()&EAJ_UPPERMASK|EAJL_UPPER)),jobname(roclass(eaclass()|EAJL_THIRD)))) {
 		case 1:
 			ChangeAppr(roclass(eaclass()&EAJ_UPPERMASK),.@TYPE_CHANGEBASE);
 			break;
@@ -110,9 +110,6 @@ function ChangeAppr {
 			break;
 		case 3:
 			ChangeAppr(roclass(eaclass()|EAJL_THIRD),.@TYPE_CHANGEBASE);
-			break;
-		case 4:
-			ChangeAppr(0,.@TYPE_SETLOOK);
 			break;
 	}
 	close;
