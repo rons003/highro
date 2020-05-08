@@ -94,7 +94,7 @@ rachel,91,273,8	script	?	930,{
 
 // Feather Beret
 //============================================================
-rachel,152,131,3	script	Sakjul	928,{
+prontera,152,131,3	script	Sakjul	928,{
 	if (countitem(5172) > 0 && countitem(7063) > 99 && countitem(982) > 0) {
 		mes "[Sakjul]";
 		mes "Great, you have brought everything";
